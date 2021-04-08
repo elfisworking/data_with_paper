@@ -1,0 +1,4201 @@
+[2021-01-01 01:27:38] <TheColdPot> I config TerserPlugin like this:
+```js
+{
+    extractComments: false
+}
+```
+BUT, my result is
+```js
+/* Banner */ {920, /*CODE*/}
+```
+Can I add a line wrap after banner?
+[2021-01-01 09:20:18] <3gwebtrain> Anyone please help me here : https://stackoverflow.com/questions/65528477/webpack-not-getting-the-same-names-with-output-build-folder-getting-number-va
+[2021-01-01 11:50:50] <solankivj> @3gwebtrain i answered on stack overflow 
+[2021-01-01 12:22:04] <3gwebtrain> @solankivj , I am not see your answer there.. do you use different Id?
+[2021-01-01 12:23:53] <solankivj> Yea its heisanbug
+[2021-01-01 16:36:56] <3gwebtrain> @solankivj  any way, that was really a help i needed. thanks for it.
+[2021-01-01 18:28:03] <danielvanmil> Hello, I have a url(...) in a style template in a JS module. Can I let Webpack handle this instead of just copying the resources? It's the same logic as the css-loader I think, but then for a JS module
+[2021-01-01 19:06:17] <somethingelseentirely> hey, I have what I think would be a pretty benign config, yet webpack segfaults... any thoughts what might cause this?
+```
+module.exports = {
+    entry: './src/index.js',
+    output: {
+        filename: 'tribles.js',
+        path: path.resolve(__dirname, 'dist'),
+    }
+};
+```
+[2021-01-02 10:58:53] <Talent30> Hi, everyone.
+[2021-01-02 11:00:16] <Talent30> [![图片.png](https://files.gitter.im/529f74f4ed5ab0b3bf04ef26/KJfl/thumb/Tu-Pian.png)](https://files.gitter.im/529f74f4ed5ab0b3bf04ef26/KJfl/Tu-Pian.png)
+[2021-01-02 11:00:22] <Talent30> Could someone help me with this erro please?
+[2021-01-02 11:01:26] <TheColdPot> Can you share your webpack.config.js, please? Please note that we needs loader
+
+[2021-01-02 11:01:51] <nirmalhk7> Hi, I've just cloned the webpack-dev-server repository, and I'm following the contributing guidelines in `CONTRIBUTING.md`, and my system is asking sudo password for running `npm link && npm link webpack-dev-server`. I'd like to know if running it with sudo is okay or not.. Thanks!
+[2021-01-02 11:02:57] <Talent30> [![图片.png](https://files.gitter.im/529f74f4ed5ab0b3bf04ef26/vL0R/thumb/Tu-Pian.png)](https://files.gitter.im/529f74f4ed5ab0b3bf04ef26/vL0R/Tu-Pian.png)
+[2021-01-02 11:03:05] <Talent30> [![图片.png](https://files.gitter.im/529f74f4ed5ab0b3bf04ef26/3NYU/thumb/Tu-Pian.png)](https://files.gitter.im/529f74f4ed5ab0b3bf04ef26/3NYU/Tu-Pian.png)
+[2021-01-02 11:04:34] <Talent30> [![图片.png](https://files.gitter.im/529f74f4ed5ab0b3bf04ef26/A1xL/thumb/Tu-Pian.png)](https://files.gitter.im/529f74f4ed5ab0b3bf04ef26/A1xL/Tu-Pian.png)
+[2021-01-02 11:05:11] <TheColdPot> It **may** caused by your loader. Do you succeed before?
+[2021-01-02 11:06:42] <Talent30> [![图片.png](https://files.gitter.im/529f74f4ed5ab0b3bf04ef26/wGPW/thumb/Tu-Pian.png)](https://files.gitter.im/529f74f4ed5ab0b3bf04ef26/wGPW/Tu-Pian.png)
+[2021-01-02 11:06:42] <Talent30> Yes, please see the first pic. If I exec DevServer
+[2021-01-02 11:07:22] <Talent30> And then just save style.css once again
+[2021-01-02 11:07:58] <Talent30> [![图片.png](https://files.gitter.im/529f74f4ed5ab0b3bf04ef26/FCab/thumb/Tu-Pian.png)](https://files.gitter.im/529f74f4ed5ab0b3bf04ef26/FCab/Tu-Pian.png)
+[2021-01-02 11:09:48] <Talent30> [![图片.png](https://files.gitter.im/529f74f4ed5ab0b3bf04ef26/Nh6I/thumb/Tu-Pian.png)](https://files.gitter.im/529f74f4ed5ab0b3bf04ef26/Nh6I/Tu-Pian.png)
+[2021-01-02 11:09:48] <Talent30> Build for prod is fine
+[2021-01-02 11:10:50] <TheColdPot> You used `import`, which is the keyword of JavaScript
+
+[2021-01-02 11:11:54] <TheColdPot> Try following syntax if you can
+```css
+@import(url)
+```
+[2021-01-02 11:12:28] <Talent30> [![图片.png](https://files.gitter.im/529f74f4ed5ab0b3bf04ef26/cWUM/thumb/Tu-Pian.png)](https://files.gitter.im/529f74f4ed5ab0b3bf04ef26/cWUM/Tu-Pian.png)
+[2021-01-02 11:14:10] <TheColdPot> Emm you can post this question on **StackOverflow** in [Webpack Tag](https://stackoverflow.com/tags/webpack).
+[2021-01-02 11:14:53] <Talent30> yea I will do this. Thank you for your help.
+[2021-01-02 11:14:59] <Talent30> I don’t know if this is my configuration problem or a loader problem. If it’s a loader problem, which loader should I submit an issue to?
+[2021-01-02 11:15:50] <TheColdPot> It's style loader,  I thought. 'Cause I see there is only CSS loader in your conf
+[2021-01-02 11:16:23] <Talent30> and postcss-loader
+[2021-01-02 11:22:44] <nitinosiris> Hey there, I am nitin. I would like to contribute and learn new things. Please guide me.
+[2021-01-02 13:30:31] <Meai> what does this mean, "module parse failed" when it's trying to load a .d.ts? that doesnt make sense right? https://paste.centos.org/view/raw/6dc6d716
+[2021-01-03 05:20:24] <dineshkumars0027> hi anyone
+[2021-01-03 11:39:31] <danielvanmil> https://stackoverflow.com/questions/65541697/how-to-process-url-in-external-module-with-webpack ? (anyone?)
+[2021-01-04 11:44:31] <thw0rted> Your link is a 404 now
+
+[2021-01-04 11:45:44] <thw0rted> If webpack is running `tsc` (the Typescript compiler) and it's complaining about a `.d.ts`, that's weird.  If Webpack is saying "I don't have a loader defined for .d.ts files", that means something is trying to `require` a .d.ts, which should never happen.
+[2021-01-04 11:48:12] <thw0rted> I've had this problem when people have a broad Context defined, either via `require.context(/too-many-files.*\.ts/)`, or   `require("/some/path/" + fileName)`.  Webpack will try to statically analyze the latter statement, and treat (more or less) as `require.context(/\/some\/path\/.*/)`
+[2021-01-04 11:50:13] <thw0rted> Either way you wind up with it grabbing `.d.ts` files when it shouldn't.  If you can fix the `require` / `require.context` so it excludes the typings, do that.  If you can't, add a rule like `{test: /\.d\.ts$/, use: "null-loader"}`
+[2021-01-04 17:31:54] <odddemid> The question is here - https://stackoverflow.com/questions/65470522/how-to-use-new-web-platform-features-fragments-in-requests-in-webpack-5
+
+still no answer :(
+[2021-01-05 14:08:04] <ugurcanalyuz> Hi friends, can I upload my Node JS Backend project to my Server with Webpack over a single HTML + JS file and perform all Backend operations?
+[2021-01-05 15:54:16] <sackh> Hi All, I am using webpack 4 and getting the error: `ReferenceError: __webpack_require__ is not defined`. There is also stackoverflow question on this which is similar - https://stackoverflow.com/questions/53890392/uncaught-referenceerror-webpack-require-is-not-defined. but given answer is not solving this issue. can some one please help me ? 
+[2021-01-06 03:25:18] <worlddai> Why can't my Webpack5 configuration use filesystem cache in production mode?
+[2021-01-06 03:25:30] <worlddai> https://stackoverflow.com/questions/65556873/why-cant-my-webpack5-configuration-use-filesystem-cache-in-production-mode
+[2021-01-06 13:03:22] <rexow> hello guys
+
+
+
+[2021-01-06 13:04:27] <rexow> While I was packing a react application with Webpack, I noticed that the code was readable in the product environment and I started looking for something different.
+
+I saw an obfuscated code similar to this in the static folder of Instagram. How can I do that?
+` __d(function(g,r,i,a,m,e,d){m.exports=function(n){ .... } ` 
+[2021-01-06 16:37:40] <643104191> hi there, I am using webpack to process wxml files,
+(Visit https://developers.weixin.qq.com/miniprogram/dev/reference/wxml/ to learn more about wxml)
+The wxml file contains the wxs tag,
+The wxs tag is used to introduce shared variables/functions in wxml.
+(Visit https://developers.weixin.qq.com/miniprogram/dev/reference/wxs/01wxs-module.html to learn more about wxs)
+I have used the local wxml-loader to get the src of wxs,
+But I don't know how to make webpacks output the corresponding wxs file,
+Is there any documentation for reference?
+[2021-01-06 16:38:24] <xiaoxiaojx> Can I share my warehouse here?
+It mainly solves the particularly complex case of webpackConfig, and may be very useful for cli tools.
+github:https://github.com/ezrealjs/ezreal/   Hope to get star  
+
+Mainly solve the following scenarios 
+1. The configuration itself is very complex, and there are always iterations
+2. Many platforms such as pc, mobile, electron, ssr ...
+3. Different teams will add different features
+As an cli tool, How can we better manage these configurations, ability to easily and painlessly add and uninstall features
+[2021-01-06 17:26:33] <xiaoxiaojx> > Can I share my warehouse here?
+> It mainly solves the particularly complex case of webpackConfig, and may be very useful for cli tools.
+> github:https://github.com/ezrealjs/ezreal/   Hope to get star  
+> 
+> Mainly solve the following scenarios 
+> 1. The configuration itself is very complex, and there are always iterations
+> 2. Many platforms such as pc, mobile, electron, ssr ...
+> 3. Different teams will add different features
+> As an cli tool, How can we better manage these configurations, ability to easily and painlessly add and uninstall features
+
+I want its first middleware or preset implementation to be relatively complete, so that it is easy to see the overview. The middleware for each subsequent feature implementation is single and small, and can be easily uninstalled and added.
+When a preset is assembled, it can be easily shared with other teams via npm packages, and teams with customization needs can continue to extend it into their own presets.
+
+Translated with www.DeepL.com/Translator (free version)
+[2021-01-06 18:14:36] <thw0rted> That's called minification or uglification.  Webpack should minify your code automatically when built in production mode.
+[2021-01-06 18:14:58] <thw0rted> https://webpack.js.org/configuration/mode/#mode-production
+[2021-01-06 18:15:35] <thw0rted> There's also a big section on optimization: https://webpack.js.org/configuration/optimization/
+[2021-01-06 18:16:52] <thw0rted> This sounds like a good question for the wxml-loader project
+[2021-01-06 18:17:02] <thw0rted> but it hasn't been updated in 2 years: https://www.npmjs.com/package/wxml-loader
+[2021-01-06 23:55:27] <Desu_yo_ne_twitter> Hi everyone, I'm having problems with setting the parser to sugarss for postcss in nuxt.config.js. Has anyone have an experience in setting the parser property in nuxt? thanks
+[2021-01-07 20:44:53] <charvey77> Hello everyone,
+
+I'm still using webpack 4.28.4 for organizational reasons. We are trying to transpile some of our code to support ES5 using Babel 7, but our resulting bundle is throwing console errors when loaded in a browser (Chromium v44). We have seen some of the newer options available in webpack 5, which some of my colleagues have been able to use to resolve similar failures:
+- output.environment.arrowFunction = false 
+- target = 'es5'
+
+Is there some sort of equivalent approach for webpack 4? Do we just need to find the right combination of Babel plugins to fully convert to ES5? 
+
+The console error we get in Chromium 44 is always an "Uncaught SyntaxError: Unexpected token )" in some low level Dojo JavaScript file which we know is unchanged and should be a valid function.
+
+Here's a cleaned up version of our webpack.config.js:
+```
+const path = require('path');
+const webpack = require('webpack');
+const BabelLoaderPlugin = require('babel-loader');
+const BabelPreset = require('@babel/preset-env');
+
+const makeConfig = ({
+      component_path,
+      js_module,
+      entryPoints = {"index": js_module + "/entryPoint",
+                     "index-css": js_module + "/css/main"},
+      outputPublicPath = 'release/',
+      outputPath = path.resolve(component_path, 'release'),
+	  dev_mode = 'production',
+      babel_chrome_level = "44",
+    } = {}) => {
+    return {
+        entry: entryPoints,
+        output: {
+            path: outputPath,
+            publicPath: outputPublicPath,
+            pathinfo: true,
+            filename: "bundle.[name].js"
+        },
+        module: {
+            rules: [
+                {
+                    test: /\.m?js$/,
+                    exclude: /(node_modules|bower_components|dojo)/,
+                    use: {
+                        loader: 'babel-loader',
+                        query: {
+                            babelrc: false,
+                            presets: [
+                                [BabelPreset,
+                                {
+                                    "exclude": ["transform-regenerator"],
+                                    "targets": {
+                                        "chrome": babel_chrome_level
+                                    }
+                                }]
+                            ],
+                            plugins: [
+                                require("@babel/plugin-transform-async-to-generator"),
+                                require("@babel/plugin-transform-arrow-functions"),
+                                require("@babel/plugin-transform-modules-commonjs")
+                            ]
+                        }
+                    }
+                },
+            ]
+        },
+        plugins: [
+            ...
+        ],
+    };
+}
+module.exports = { makeConfig };
+```
+[2021-01-08 09:16:41] <jantimon> Did you try to hardcoded it to `44` instead of using `babel_chrome_level`?
+[2021-01-08 10:55:47] <thw0rted> In Chrome devtools, you might be able to get it to pretty-print the minified Dojo sources to better identify exactly which feature it's tripping over
+[2021-01-08 10:58:11] <thw0rted> The better fix for this is to find whatever numbskull in your organization has you stuck on a *FIVE YEAR OLD* version of a browser and smack them until they stop
+[2021-01-08 11:00:03] <thw0rted> Also it looks like you're explicitly excluding `dojo` from your Babel transform
+[2021-01-08 11:04:55] <thw0rted> I don't know much about Dojo -- I guess they made a totally new "modern" version at some point? -- but maybe you can pin to an older version of it that officially supports your version of Chrome?
+
+
+
+[2021-01-08 11:52:58] <Cartman720> Hello guys
+Can you help me with this issue. I can't figure out why bundle isn't being executed!
+https://stackoverflow.com/questions/65625040/webpack-successfully-builds-but-javascript-doesnt-execute-runtime
+[2021-01-08 14:52:42] <dAnjou_gitlab> Hi, I'm quite new to webpack (backend dev here) and I'm dabbling at browser games currently. I'm using this framework Phaser which offers custom builds via a special webpack config. I've tried adding webpack-dev-server into the mix but it's throwing some errors then: https://github.com/photonstorm/phaser3-custom-build/issues/8. I was hoping some of you are able to spot the cause immediately and help me out :)
+[2021-01-10 04:47:45] <10mayje> hello, I am Tanmay Mondal a second-year student of nit Durgapur, West Bengal, India. I am expressed in python, Django, javascript. How can I get started as very new at webpack ?
+[2021-01-10 06:28:16] <TheColdPot> webpack.github.io is the offical site of webpack. You can see documentations there. Webpack is a tool and I think it's very easy to use.
+[2021-01-10 16:12:17] <Rolanddoda> Hi everyone.
+I created a new project and added `"type": "module"` to package.json to use ES modules and use` import()` instead of `require()`.
+However, I have a file, where I want to find some files and the only way I know to do that is by using `require.context()`.
+
+But when I do that, I get an error: 
+```
+(node:39868) Warning: require() of ES modules is not supported.
+```
+
+Is there any way to prevent this error or another way of doing the same thing as the `require.context()` does, but with `import()` ?
+[2021-01-11 08:37:19] <WanderWang> Hello ,  webpack 5 contains ```types.d.ts``` , but seems that missing lot of declaration from ```@types/webpack@4.x.x``` , for example , how to implement a custom Loader with declaration ?
+[2021-01-11 08:37:59] <WanderWang> ```@types/webpack@4.x.x``` define ```webpack.loader.Loader``` but webpack 5 have no similiar declaration
+[2021-01-11 10:12:23] <thw0rted> Roland, does your project run in Node or in the browser?
+[2021-01-11 10:13:20] <thw0rted> If browser, then I need more context around the error, because I don't understand what's causing it
+[2021-01-11 10:13:40] <thw0rted> If your code runs in Node, use the `fs` package to interact with the file system
+[2021-01-11 10:14:08] <thw0rted> (And for that matter, why use Webpack in the first place? Node code doesn't need to be bundled.)
+[2021-01-11 10:14:46] <thw0rted> Anyway it would be helpful to post a small reproduction somewhere and link to that
+[2021-01-11 10:25:09] <Rolanddoda> It runs on the browser, I have a vue.js app
+[2021-01-11 10:26:12] <Rolanddoda> I am trying to auto-import routes from the folder structure and this is my code:
+
+```
+import { createRouter, createWebHistory } from 'vue-router'
+
+/*
+ * Auto imports routes from @/pages. It only requires a route.js file inside each page
+ * */
+function autoImportRoutes() {
+  const filePaths = require.context('@/pages/', true, /route.js/)
+  return filePaths.keys().map(filePath => {
+    const pathWithoutLeadingDot = filePath.replace('.', '') // remove first dot of ./path-name
+    return require(`@/pages${pathWithoutLeadingDot}`).default
+  })
+}
+
+const routes = autoImportRoutes()
+
+const router = createRouter({
+  history: createWebHistory(process.env.BASE_URL),
+  routes
+})
+
+export default router
+```
+[2021-01-11 10:31:03] <Rolanddoda> The code above works fine if I remove the type: module from the package.json but if I add it I get the warning.
+FYI the vue-router package expects an array of objects which define the SPA routes. Instead of adding routes manually, I try with `require.context()` to get those routes automatically by using a folder structure.
+[2021-01-11 10:33:47] <Rolanddoda> I searched this a bit and it seems that it's not possible to do what I want (at least without hacking around with node file system) by using ES modules for 2 reasons.
+
+1) Haven't found an import alternative to require.context()
+2) import() it asynchronous which will make my code fail because vue-router doesn't waits. Could be workarounds to make it wait though, but too hacky.
+So right now, I will stick with removing "type": "module" from package.json
+[2021-01-11 11:37:31] <thw0rted> I'm not sure how to configure Vue's router for asynchronous loading but `import()` is the correct way to feed it modules.  These are the relevant Webpack docs: https://webpack.js.org/guides/code-splitting/#dynamic-imports
+[2021-01-11 11:38:08] <thw0rted> And this is where to start for Vue, I think https://router.vuejs.org/guide/advanced/lazy-loading.html
+[2021-01-11 11:39:02] <thw0rted> If you use `require.context()` then Webpack is going to put every matching file in your bundle.  Dynamic `import()` lets you split off separate entry points per route, reducing the initial bundle size
+[2021-01-11 11:40:25] <thw0rted> Using Promise-based (`import()`) lazy loading in your Vue router isn't "hacky", it's the way it's supposed to be used in modern browsers
+[2021-01-11 11:42:09] <thw0rted> That said, you have to look at your use case.  If your whole site is 5MB but your front page can fit in 20k, splitting will really improve user experience.  If your front page needs 90% of your dependencies, nobody will notice the difference
+[2021-01-11 11:50:47] <rickihastings> Hey, I seem to be having a problem with Module Federation and material-ui that I'm wondering if anyone else has came across. We have quite a large app which is being split up into a container and various micro-frontends. The container has material-ui components a long with the ThemeProvider etc. The micro-frontends are also using material-ui components, we've added all the `@material-ui/*` libraries to the shared object in both apps, but it seems like multiple parts of material-ui are being loaded from either the container or the sub apps and we can't seem to force any consistency, we'd just like the container to provide the entire of material-ui. It's resulting in inconsistent import orders and duplicate `<style>` tags etc. We've tried supplying `externals` and also forcing all the packages into a chunk and neither work.
+[2021-01-11 12:31:56] <Rolanddoda> My routes(components) are lazy loaded. With  `require.context()` I just gather the array of objects configuration. **Without** my auto-routing a router config looks like this:
+```
+const router = createRouter({
+  history: createWebHistory(process.env.BASE_URL),
+  routes: [
+    {
+      name: 'Homepage',
+      path: '/home',
+      component: () => import('./component-path')
+    }
+  ]
+})
+
+export default router
+```
+
+With my auto-routing I just have to have a `route.js` file inside a pages folder. My folder structure:
+```
+-- src
+  -- pages
+     -- home
+         route.js
+```
+and the route.js has this code:
+
+```
+export default {
+      name: 'Homepage',
+      path: '/home',
+      component: () => import('./component-path')
+}
+```
+
+So my auto-routing code just takes this object and puts it into routes array vue-router expects.
+
+**Lazy-loading will still work**
+[2021-01-11 12:38:13] <Rolanddoda> Here is the array of objects my auto-routing code generates. As you can see the component it's a function which means it's not loaded.
+
+[![image.png](https://files.gitter.im/529f74f4ed5ab0b3bf04ef26/sU2E/thumb/image.png)](https://files.gitter.im/529f74f4ed5ab0b3bf04ef26/sU2E/image.png)
+
+[2021-01-11 12:39:35] <Rolanddoda> So to bring up my case again.
+**Everything works, but using ES modules gives me an warning on this file**
+[2021-01-11 13:07:23] <Rolanddoda> Actually, I just tested it, and you are right, **no lazy-loading happens** with my auto-routing code. I wonder why :/. I just tried to automatically populate the routes. Hmm
+[2021-01-11 13:22:14] <Rolanddoda> Does webpack auto loads this `component: () => import('./component-path')` ?
+[2021-01-11 14:06:18] <Rolanddoda> Ohh wait, I was actually able to do it. The only thing I changed is how I import the  `route.js` file. So the only thing I changed was how I used the `require` (Maybe a bug ??)
+
+My previous code:
+```
+function autoImportRoutes() {
+  const filePaths = require.context('@/pages/', true, /route.js/)
+  return filePaths.keys().map(filePath => {
+    const pathWithoutLeadingDot = filePath.replace('.', '') // remove first dot of ./path-name
+    return require(`@/pages${pathWithoutLeadingDot}`).default
+  })
+}
+```
+
+The code which works:
+```
+function autoImportRoutes() {
+  const filePaths = require.context('@/pages/', true, /route.js/)
+  return filePaths.keys().map(filePath => {
+    const pageName = filePath.split('/')[1] // get page name from path eg ./page-name/folder-name
+    return require(`@/pages/${pageName}/route.js`).default
+  })
+}
+```
+[2021-01-11 14:10:43] <Rolanddoda> I checked in the browser devtools -> Network tab and I see that **lazy-loading works**. Also I checked `npm run build` and that works too.
+
+**Without auto-importing**
+```
+import { createRouter, createWebHistory } from 'vue-router'
+
+const router = createRouter({
+  history: createWebHistory(process.env.BASE_URL),
+  routes: [
+    {
+      name: 'home',
+      path: '/',
+      component: () => import(/* webpackChunkName: "home" */ '@/pages/home/Home')
+    },
+    {
+      name: 'About',
+      path: '/about',
+      component: () => import(/* webpackChunkName: "about" */ '@/pages/about/About.vue')
+    }
+  ]
+})
+
+export default router
+```
+I get this: [![image.png](https://files.gitter.im/529f74f4ed5ab0b3bf04ef26/KuRH/thumb/image.png)](https://files.gitter.im/529f74f4ed5ab0b3bf04ef26/KuRH/image.png)
+
+[2021-01-11 14:14:02] <Rolanddoda> **With AUTO-IMPORT**
+```
+import { createRouter, createWebHistory } from 'vue-router'
+
+/*
+ * Auto imports routes from @/pages. It only requires a route.js file inside each page
+ * */
+function autoImportRoutes() {
+  const filePaths = require.context('@/pages/', true, /route.js/)
+  return filePaths.keys().map(filePath => {
+    const pageName = filePath.split('/')[1] // get page name from path eg ./page-name/folder-name
+    return require(`@/pages/${pageName}/route.js`).default
+  })
+}
+//
+const routes = autoImportRoutes()
+const router = createRouter({
+  history: createWebHistory(process.env.BASE_URL),
+  routes: routes
+})
+
+export default router
+
+```
+
+I get this
+
+[![image.png](https://files.gitter.im/529f74f4ed5ab0b3bf04ef26/9zIE/thumb/image.png)](https://files.gitter.im/529f74f4ed5ab0b3bf04ef26/9zIE/image.png)
+[2021-01-11 14:15:13] <Rolanddoda> Comparing both of them: The one below is from the auto-routing code:
+
+[![image.png](https://files.gitter.im/529f74f4ed5ab0b3bf04ef26/VbDC/thumb/image.png)](https://files.gitter.im/529f74f4ed5ab0b3bf04ef26/VbDC/image.png)
+[2021-01-11 17:56:31] <LuisMendes070_twitter> TerserPlugin is not a constructor 
+[2021-01-11 17:57:09] <LuisMendes070_twitter> const webpack = require('webpack')
+const path = require('path')
+const PUBLIC_DIR = 'public'
+
+const HTMLWebpackPlugin = require('html-webpack-plugin')
+
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const DashboardPlugin = require('webpack-dashboard/plugin')
+
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
+    .BundleAnalyzerPlugin
+
+const mainCss = require('./css/main.css')
+
+const prettier = require('prettier/standalone')
+const plugins = [require('prettier/parser-graphql')]
+prettier.format('type Query { hello: String }', {
+    parser: 'graphql',
+    plugins,
+})
+
+const WorkboxPlugin = require('workbox-webpack-plugin')
+
+// const path = require('path');
+// const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
+
+const TerserWebpackPlugin = require('terser-webpack-plugin')
+
+// const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const WebpackManifestPlugin = require('webpack-manifest-plugin')
+const options = {  }
+//modern javascript google developers
+const OptimizePlugin = require('optimize-plugin')
+const BabelEsmPlugin = require('babel-esm-plugin')
+const ModernNpmPlugin = require('webpack-plugin-modern-npm')
+
+//server.js
+//const webpackDevMiddleware = require('webpack-dev-middleware');
+
+const argv = require('webpack-nano/argv');
+
+const { source } = argv;
+
+module.exports = () => {
+    return {
+        node: {
+            Buffer: false,
+            process: false,
+        },
+        module: {
+            loaders: [
+                { exclude: ['node_modules'], loader: 'babel', test: /\.jsx?$/ },
+                { loader: 'style-loader!css-loader', test: /\.css$/ },
+                { loader: 'url-loader', test: /\.gif$/ },
+                { loader: 'file-loader', test: /\.(ttf|eot|svg)$/ },
+            ],
+        },
+        resolve: {
+            alias: {
+                config$: './configs/app-config.js',
+                react: './vendor/react-master',
+            },
+            extensions: ['', 'js', 'jsx'],
+            modules: [
+                'node_modules',
+                'bower_components',
+                'shared',
+                '/shared/vendor/modules',
+                'fs',
+                'mime',
+            ],
+        },
+        mode: 'production',
+        devServer: {
+            inline: false,
+            contentBase: path.join(__dirname, PUBLIC_DIR),
+            hot: true,
+            compress: true,
+            port: 3000,
+        },
+        devtool: 'inline-source-map',
+        entry: {
+            app: ['./app.js'],
+            admin: ['./adminApp.js'],
+        },
+        output: {
+            libraryTarget: 'system',
+            publicPath: '',
+            filename: '[name]-[hash].js',
+            path: path.resolve(__dirname, 'dist'),
+            module: true,
+            publicPath: '/',
+        },
+        experiments: {
+            outputModule: true,
+        },
+        target: ['web', 'es2017'],
+        resolve: {
+            alias: {
+                config$: './configs/app-config.js',
+                react: './vendor/react-master',
+            },
+            extensions: [
+                '.ts',
+                '.tsx',
+                '.js',
+                '.jsx',
+                '.css',
+                '.sass',
+                '.less',
+                '.scss',
+                '.json',
+                '.html',
+                '.png',
+                '.geojson',
+                '.gif',
+            ],
+            fallback: {
+                path: require.resolve('path-browserify'),
+                http: require.resolve('stream-http'),
+                crypto: require.resolve('crypto-browserify'),
+            },
+        },
+        module: {
+            rules: [
+                {
+                    test: require.resolve("underscore"),
+                    loader: "expose-loader",
+                    options: {
+                      exposes: [
+               
+[2021-01-11 23:09:00] <yang> I have a webpack config with one entrypoint and some codesplitting optimizations, resulting in many .chunk.js files. Is it possible to add a second entrypoint without applying all the codesplitting optimizations (so it's just one resulting .js file)?
+[2021-01-12 08:40:55] <thw0rted> It's great that you got it working!
+[2021-01-12 08:42:00] <thw0rted> I'm curious, how did you hint the chunk name for the automatic version?  I see the inline `webpackChunkName` comments in the "manual" version
+[2021-01-12 08:42:45] <thw0rted> also did you have to use a plugin to get Webpack to handle the dynamic import syntax, or is that baked in now?  (I think it was a plugin last time I needed it, but that was a while back.)
+[2021-01-12 08:57:14] <Rolanddoda> An individual route.js file looks like this:
+```
+export default {
+  name: 'About',
+  path: '/about',
+  component: () => import(/* webpackChunkName: "about" */ './About.vue')
+}
+```
+[2021-01-12 08:58:07] <Rolanddoda> And the code which auto imports all `route.js` files inside `pages` folder is:
+```
+function autoImportRoutes() {
+  const filePaths = require.context('@/pages/', true, /route.js/)
+  return filePaths.keys().map(filePath => {
+    const pageName = filePath.split('/')[1] // get page name from path eg ./page-name/folder-name
+    return require(`@/pages/${pageName}/route.js`).default
+  })
+}
+```
+[2021-01-12 08:59:01] <Rolanddoda> So I didn't use any plugin. I've provided all the code I used
+[2021-01-12 08:59:38] <Rolanddoda> But still my problem remains unresolved. `"type": "module"` in package.json doesn't allow that auto-routing code
+[2021-01-12 09:01:13] <Rolanddoda> Also I don't understand why webpack doesn't gives lazy loading when I use this code:
+```
+function autoImportRoutes() {
+  const filePaths = require.context('@/pages/', true, /route.js/)
+  return filePaths.keys().map(filePath => {
+    const pathWithoutLeadingDot = filePath.replace('.', '') // remove first dot of ./path-name
+    return require(`@/pages${pathWithoutLeadingDot}`).default
+  })
+}
+```
+But gives lazy-loading when I use this:
+```
+function autoImportRoutes() {
+  const filePaths = require.context('@/pages/', true, /route.js/)
+  return filePaths.keys().map(filePath => {
+    const pageName = filePath.split('/')[1] // get page name from path eg ./page-name/folder-name
+    return require(`@/pages/${pageName}/route.js`).default
+  })
+}
+```
+
+The only change is how I use the `require()`
+[2021-01-12 09:23:38] <shawticus> Hey all, has anyone had any experience with Webpack 5 and workers with Next.js?
+[2021-01-12 09:24:25] <shawticus> Struggling quite a bit, mostly just with not being able to find any successful examples of workers + Next + Webpack 5
+[2021-01-13 08:31:15] <lornally> hello, does webpack not support i18n? follow this issue: https://github.com/webpack/webpack/issues/12395
+[2021-01-15 00:25:29] <steinybot> Any tips on figuring out what could be causing this? It seems to happen randomly. I’m not even sure where to start looking. Something to do with `terser-webpack-plugin` maybe? 
+```
+[error] events.js:292
+[error]       throw er; // Unhandled 'error' event
+[error]       ^
+[error] Error: write EPIPE
+[error]     at process.target._send (internal/child_process.js:806:20)
+[error]     at process.target.send (internal/child_process.js:677:19)
+[error]     at callback (/codebuild/output/src677031796/src/codestar-connections.ap-southeast-2.amazonaws.com/git-http/889040691558/ap-southeast-2/aee8be3e-d20a-4d4c-ba38-5e3db37368d3/tlayen/platform/erp-front/target/scala-2.12/scalajs-bundler/main/node_modules/worker-farm/lib/child/index.js:32:17)
+[error]     at module.exports (/codebuild/output/src677031796/src/codestar-connections.ap-southeast-2.amazonaws.com/git-http/889040691558/ap-southeast-2/aee8be3e-d20a-4d4c-ba38-5e3db37368d3/tlayen/platform/erp-front/target/scala-2.12/scalajs-bundler/main/node_modules/terser-webpack-plugin/dist/worker.js:13:5)
+[error]     at handle (/codebuild/output/src677031796/src/codestar-connections.ap-southeast-2.amazonaws.com/git-http/889040691558/ap-southeast-2/aee8be3e-d20a-4d4c-ba38-5e3db37368d3/tlayen/platform/erp-front/target/scala-2.12/scalajs-bundler/main/node_modules/worker-farm/lib/child/index.js:44:8)
+[error]     at process.<anonymous> (/codebuild/output/src677031796/src/codestar-connections.ap-southeast-2.amazonaws.com/git-http/889040691558/ap-southeast-2/aee8be3e-d20a-4d4c-ba38-5e3db37368d3/tlayen/platform/erp-front/target/scala-2.12/scalajs-bundler/main/node_modules/worker-farm/lib/child/index.js:55:3)
+[error]     at process.emit (events.js:315:20)
+[error]     at emit (internal/child_process.js:876:12)
+[error]     at processTicksAndRejections (internal/process/task_queues.js:85:21)
+[error] Emitted 'error' event on process instance at:
+[error]     at internal/child_process.js:810:39
+[error]     at processTicksAndRejections (internal/process/task_queues.js:79:11) {
+[error]   errno: 'EPIPE',
+[error]   code: 'EPIPE',
+[error]   syscall: 'write'
+[error] }
+```
+[2021-01-15 12:00:15] <albert1355> css-loader causes this problem, why? Error: No module factory available for dependency type: CssDependency
+[2021-01-15 15:57:23] <Enome> Hello, I just ran into an issue that took me a while to solve. I am not sure if it's a bug or I missed some documentation. So when I ran webpack with `yarn webpack;yarn serve build` everything worked fine. I wanted to use the webpack dev server so after setting it up I ran 'webpack serve' but it wasn't attaching my library to window.<library>. After googling a lot and trying different thing I ran 'webpack serve --help' and noticed the --target switch. So then when I ran `webpack serve --target web` everything works as expected.
+[2021-01-15 15:57:43] <Enome> Is that --target switch documented anywhere?
+[2021-01-17 00:57:38] <odddemid> Can anybody explain me this feature https://webpack.js.org/blog/2020-10-10-webpack-5-release/#uris
+[2021-01-17 00:58:04] <odddemid> Also my question on stackoverflow - https://stackoverflow.com/questions/65470522/how-to-use-new-web-platform-features-fragments-in-requests-in-webpack-5 
+[2021-01-19 06:05:27] <skyrex-mark> Does anyone know how to prefetch /preload remotes under module federation?
+[2021-01-19 08:02:24] <mkamalkayani> In module federation when a remote fails due to network failure, how can I provide a fallback? Currently the whole app crashes.
+[2021-01-19 09:15:41] <raphael10-collab> Hi all! As described here: https://stackoverflow.com/questions/65788345/issue-when-calling-a-python-script-with-python-shell-from-main-ts-electron-app I'm trying to call and execute a simple python script located in /src/scripts/factorial from /src/main.ts :  `import { PythonShell } from 'python-shell';
+
+let options = {
+  pythonPath: '/home/marco/anaconda3/bin/python3',
+  pythonOptions: ['-u'], // het print results in real-time
+  scriptPath: path.join(__dirname, './scripts/factorial.py'),
+  args: parseInt(msg)
+};
+
+PythonShell.run('factorial.py', options, function (err) {
+  if (err) throw err;
+  console.log('finished');
+});   ` I get this error:  
+[2021-01-19 09:16:38] <raphael10-collab> [![image.png](https://files.gitter.im/529f74f4ed5ab0b3bf04ef26/vlW0/thumb/image.png)](https://files.gitter.im/529f74f4ed5ab0b3bf04ef26/vlW0/image.png)
+[2021-01-19 09:16:48] <raphael10-collab> What do I have to define in webpack and how to fix it?
+[2021-01-19 10:28:51] <kopax> I want to buy server in unit and a server cabinet for hosting docker services locally, what should I get ?
+[2021-01-19 10:28:54] <kopax> wrong chan
+[2021-01-19 12:36:06] <kettanaito> Hey! I'm writing a custom plugin. It establishes a watcher on a given folder. 
+How do I:
+
+1. Add all the files in the folder to the build's dependencies? So whenever there's a change it triggers an incremental build.
+2. Provide a JSON derived from the file structure globally to the bundle?
+
+I'm using `normalModuleFactory.hooks.parser` hooks at the moment, but although it does creates a global variable and seems to listen to updates, the bundle never receives the next variable value unless I edit some of my app's code.
+[2021-01-19 13:45:11] <kettanaito> I'd love to read more materials on writing custom plugins. The guidelines in the webpack docs are good but extremely superficial. 
+Where can I learn about the parts of the compilation, all its hooks, how to affect the compiled code? _When_ to affect it?
+[2021-01-19 13:45:40] <kettanaito> Googling this is frustrating, as it suggests existing plugins instead of resources on how to write one yourself. 
+[2021-01-19 15:31:28] <danielvanmil> hello, is there a way to use bare module identifiers in an HTML entry point? Maybe by using the HtmlWebpackPlugin with a plugin?
+[2021-01-19 15:35:33] <danielvanmil> HtmlWebpackTagsPlugin?
+[2021-01-19 19:25:23] <raphael10-collab> As explained before I'm trying to understand how to call a python script from node.js, and, may be, webpack configuration is involved: Following the indications found here: https://www.tutorialspoint.com/run-python-script-from-node-js-using-child-process-spawn-method , I wrote this code: 
+[2021-01-19 19:25:25] <raphael10-collab> const { spawn } = require('child_process');
+
+let nb = parseInt(msg);
+
+function runScript() {
+  return spawn ('python3', [
+    "-u",
+    path.join(__dirname, './scripts/factorial.py'),
+    nb,
+  ]);
+}
+
+const subprocess = runScript();
+
+subprocess.stdout.on('data', (data) => {
+  console.log(`data:${data}`);
+});
+
+subprocess.stderr.on('data', (data) => {
+  console.log(`error:${data}`);
+});
+
+subprocess.stderr.on('close', () => {
+  console.log("Closed");
+});
+
+[2021-01-19 19:25:39] <raphael10-collab> I get this error:
+[2021-01-19 19:25:41] <raphael10-collab> error:python3: can't open file '/home/marco/webMatters/electronMatters
+/PythonConnection/.webpack/main/scripts/factorial.py': [Errno 2] No 
+such file or directory
+
+Closed
+[2021-01-19 19:25:55] <raphael10-collab> How to solve the problem? Looking forward to your kind help
+[2021-01-19 19:44:48] <raphael10-collab> Following the indications found here: https://webpack.js.org/plugins/copy-webpack-plugin/#root  I modified the /tools/webpack/webpack.plugins.js as : 
+[2021-01-19 19:45:22] <raphael10-collab>      const CopyPlugin = require("copy-webpack-plugin");
+    module.exports = [
+      new ForkTsCheckerWebpackPlugin(),
+      new webpack.ExternalsPlugin('commonjs', [
+        'electron'
+      ]),
+      new CopyPlugin({
+        patterns: [
+          { from: "src/scripts/", to: ".webpack/main/script/" },
+        ],
+      }),
+    ];
+[2021-01-19 19:46:03] <raphael10-collab> To me, it seems respecting the standard, but I get this long error message:
+[2021-01-19 19:46:30] <raphael10-collab>     An unhandled error has occurred inside Forge:
+    compilation.getCache is not a function
+    TypeError: compilation.getCache is not a function
+        at /home/marco/webMatters/electronMatters/PythonConnection/node_modules/copy-webpack-plugin/dist/index.js:459:33
+        at SyncHook.eval (eval at create (/home/marco/webMatters/electronMatters/PythonConnection/node_modules/tapable/lib/HookCodeFactory.js:19:10),   <anonymous>:7:1)
+    at SyncHook.lazyCompileHook (/home/marco/webMatters/electronMatters/PythonConnection/node_modules/tapable/lib/Hook.js:154:20)
+    at Compiler.newCompilation (/home/marco/webMatters/electronMatters/PythonConnection/node_modules/webpack/lib/Compiler.js:630:30)
+    at /home/marco/webMatters/electronMatters/PythonConnection/node_modules/webpack/lib/Compiler.js:667:29
+    at AsyncSeriesHook.eval [as callAsync] (eval at create (/home/marco/webMatters/electronMatters/PythonConnection/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:6:1)
+    at AsyncSeriesHook.lazyCompileHook (/home/marco/webMatters/electronMatters/PythonConnection/node_modules/tapable/lib/Hook.js:154:20)
+    at Compiler.compile (/home/marco/webMatters/electronMatters/PythonConnection/node_modules/webpack/lib/Compiler.js:662:28)
+    at /home/marco/webMatters/electronMatters/PythonConnection/node_modules/webpack/lib/Watching.js:77:18
+    at AsyncSeriesHook.eval [as callAsync] (eval at create (/home/marco/webMatters/electronMatters/PythonConnection/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:33:1)
+    at AsyncSeriesHook.lazyCompileHook (/home/marco/webMatters/electronMatters/PythonConnection/node_modules/tapable/lib/Hook.js:154:20)
+    at Watching._go (/home/marco/webMatters/electronMatters/PythonConnection/node_modules/webpack/lib/Watching.js:41:32)
+    at /home/marco/webMatters/electronMatters/PythonConnection/node_modules/webpack/lib/Watching.js:33:9
+    at Compiler.readRecords (/home/marco/webMatters/electronMatters/PythonConnection/node_modules/webpack/lib/Compiler.js:529:11)
+    at new Watching (/home/marco/webMatters/electronMatters/PythonConnection/node_modules/webpack/lib/Watching.js:30:17)
+    at Compiler.watch (/home/marco/webMatters/electronMatters/PythonConnection/node_modules/webpack/lib/Compiler.js:244:10)
+    error Command failed with exit code 1.
+
+[2021-01-19 19:46:56] <raphael10-collab>  What am I doing wrong?
+[2021-01-20 06:05:39] <specialWjy> it look like your webpack`s version is lower than your copy-webpack-plugin,try to update or demotion
+
+[2021-01-20 08:42:14] <raphael10-collab> Hi @specialWjy . Thanks for helping. I upgraded webpack to the lastest available: webpack@5.16.0 , and downgraded copy-webpack-plugin to the version before the latest: copy-webpack-plugin@6.4.1 . But the problem persists. Did I write  /tools/webpack/webpack.plugins.js correctly?
+[2021-01-20 09:10:28] <specialWjy> I has the same mistakes as you，i used copy-webpack-plugin`s version with  7.0.0.0 and webpack version is 4.16.4 at that time.when i downgraded copy-webpack-plugin`s  version to 
+4.5.0, and code like this 
+new CopyWebpackPlugin([
+      {
+        from: path.resolve(__dirname, '../src'),
+        to: path.resolve(__dirname, '../dist')
+      }
+    ])  this error was solved,i'm so sorry i can only help you a little
+[2021-01-20 10:23:03] <raphael10-collab> I tried to downgrade copy-webpack-plugin and webpack to those versions: now I have as devDependencies: "copy-webpack-plugin": "4.5.0",  "webpack": "4.16.4" and in /tools/webpack/webpack.plugins.js :
+[2021-01-20 10:23:31] <raphael10-collab>     module.exports = [
+      new ForkTsCheckerWebpackPlugin(),
+      new webpack.ExternalsPlugin('commonjs', [
+        'electron'
+      ]),
+
+      new CopyPlugin({
+        patterns: [
+          { from: path.resolve(__dirname, "../../src/scripts/*"),
+            to: path.resolve(__dirname, "../../.webpack/main/scripts") },
+        ],
+      })
+    ];
+
+[2021-01-20 10:23:57] <raphael10-collab> But still get these error messages :  
+[2021-01-20 10:24:31] <raphael10-collab>     An unhandled error has occurred inside Forge:
+    [copy-webpack-plugin] patterns must be an array
+    Error: [copy-webpack-plugin] patterns must be an array
+        at new CopyWebpackPlugin (/home/marco/webMatters/electronMatters/PythonConnection/node_modules/copy-webpack-plugin/dist/index.js:22:15)
+        at Object.<anonymous> (/home/marco/webMatters/electronMatters/PythonConnection/tools/webpack/webpack.plugins.js:26:3)
+        at Module._compile (internal/modules/cjs/loader.js:1201:30)
+        at Object.Module._extensions..js (internal/modules/cjs/loader.js:1221:10)
+        at Module.load (internal/modules/cjs/loader.js:1050:32)
+        at Function.Module._load (internal/modules/cjs/loader.js:938:14)
+        at Module.require (internal/modules/cjs/loader.js:1090:19)
+        at require (internal/modules/cjs/helpers.js:75:18)
+        at Object.<anonymous> (/home/marco/webMatters/electronMatters/PythonConnection/tools/webpack/webpack.renderer.js:3:17)
+        at Module._compile (internal/modules/cjs/loader.js:1201:30)
+        at Object.Module._extensions..js (internal/modules/cjs/loader.js:1221:10)
+        at Module.load (internal/modules/cjs/loader.js:1050:32)
+        at Function.Module._load (internal/modules/cjs/loader.js:938:14)
+        at Module.require (internal/modules/cjs/loader.js:1090:19)
+        at require (internal/modules/cjs/helpers.js:75:18)
+        at WebpackConfigGenerator.resolveConfig (/home/marco/webMatters/electronMatters/PythonConnection/node_modules/@electron-forge/plugin- webpack/src/WebpackConfig.ts:42:14)
+
+[2021-01-20 10:31:02] <raphael10-collab> Anyway.... thank you @specialWjy  for trying to help me
+[2021-01-20 11:03:58] <jenwirth> Hi, i have a very basic question on `mini-css-extract-plugin`. In the documentation is reads "it creates a CSS file per JS file which contains CSS". What does that mean? If i have one entry with two javascript files, each importing a separate css files, i still end up with a single `main.js`. Which i am fine with, but i don't understand that quoted line from the docs
+[2021-01-20 11:12:12] <raphael10-collab> 
+I reported the issue above in webpack's github page: https://github.com/webpack/webpack/issues/12461 and in electron's github page: https://github.com/electron/electron/issues/27390
+
+[2021-01-20 11:34:29] <raphael10-collab> And also here: https://github.com/electron-userland/electron-forge/issues/2135
+[2021-01-20 14:24:47] <trippel> Hi all,
+I am struggling with the following:
+I have thrown together a little plugin which creates a bunch of svg files from a json files. :
+
+```
+apply(compiler) {
+		compiler.hooks.afterPlugins.tap('JSON2SVG', () => {
+				// Create files
+		});
+		compiler.hooks.done.tap('JSON2SVG', () => {
+			// Delete files
+		});
+	}
+```
+Furthermore I have defined a module.rules in my webpack.config with the hope that it would process the created svg files:
+
+```
+{
+          test: /\.svg$/,
+          use: [
+            {
+              loader: 'svg-sprite-loader',
+            },
+          ],
+        },
+```
+As you can imagine, that does not seem to work as intended and from what I can tell, the svg-sprite-loader never gets triggered. Could anyone push me in the right direction to achieve the result: Create SVGs -> svg-sprite-loader-magic -> remove SVGs? I would be glad. Thanks in advance.
+[2021-01-20 16:10:36] <mukuljainx> Hello everyone, having a problem with splitting chunks, this is my current config
+
+```
+splitChunks: {
+      chunks: 'all',
+      maxInitialRequests: Infinity,
+      minSize: 0,
+      cacheGroups: {
+        patientVendor: {
+          test: /[\\/]node_modules[\\/](!react-pdf)[\\/]/,
+          name: 'patientVendor',
+          chunks: 'all',
+        },
+        reactPDFVendor: {
+          test: /[\\/]node_modules[\\/](react-pdf)[\\/]/,
+          name: 'reactPDFChunk',
+          chunks: 'all',
+        },
+      },
+    },
+  }
+```
+
+Expected:
+different chunk for react-pdf
+different chunk for every other module with the name *`patientVendor.[hash].js`*
+
+Current:
+different chunk for react-pdf
+different chunk for every other module with *the name `[hash].js`*
+
+Can someone point out the mistake it has 2 hours since my struggling with this... Thankyou
+[2021-01-20 17:07:55] <raphael10-collab> Hi @specialWjy With the combination :
+
+"copy-webpack-plugin": "6",
+"webpack": "4"
+
+I do not get those errors anymore.  Thank you for pointing me to the right direction
+[2021-01-20 18:58:33] <itsmenabil> @itsmenabil
+hey guys, im new to this, can anyone please help me solve this code so i can join codewars
+function multiply(a , b){
+  a * b
+}
+[2021-01-21 00:48:01] <specialWjy> i konw this problem,if you use cpoy-webpack-plugin@6.5.0,you must write code as: const CopyWebpackPlugin = require("copy-webpack-plugin") and try use like: new CopyWebpackPlugin([]) 
+[2021-01-21 06:05:09] <gowrisankarvoltuswave> hi guys.. I have an problem with vue files... after bundlig i am getting this error "Cannot read property 'toLowerCase' of undefined"
+[2021-01-21 06:06:23] <gowrisankarvoltuswave> Can anyone help on this..
+[2021-01-21 06:07:53] <gowrisankarvoltuswave> I am Using webpack 4 along with vue ^2.2.6
+[2021-01-21 12:17:05] <TomDGW2> Hey fellas!
+Anyone know if it's possible with webpack to process several JS files as entry files, and also reference them from HTML files that get handled with `html-loader`, by having it inject the correct filenames with hash to wherever an existing `<script src="">` tag referencing the original souce files, already exists? I've not been able to solve this for 3 days now.
+[2021-01-21 14:59:24] <kettanaito> Please, how to create a custom plugin that behaves as `webpack.DefinePlugin` but can re-initialize global variables?
+I have a watcher over fs, watcher produces JSON. Whenever there's a new/deleted file, I need to update the global variable exposed via `DefinePlugin`.
+ 
+[2021-01-21 15:30:18] <thw0rted> I think this is what `html-webpack-plugin` does, specifically with the `inject: true` option.  You don't write the `script` tag yourself, they're generated and injected in the template you configure
+[2021-01-21 15:32:57] <thw0rted> In my case I have `entry: { main: ["./src/main.ts", "./src/main.css"]}` and `plugins: [new HtmlPlugin({template: "./src/index.html", inject: true, ...}]`
+
+[2021-01-21 15:36:10] <thw0rted> `optimize.splitChunks` creates several bundles, and all of them are injected in the built `index.html`, appended at the end of existing content in `<head>` for CSS and `<body>` for scripts
+[2021-01-21 20:34:15] <steinybot> Does anyone know what the definition is for the elements in the `sources` array in a source map? The Closure compiler seems to do something sane and just has normal looking file paths. I can’t understand what webpack does. It puts these weird `webpack://` URLs. What are they? Why does it use that? How is it that browsers seem to understand it?
+[2021-01-21 22:39:34] <lucasferreiralimax> Hi everyone, good night.
+[2021-01-21 22:41:17] <lucasferreiralimax> I don't understand, I make a rule css loader with localIdentName: [name]-[local]--[hash:base64:5]
+[2021-01-21 22:41:41] <lucasferreiralimax> But in pug/HTML don't get this class name generator
+[2021-01-21 22:42:19] <lucasferreiralimax> I need other plugin in rule of pug/HTML?
+[2021-01-21 22:43:07] <lucasferreiralimax> What is? I read the docs webpack but not find about this
+
+[2021-01-21 22:48:12] <lucasferreiralimax> Thanks for help
+
+[2021-01-22 03:34:02] <marcusds> Hi, any idea why in Webpack 5 chunks from `splitChunks.cacheGroups` seem be named by output.filename, not `output.chunkFilename`? Here is the relevant code:
+
+```
+		output: {
+			filename: '[name].test.js',
+			path: __dirname, 
+			publicPath: '/resources/',
+			chunkFilename: '[chunkhash].chunk.js'
+		},
+		splitChunks: {
+				chunks: 'async',
+				minSize: 20000,
+				minRemainingSize: 0,
+				maxSize: 0,
+				minChunks: 1,
+				maxAsyncRequests: 30,
+				maxInitialRequests: 30,
+				enforceSizeThreshold: 50000,
+				cacheGroups: {
+					defaultVendors: {
+						test: /[\\/]node_modules[\\/]/,
+						priority: -10,
+						reuseExistingChunk: true
+					},
+					default: {
+						minChunks: 2,
+						priority: -20,
+						reuseExistingChunk: true
+					}
+				}
+			}
+```
+
+Anything coming out of `splitchunks.cacheGroup.defaultVendors` is being named `something.test.js`, not `[chunkhash].chunk.js`.
+
+Thanks!
+[2021-01-22 13:29:09] <devnix> Hello, I've spend hours trying to get rid of this when compiling (using Symfony Encore):
+```
+ error  in ./assets/legacy.js
+
+Syntax Error: Error: Must export a default export when using ES6 modules.
+    at Array.map (<anonymous>)
+    at cachedFunction.next (<anonymous>)
+    at Generator.next (<anonymous>)
+    at buildRootChain.next (<anonymous>)
+```
+
+I'm trying to add various formats polyfills, and it seems like the uncommented line is the offending one:
+
+```javascript
+    .configureBabel(function(config) {
+        config.presets.push('stage-3');
+        // config.plugins.push('@babel/plugin-transform-runtime');
+        // config.plugins.push('@babel/plugin-proposal-class-properties');
+        // config.plugins.push('@babel/plugin-transform-object-assign');
+        config.plugins.push('@formatjs/intl-getcanonicallocales/polyfill');
+        // config.plugins.push('@formatjs/intl-datetimeformat/polyfill');
+        // config.plugins.push('@formatjs/intl-datetimeformat/add-all-tz');
+        // config.plugins.push('@formatjs/intl-locale/polyfill');
+        config.plugins.push('react-intl');
+    })
+```
+
+Do you have any thoughts?
+[2021-01-23 03:25:06] <TomDGW2> > I think this is what `html-webpack-plugin` does, specifically with the `inject: true` option.  You don't write the `script` tag yourself, they're generated and injected in the template you configure
+
+@thw0rted Yes thank you for replying! However that is actually what I wanted to avoid, I want the template to be scanned for script tags and automatically inject the ones that appear in my code. This works with CSS files when I used`html-loader`, but with the bundle js files it instead executes the bundle code in the node process, and outputs a jumbled mess.
+[2021-01-24 03:20:46] <VictorQueiroz> Hi. How can I find out why unused exports are being included in the production bundle?
+
+[2021-01-24 05:05:04] <marcusds> https://webpack.js.org/guides/tree-shaking/ - You may need to setup sideEffects in your package.json
+[2021-01-24 13:57:04] <TheoOliveira> Cant' set relative path and try several things but nothing seems to set.
+```
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const FontminPlugin = require("fontmin-webpack");
+
+module.exports = {
+  entry:()=>["/src/index.js", "/src/assets/lander.js", "/src/cf_stripe_orders.js"],
+  output: {
+    filename: "bundle.js",
+    path: path.resolve(__dirname, "dist"),
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: "/src/yoniclubclosed.html",
+      output:{
+        publicPath: '/'
+      }
+    }),
+    new FontminPlugin({ autodetect: true }),
+  ],
+  module: {
+    rules: [
+      
+      {
+        test: /\.(svg|jpe?g|png|gif)(\?v=\d+\.\d+\.\d+)?$/,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "[hash].[ext]",
+              publicPath: '/dist/'
+             
+            },
+          },
+        ],
+      },
+      {
+        test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
+        use: [{
+          loader: 'file-loader',
+          options:{
+            name: "[hash].[ext]",
+            publicPath: '/dist/'
+            
+            
+          }
+        }
+        ]
+      },
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+        
+      },
+    ],
+  },
+};
+
+```
+
+[2021-01-24 20:55:40] <Jackiecasey_gitlab> Hello
+[2021-01-24 20:56:28] <Jackiecasey_gitlab> Does anyone has a trading bot software available or mining bot software here?
+[2021-01-25 09:06:00] <thw0rted> I don't think this is how Webpack works, generally.  I'm not an expert, I could be wrong and yours could be a supported use-case, but I haven't seen it.
+[2021-01-25 09:07:03] <thw0rted> You say "with the bundle js files" -- how can you reference the *output* of the bundling process, during the build itself?
+[2021-01-25 09:07:22] <thw0rted> A concrete example of what you're trying to do might be helpful
+[2021-01-25 09:08:52] <thw0rted> If e.g. you were talking about dependencies, and you've got a `<script src="lodash.js">` or something, that's simply the wrong way to do it and you should be importing that from a `vendors.js` which should itself be declared as an entry point.  But it sounds like that's not what you mean?
+[2021-01-25 09:11:32] <NicolasBonduel> Hello!
+
+Upgrading to webpack 5, I am encountering an issue with the devServer.
+When using the webserver, our library output is an empty object, without the webserver, the library output is as expected.
+
+Here is a git repo for reproducing the issue: https://github.com/NicolasBonduel/webpack-web-server-bug-reproduction
+
+- When running `npm run serve`, the project won't work, and the `testlib` variable will be an empty project.
+- When running `npm run build:qa`, the project will compile fine, and testing with `npx http-server`, the `testlib` variable contains what's expected (an `init` function)
+
+Am I missing something obvious?
+[2021-01-25 09:14:44] <thw0rted> I was going to suggest `source-map-explorer` but that just tells you if a file was included or not, it doesn't tell you *why*.  I'd be interested to know if you find a plugin or other feature that traces the require/import chain
+[2021-01-25 09:27:14] <NicolasBonduel> I meant "the `testlib` variable will be an empty object*"
+[2021-01-25 10:18:12] <GiladShoham> Hello,
+Is there a @types package for webpack-dev-server@next ? (v4.0.0-beta.0)
+Thanks!
+[2021-01-25 12:51:51] <NicolasBonduel> Turns out the webpack-dev-server is not yet compatible with webpack 5. Using webpack-dev-server v4.0.0-beta.0 makes it work
+[2021-01-25 14:01:25] <zheyaoa> I have a good idea is that use babel-loader and esbuild-loader both in webpack.
+So I have a test is config my webpack is that
+```
+      {
+        test: /\.(jsx?)$/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              loader: 'jsx',
+              target: 'es2015'
+            }
+          },
+
+        ]
+      },
+```
+i want to use esbuild-loader to transform code from high version code to es5.
+The babel-loader only use to do some custom babel-plugin sush as babel-plugin-import and react-refresh/babel
+```
+{
+  "plugins": [
+    [
+      "import",
+      {
+        "libraryName": "antd",
+        "style": "css"
+      }
+    ],
+    "react-refresh/babel",
+  ]
+}
+```
+But i get an error .
+```
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+Error: .inputSourceMap must be a boolean, object, or undefined
+    at assertInputSourceMap (/Users/yuxin.yu/code/sales_pitch_sdk/node_modules/@babel/core/lib/config/validation/option-assertions.js:110:11)
+    at /Users/yuxin.yu/code/sales_pitch_sdk/node_modules/@babel/core/lib/config/validation/options.js:109:5
+    at Array.forEach (<anonymous>)
+    at validateNested (/Users/yuxin.yu/code/sales_pitch_sdk/node_modules/@babel/core/lib/config/validation/options.js:85:21)
+    at validate (/Users/yuxin.yu/code/sales_pitch_sdk/node_modules/@babel/core/lib/config/validation/options.js:76:10)
+    at loadPrivatePartialConfig (/Users/yuxin.yu/code/sales_pitch_sdk/node_modules/@babel/core/lib/config/partial.js:78:50)
+    at loadPrivatePartialConfig.next (<anonymous>)
+    at /Users/yuxin.yu/code/sales_pitch_sdk/node_modules/@babel/core/lib/config/partial.js:140:25
+    at Generator.next (<anonymous>)
+    at step (/Users/yuxin.yu/code/sales_pitch_sdk/node_modules/gensync/index.js:261:32)
+```
+I don't know what happened.
+[2021-01-25 14:33:00] <thw0rted> I filed https://github.com/webpack/webpack-dev-server/issues/2935 about it but the response I got is pretty typical of the webpack ecosystem, unfortunately
+[2021-01-25 19:16:26] <NicolasBonduel> No worries, thanks for your work and for helping so many people!
+[2021-01-25 19:52:21] <hkjpotato> hi webpack masters, I wonder if I can create a plugin or something, which will have access to specific loader's input and output.  I would like to log them into my terminal to better understand the process, and identify potential bugs from the processed content of the loader. (E.g. log out  ts-loader's output to the terminal)
+[2021-01-26 08:50:07] <thw0rted> I don't have experience with it myself but https://webpack.js.org/api/compilation-hooks/ explains the lifecycle events that are exposed by hooks and https://github.com/webpack/tapable does a pretty good job of explaining the interface those events use
+[2021-01-26 08:50:33] <hkjpotato> thank you~
+[2021-01-26 08:50:46] <thw0rted> 
+[2021-01-26 08:53:46] <thw0rted> My first thought was, I wonder if this exists? Found https://www.npmjs.com/package/log-loader , but it hasn't been updated for 4 years
+[2021-01-26 08:54:31] <thw0rted> I already use https://www.npmjs.com/package/null-loader so I figured *somebody* must have written a pass-through logging loader
+[2021-01-26 10:59:25] <GiladShoham> I notice that the MultiStats type is not exported from the types (Webpack5) which cause this error for me `Return type of public method from exported class has or is using name 'MultiStats' from external module` 
+
+
+
+
+[2021-01-26 15:25:10] <nicobrinkkemper> Hello
+[2021-01-26 15:26:31] <nicobrinkkemper> I'm trying out webpack 5's new asset/resource concept, but I'm struggling to do a very simple thing. I followed the webpack documentation on how to generate additional webp formats, but when they are generated like this I can not influence the directory they end up in.
+[2021-01-26 15:54:22] <codymikol> Are there any good writeups on how `addModule` is used?
+[2021-01-26 15:55:24] <codymikol> or more specifically dynamic module creation inside of a webpack plugin
+[2021-01-26 16:13:10] <nicobrinkkemper> I asked my question here, let me know if you have any ideas
+
+[2021-01-26 16:13:13] <nicobrinkkemper> https://stackoverflow.com/questions/65904582/how-do-i-use-webpack5s-asset-resource-and-imageminimizerplugin-to-mirror-so
+[2021-01-26 16:17:08] <Zayniddin98> Guys Honestly how much u earn for a week or month in Frontend or other web developing ??
+[2021-01-26 16:44:46] <nicobrinkkemper> depends on where you live/work
+[2021-01-27 02:33:55] <akashgp09> Hello everyone! Is webpack applying as an organization this year for GSOC?
+[2021-01-27 07:10:01] <berniedev007> Hello everyone. I have one question. I have a webpage built with React. It has many images on the page ( total 36MB) so the production bundle size is way too big and site is slow.
+[2021-01-27 07:10:11] <berniedev007> Is there any way to reduce the bundle size?
+[2021-01-27 09:54:50] <thw0rted> What's your webpack config look like?  You must either have a *huge* number of images or a bad config for the image filetype.  By default, the `url-loader` (v4) or `type: "asset"` (v5) only puts files in the bundle if they're under a small limit, something like 4-8kb
+
+ETA: oops, `url-loader` defaults to no limit, so it'll inline every (enormous) image by default.
+[2021-01-27 09:56:06] <thw0rted> If you're stuck with v4, and you're using `url-loader` for images, make sure it has a [`limit` option](https://webpack.js.org/loaders/url-loader/#limit)
+[2021-01-27 09:57:11] <thw0rted> If you're on v5 and you use [asset modules](https://webpack.js.org/guides/asset-modules/) then just setting `type: "asset"` should fix it
+[2021-01-27 10:38:34] <ArtoCully> Hi everyone, i was wondering if someone could help me. I have webpack 4 and recently updates the resolve paths to absolute paths. But now vscode go to definitions do not go to the correct modules
+[2021-01-27 10:38:42] <ArtoCully> the paths however seem to be correct.
+
+
+[2021-01-27 11:06:56] <majo44> Hello is there any way to force weboack to load module with particular extension instead of the original import
+Let say we have: 
+```
+/src
+    |- a.css
+    |- a.css.ts
+    |- a.ts
+```
+and within the a.ts we have 
+```
+import something from  'a.css'
+```
+How to force resolution to  `a.css.ts` instead of to `a.css` ? I know that order of `resolve.extensions` is taken into account as I see but the direct import resolution have a highest priority. 
+[2021-01-27 11:34:45] <Zayniddin98> Is there anyone works as a developer??
+[2021-01-27 11:43:07] <rtalon83> Hello everybody!
+
+I have a complex question. I want to make a simple library with Webpack + Typescript. For example, a library with several independent classes. I make the library:
+
+```
+...
+filename: 'my_lib.js',    
+library: 'LIB',
+libraryTarget: 'umd',
+...
+```
+
+Then, I use this library in another project copying it in **/libs/my_lib.js** and only use one classes:
+
+```
+import * as LIB from '../libs/my_lib';
+
+let myClass = new LIB.MyClass();
+```
+
+But my, finnally, bundle include all classes from **my_lib.js** when I use only one.
+
+I'm searching information but I don't find any example.
+Thanks!!
+[2021-01-27 11:53:50] <thw0rted> That's because you're packaging it as UMD.  What you want to do is called "tree shaking" (excluding unused code) and it's only possible when the code you're importing is packaged as an ES6 module
+[2021-01-27 11:54:25] <thw0rted> I think also you might need to do individual imports, i.e. `import {MyClass} from "/path/to/my_lib"`
+[2021-01-27 11:55:02] <rtalon83> But, I want to write LIB.MyClass
+[2021-01-27 11:56:31] <thw0rted> Scratch that second part, my guess was wrong: https://github.com/webpack/webpack/issues/2713
+[2021-01-27 11:57:04] <thw0rted> But I'm pretty sure you still need your library to be ES6 modules
+[2021-01-27 11:57:08] <thw0rted> not UMD
+[2021-01-27 11:57:24] <thw0rted> you probably shouldn't need webpack to build your library in the first place
+[2021-01-27 11:57:31] <thw0rted> just `tsc`
+[2021-01-27 11:57:56] <rtalon83> or rollup
+[2021-01-27 11:58:02] <rtalon83> instead of webpack
+[2021-01-27 11:59:04] <thw0rted> Sure.  For the consuming project (using webpack), the docs are here: https://webpack.js.org/guides/tree-shaking/
+[2021-01-27 12:01:38] <rtalon83> Ok, I going to research **tsc** first
+[2021-01-27 12:01:43] <rtalon83> thanks James!
+[2021-01-27 12:10:28] <thw0rted> 
+[2021-01-27 21:09:37] <steinybot> Is it possible to get webpack to replace a require with the public path of an asset as a string? For example:
+```
+sourceMap.SourceMapConsumer.initialize({
+    "lib/mappings.wasm": require("source-map/lib/mappings.wasm");
+)}
+```
+Would be:
+```
+sourceMap.SourceMapConsumer.initialize({
+    "lib/mappings.wasm": "lib/mappings.wasm"
+)}
+```
+assuming that the file loader copies `*.wasm` to `lib`
+[2021-01-28 01:25:14] <tusharnerkar8_gitlab> Hi All,
+Material fonts are not loaded when used offline.
+ I am trying to use material-design-icons npm package and use material-icons offline. I installed the npm package, in my main.js I have imported the css 
+```
+import "material-design-icons/iconfont/material-icons.css"
+```
+When I run the application, it loads the styles in <style> element in document , also the css  is inserted in the javascript properly and when we inspect the span in browser, we can see the css loaded properly. 
+[![image.png](https://files.gitter.im/529f74f4ed5ab0b3bf04ef26/ABd0/thumb/image.png)](https://files.gitter.im/529f74f4ed5ab0b3bf04ef26/ABd0/image.png)
+But the fonts are not loaded. In computed styles also , I don't see material font loaded. 
+
+In Webpack.config
+```
+const { resolve } = require("path")
+const webpack = require("webpack")
+const ExtractTextPlugin = require("extract-text-webpack-plugin")
+const HtmlWebpackPlugin = require("html-webpack-plugin")
+const UglifyJsPlugin = require("uglifyjs-webpack-plugin")
+
+const config = {
+  mode: "production",
+  devtool: "source-map",
+
+  entry: {
+    app: ["babel-polyfill", "./src/main.js"]
+  },
+
+  output: {
+    filename: "static/[name].[chunkhash].js",
+    chunkFilename: "static/[name].[chunkhash].chunks.js",
+    sourceMapFilename: "static/[name].[chunkhash].map",
+    path: resolve(__dirname, "build/"),
+    publicPath: ""
+  },
+
+  performance: {
+    hints: "warning"
+  },
+
+  bail: true,
+
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: [
+              [
+                "env",
+                {
+                  modules: false,
+                  targets: {
+                    browsers: ["last 2 versions"]
+                  }
+                }
+              ],
+              "babel-preset-react",
+              "babel-preset-react-optimize"
+            ],
+            plugins: [
+              "babel-plugin-transform-runtime",
+              "babel-plugin-syntax-trailing-function-commas",
+              "babel-plugin-transform-class-properties",
+              "babel-plugin-transform-object-rest-spread",
+              "babel-plugin-transform-react-constant-elements",
+              "syntax-dynamic-import",
+              "lodash",
+              "recharts"
+            ]
+          }
+        }
+      },
+      {
+        test: /\.s?css$/,
+        use: [
+          {
+            loader: "style-loader" // creates style nodes from JS strings
+          },
+          {
+            loader: "css-loader" // translates CSS into CommonJS
+          },
+          {
+            loader: "sass-loader" // compiles Sass to CSS
+          }
+        ]
+      },
+      {
+        test: /\.(ttf|eot|woff|woff2|svg)$/,
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]',
+            outputPath: 'fonts/'
+          },
+        },
+      },
+      { test: /\.(png|jpg)$/, use: "url-loader?limit=15000" },
+      { test: /\.eot(\?v=\d+.\d+.\d+)?$/, use: "file-loader" },
+      { test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/, use: "url-loader?limit=10000&mimetype=application/font-woff" },
+      { test: /\.[ot]tf(\?v=\d+.\d+.\d+)?$/, use: "url-loader?limit=10000&mimetype=application/octet-stream" },
+      { test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, use: "url-loader?limit=10000&mimetype=image/svg+xml" }
+    ]
+  },
+
+  plugins: [
+    new webpack.DefinePlugin({'process.env': JSON.stringify('production')}),
+    new webpack.DefinePlugin({'process.env.NODE_ENV': JSON.stringify('production')}),
+    new webpack.LoaderOptionsPlugin({
+      minimize: true,
+      debug: false
+    }),
+    new UglifyJsPlugin({
+      sourceMap: true,
+    }),
+    new HtmlWebpackPlugin({
+      title: "Dash-UI",
+      inject: false,
+      favicon: "./assets/img/favicon.png",
+      template: "./index.html.ejs",
+      appMountId: "app",
+      production: true
+    })
+  ]
+}
+
+module.exports = config
+
+```
+[2021-01-28 01:41:06] <tusharnerkar8_gitlab> And I can see successful woff requests in network tab
+[2021-01-28 02:03:08] <thanaratjaruenying> 
+[2021-01-28 03:35:28] <643104191> [![image.png](https://files.gitter.im/529f74f4ed5ab0b3bf04ef26/ltiP/thumb/image.png)](https://files.gitter.im/529f74f4ed5ab0b3bf04ef26/ltiP/image.png)
+[2021-01-28 03:35:31] <643104191> hi there.Does anyone know how to distinguish whether it is the same variable in ast?
+[2021-01-28 04:50:37] <berniedev007> Well,  20-30 images
+[2021-01-28 11:40:54] <thw0rted> In v4, this is what `file-loader` does.  In v5, it's `type: "asset/resource"` per https://webpack.js.org/guides/asset-modules/
+[2021-01-28 11:43:22] <thw0rted> I'm not sure it will fix your issue but you should change to `material-design-icons-iconfont`, the `material-design-icons` package is intended for people who want to build their own fonts from sources
+[2021-01-28 11:43:40] <thw0rted> it's not really kept up to date and is an order of magnitude larger
+[2021-01-28 11:45:33] <thw0rted> You have two `rules` for each font type, I'm not sure what happens when two rules match the same file.  (First one wins maybe?)
+[2021-01-28 11:51:53] <thw0rted> If you're considering a move to webpack v5, you can convert to asset modules.  My font rules look like
+
+````json
+        {
+            test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/,
+            type: "asset",
+            generator: {
+                dataUrl: {
+                    mimetype: "application/font-woff",
+                },
+                filename: "./Assets/[name][ext]"
+            },
+        }, {
+            test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
+            type: "asset",
+            generator: {
+                dataUrl: {
+                    mimetype: "application/octet-stream",
+                },
+                filename: "./Assets/[name][ext]"
+            },
+        }, {
+            test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
+            type: "asset",
+            generator: {
+                dataUrl: {
+                    mimetype: "application/vnd.ms-fontobject",
+                },
+                filename: "./Assets/[name][ext]"
+            }
+        }
+````
+[2021-01-28 11:54:20] <thw0rted> Well, that means your images are a lot more than 8kb each, so as I said in the channel you must not have a `limit` set on your `url-loader`.  If moving to v5 is an option, you can just change to asset modules and get sane defaults for free
+[2021-01-29 02:02:36] <Zeranoe> Can I force a module to resolve to another? As in, don't even check and then `fallback`, but just use the other one
+[2021-01-29 05:41:57] <AswinCG2002> Can someone suggest me how to get started here?
+[2021-01-29 21:17:37] <snoozbuster> hello... I have a question about webpack-dev-server and http-proxy-middleware
+[2021-01-29 21:32:20] <robertmain> got a slightly odd webpack setup - wondered if someone could advise?
+[2021-01-29 21:33:19] <robertmain> i have a server-side nestjs application that i need to compile with webpack as well as a frontend app that i need to bundle with the same webpack config
+[2021-01-29 21:33:44] <robertmain> i know you can have multiple configs in one file, but the back-end app has it's own static server built in that i want to use in prod, but not dev
+[2021-01-30 10:12:49] <mijatovicmile> Hello 
+[2021-01-30 10:13:37] <mijatovicmile> Can you review these two webpack configuration, and tell me which one is better
+
+https://github.com/homerchen19/bootstrap-webpack-jquery-boilerplate/blob/505796277391e863afab58b6570fe88ad04c5646/webpack.config.js
+
+https://github.com/manchenkoff/webpack-bootstrap/blob/master/webpack.config.js
+[2021-01-30 10:14:05] <mijatovicmile> I don't have experience with Webpack, but I must use it to compile js and scss
+So, I need to copy paste configuration :(
+
+Basically I don't need production version, because I just want to compile js and scss , and later I will deliver my front-end code to the back-end developer
+
+Can you help me please ?
+
+
+
+[2021-01-30 10:15:17] <mijatovicmile> I just need to compile part of JS instead of including the whole bootstrap.min.js, I don't need anything else 
+[2021-01-30 18:06:40] <robertmain> Hey folks, getting this error from webpack:
+
+`ERROR in NormalModuleFactory.beforeResolve is no longer a waterfall hook, but a bailing hook instead. Do not return the passed object, but modify it instead. Returning false will ignore the request and results in no module created.`
+[2021-01-30 18:07:10] <robertmain> I've tried deduping versions of webpack, but i can't get any more info on what's wrong
+[2021-01-30 19:02:54] <robertmain> fixed it by updating my webpack version
+[2021-01-31 13:05:49] <happybeing> I'm having an issue with the `webpack-dev-middleware`. Is there a way to get it to serve resources from disk which it is not emitting itself? For example I have `./dist/wasm/somefile.wasm` but it gives a 404 for this. The same `webpack.config.js` works with the `webpack-dev-server` CLI though so I assume this should be possible.
+[2021-01-31 13:17:25] <happybeing> I also have my own `./dist/index.html` which I'd rather use than one created by the `HtmlWebpackPlugin` plugin, but that's less of an issue.
+[2021-01-31 17:15:35] <happybeing> ^^ I've figured this out. Solution is that I needed to instruct the `express` middleware I'm using to serve the static assets:
+```
+    app.use(express.static(webpackConfig.devServer.contentBase));
+    app.use(
+        middleware(compiler, {
+            // webpack-dev-middleware options
+        })
+    );
+```
+[2021-01-31 20:14:01] <Spence-S> Does anyone here know if you can use the new asset modules inline like you could with say raw loader? like... `require('raw-loader!whatever.svg')`
+
+[2021-02-01 10:08:12] <thw0rted> Spencer: https://webpack.js.org/guides/asset-modules/ gives a good overview
+[2021-02-01 10:08:23] <thw0rted> "asset/source exports the source code of the asset. Previously achievable by using raw-loader."
+[2021-02-01 10:15:20] <thw0rted> Re-reading the question, it looks like you're trying to find override syntax, so you could e.g. configure `svg` as `type: asset` normally, but in one specific case, `require` the raw content instead.  Is that right?  If so, I haven't seen a way to do that, so it might be worth opening an issue
+[2021-02-01 12:33:06] <raimohanska> Hey, I followed the instructions here https://webpack.js.org/guides/development/#using-webpack-dev-server
+
+And the script `webpack-dev-server --open` fails. I found instructions [here](https://stackoverflow.com/questions/40379139/cannot-find-module-webpack-bin-config-yargs) saying I should use `webpack --serve` instead. I guess the documentation is outdated. How can I help?
+[2021-02-01 13:33:49] <thw0rted> The page you linked already says to use `webpack serve`, just search the page
+[2021-02-01 13:33:57] <thw0rted> but it probably could use an entry on https://webpack.js.org/migrate/5/ as well
+[2021-02-01 13:34:52] <thw0rted> You do still need the `webpack-dev-server` package installed, it's what `webpack serve` uses under the hood
+[2021-02-01 13:35:25] <thw0rted> note it's actually `webpack serve`, a subcommand, not `--serve` as a flag/switch/option/whatever
+[2021-02-01 19:21:04] <raimohanska> Ah, I refreshed my browser and the page seems to be now up-to-date. Yeah definitely `webpack serve` not `webpack --serve`, that was a mistake on my part. Thanks!
+[2021-02-01 19:58:32] <ShaCP> best way to stop lint errors from stopping build/dev server? this didn't happen before
+[2021-02-01 22:26:39] <enjoyincity> Hello my website has designed in html and using materialize framework. . I am getting an error in Google search console, which is unexpected error caught " <script>
+M.AutoInit();
+</script>
+I would like to know how do I make it run?
+I have made my websiteshttps://www.enjoyincity.com/ and https://enjoyindehradun.com by using coffeecup.com site designer and both website are static and having materialize.min.js JavaScript error that I have mention above.
+Kindly let me know how do I run it error free on my html source code.
+[2021-02-02 09:29:13] <thw0rted> I think you want to find a channel for your site designer (coffeecup) or the Materialize framework.  This chat is for webpack, a tool that it sounds like you do not use
+[2021-02-02 15:43:02] <mkamalkayani> Hi, anyone knows what does the property eager means in module federation's shared property? 
+[2021-02-03 16:31:11] <ronnross> @mkamalkayani  If I understand this correctly https://webpack.js.org/concepts/module-federation/#troubleshooting. It will move it from an async chunk to a synchronous chunk. I have not tested this but it seems you will want to do with will things are in your critical path for first load. Let me know if you figure anymore out. 
+[2021-02-03 17:27:37] <raphael10-collab> I started from a brand new working very simple Electron-Typescript app.
+
+In this working really simple Electron-Typescript app, I added in main.ts: 
+
+    import Ipfs from 'ipfs';
+    import IpfsHttpClient from 'ipfs-http-client';
+
+and this `import` of ipfs modules went fine.
+
+But when I add 
+
+    const { globSource } = IpfsHttpClient;
+
+or 
+
+when I create an IPFS node:
+
+    const ops = async () => {
+      const node = await Ipfs.create({ repo: String(Math.random() + Date.now()) });
+    }
+
+I get this error:
+
+    A JavaScript error occurred in the main process
+    Uncaught Exception:
+    Error: Cannot find module 'jsonfile/utils'
+        at webpackMissingModule (/home/marco/webMatters/electronMatters/IpfsPlaying/.webpack/main/index.js:13356:87)
+        at Object../node_modules/fs-extra/lib/json/output-json.js (/home/marco/webMatters/electronMatters/IpfsPlaying/.webpack
+    /main/index.js:13356:176)
+        at __webpack_require__ (/home/marco/webMatters/electronMatters/IpfsPlaying/.webpack/main/index.js:21:30)
+        at Object../node_modules/fs-extra/lib/json/index.js (/home/marco/webMatters/electronMatters/IpfsPlaying/.webpack
+    /main/index.js:13284:25)
+        at __webpack_require__ (/home/marco/webMatters/electronMatters/IpfsPlaying/.webpack/main/index.js:21:30)
+        at Object../node_modules/fs-extra/lib/index.js (/home/marco/webMatters/electronMatters/IpfsPlaying/.webpack
+    /main/index.js:13250:6)
+        at __webpack_require__ (/home/marco/webMatters/electronMatters/IpfsPlaying/.webpack/main/index.js:21:30)
+        at Object../node_modules/ipfs-utils/src/files/glob-source.js (/home/marco/webMatters/electronMatters/IpfsPlaying/.webpack
+    /main/index.js:25171:12)
+        at __webpack_require__ (/home/marco/webMatters/electronMatters/IpfsPlaying/.webpack/main/index.js:21:30)
+        at Object../node_modules/ipfs-http-client/src/index.js (/home/marco/webMatters/electronMatters/IpfsPlaying/.webpack
+    /main/index.js:21670:20)
+
+[2021-02-03 17:27:40] <raphael10-collab> tools/webpack/webpack.main.js  : 
+
+    module.exports = {
+      entry: ['./src/main.ts'],
+      // Put your normal webpack config below here
+      module: {
+        rules: require('./webpack.rules'),
+      },
+      resolve: {
+        extensions: ['.js', '.ts', '.jsx', '.tsx', '.css', '.json'],
+        alias: require('./webpack.aliases'),
+      },
+      target: 'electron-main'
+    };
+
+
+tools/webpack/webpack.renderer.js :  
+
+    /* eslint-disable @typescript-eslint/no-var-requires */
+    const rules = require('./webpack.rules');
+    const plugins = require('./webpack.plugins');
+    const aliases = require('./webpack.aliases');
+
+    module.exports = {
+      target: 'electron-renderer',
+      module: {
+        rules,
+      },
+      plugins: plugins,
+      resolve: {
+        extensions: ['.js', '.ts', '.jsx', '.tsx', '.css'],
+        alias: {
+          // React Hot Loader Patch
+          'react-dom': '@hot-loader/react-dom',
+          // Custom Aliases
+          ...aliases,
+        },
+      },
+    };
+
+
+tools/webpack/webpack.rules.js  :  
+
+    const inDev = process.env.NODE_ENV === 'development';
+
+    module.exports = [
+      {
+        // Add support for native node modules
+        test: /\.node$/,
+        use: 'node-loader',
+      },
+      {
+        // Typescript loader
+        test: /\.tsx?$/,
+        exclude: /(node_modules|\.webpack)/,
+        use: {
+          loader: 'ts-loader',
+          options: {
+            transpileOnly: true,
+          },
+        },
+      },
+      {
+        // CSS Loader
+        test: /\.css$/,
+        use: [{ loader: 'style-loader' }, { loader: 'css-loader' }],
+      },
+      {
+        // Less loader
+        test: /\.less$/,
+        use: [
+          { loader: 'style-loader' },
+          { loader: 'css-loader' },
+          { loader: 'less-loader' },
+        ],
+      },
+      {
+        // Images Loader
+        test: /\.(gif|jpe?g|tiff|png|webp|bmp)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              publicPath: 'images',
+              outputPath: inDev ? 'images' : './main_window/images',
+            },
+          },
+        ],
+      },
+    ];
+
+How to solve the problem?
+[2021-02-03 17:49:35] <raphael10-collab> If modify the `target` from `electron-renderer' to `web' in 
+tools/webpack/webpack.renderer.js :  
+
+    /* eslint-disable @typescript-eslint/no-var-requires */
+    const rules = require('./webpack.rules');
+    const plugins = require('./webpack.plugins');
+    const aliases = require('./webpack.aliases');
+
+    module.exports = {
+      //target: 'electron-renderer',
+      target: 'web',
+      module: {
+        rules,
+      },
+      plugins: plugins,
+      resolve: {
+        extensions: ['.js', '.ts', '.jsx', '.tsx', '.css'],
+        alias: {
+          // React Hot Loader Patch
+          'react-dom': '@hot-loader/react-dom',
+          // Custom Aliases
+          ...aliases,
+        },
+      },
+    };
+
+
+And in the renderer process /src/app/components/App.tsx I add : 
+
+    import Ipfs from 'ipfs';
+    const { globSource } = Ipfs;
+
+    const ops = async () => {
+        const node = await Ipfs.create({ repo: String(Math.random() + 
+    Date.now()) });
+        console.log('Ipfs node is ready');
+        const files = [
+          {
+            path: '/home/marco/Downloads/Art21Costituzione.jpg',
+            content: 'Art21Costituzione'
+          },
+          {
+            path: '/home/marco/Downloads/VitaminaCAlimenti.pdf',
+            content: 'VitaminaCAlimenti'
+          }
+        ];
+
+        let results = await all(node.addAll(files));
+        results.map(result => console.log(result));
+    }
+
+I get this correct output: 
+[2021-02-03 17:50:07] <raphael10-collab> [![image.png](https://files.gitter.im/529f74f4ed5ab0b3bf04ef26/ARG3/thumb/image.png)](https://files.gitter.im/529f74f4ed5ab0b3bf04ef26/ARG3/image.png)
+[2021-02-03 17:50:28] <raphael10-collab> So.. I guess there is something to fix  in webpack configuration in order to make it work in the main process.
+How to solve the problem?
+[2021-02-03 19:19:47] <ronnross> Does anyone know how to force webpack-dev-server to use ws:// instead of wss://? 
+[2021-02-04 10:59:12] <raphael10-collab> Hi all,
+[2021-02-04 11:00:46] <raphael10-collab> As you can see from here: https://github.com/ipfs/js-ipfs/issues/3508#issuecomment-772772507 and from here: https://github.com/ipfs/js-ipfs/issues/3508#issuecomment-773151528 I have this situation:
+
+This is the package.json 
+
+
+    {
+      "name": "IpfsPlaying",
+      "version": "2.0.2",
+      "description": "IpfsPlaying",
+      "main": ".webpack/main",
+      "scripts": {
+        "start": "cross-env NODE_ENV=development electron-forge start",
+        "package": "electron-forge package",
+        "make": "electron-forge make",
+        "publish": "electron-forge publish",
+        "lint": "eslint --ext .ts ."
+      },
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/raphael10-collab/IpfsPlaying"
+      },
+      "license": "MIT",
+      "config": {
+        "forge": "./tools/forge/forge.config.js"
+      },
+      "devDependencies": {
+        "@electron-forge/cli": "^6.0.0-beta.54",
+        "@electron-forge/maker-deb": "6.0.0-beta.53",
+        "@electron-forge/maker-rpm": "6.0.0-beta.53",
+        "@electron-forge/maker-squirrel": "^6.0.0-beta.54",
+        "@electron-forge/maker-zip": "6.0.0-beta.53",
+        "@electron-forge/plugin-webpack": "6.0.0-beta.53",
+        "@types/react": "^16.9.49",
+        "@types/react-dom": "^16.9.8",
+        "@types/webpack-env": "^1.15.2",
+        "@typescript-eslint/eslint-plugin": "^4.1.1",
+        "@typescript-eslint/parser": "^4.1.1",
+        "copy-webpack-plugin": "6",
+        "cross-env": "^7.0.2",
+        "electron": "^10.1.2",
+        "eslint": "^7.9.0",
+        "eslint-import-resolver-alias": "^1.1.2",
+        "eslint-plugin-import": "^2.20.0",
+        "eslint-plugin-react": "^7.20.6",
+        "fork-ts-checker-webpack-plugin": "^5.2.0",
+        "less": "^3.12.2",
+        "node-loader": "^1.0.1",
+        "react-hot-loader": "^4.12.21",
+        "ts-loader": "^8.0.3",
+        "typescript": "^4.0.2",
+        "webpack": "4"
+     },
+     "dependencies": {
+        "@hot-loader/react-dom": "^16.13.0",
+        "ipfs": "^0.54.1",
+        "ipfs-http-client": "^49.0.1",
+        "ipfs-utils": "^6.0.0",
+        "react": "^16.13.1",
+        "react-dom": "^16.13.1",
+        "react-viewer": "^3.2.2",
+        "react-window": "^1.8.6"
+      } 
+    }
+
+When using ipfs in main.ts I get this error:
+
+    A JavaScript error occurred in the main process
+    Uncaught Exception:
+    Error: Cannot find module 'jsonfile/utils'
+
+
+    A JavaScript error occurred in the main process
+    Uncaught Exception:
+    Error: Cannot find module 'jsonfile/utils'
+        at webpackMissingModule (/home/marco/webMatters/electronMatters/IpfsPlaying/.webpack/main/index.js:78837:87)
+        at Object../node_modules/fs-extra/lib/json/output-json.js (/home/marco/webMatters/electronMatters/IpfsPlaying/.webpack
+    /main/index.js:78837:176)
+        at __webpack_require__ (/home/marco/webMatters/electronMatters/IpfsPlaying/.webpack/main/index.js:21:30)
+        at Object../node_modules/fs-extra/lib/json/index.js (/home/marco/webMatters/electronMatters/IpfsPlaying/.webpack
+    /main/index.js:78765:25)
+        at __webpack_require__ (/home/marco/webMatters/electronMatters/IpfsPlaying/.webpack/main/index.js:21:30)
+        at Object../node_modules/fs-extra/lib/index.js (/home/marco/webMatters/electronMatters/IpfsPlaying/.webpack
+    /main/index.js:78731:6)
+        at __webpack_require__ (/home/marco/webMatters/electronMatters/IpfsPlaying/.webpack/main/index.js:21:30)
+        at Object../node_modules/ipfs-utils/src/files/glob-source.js (/home/marco/webMatters/electronMatters/IpfsPlaying/.webpack
+    /main/index.js:115083:12)
+        at __webpack_require__ (/home/marco/webMatters/electronMatters/IpfsPlaying/.webpack/main/index.js:21:30)
+        at Object../node_modules/ipfs-core/src/index.js (/home/marco/webMatters/electronMatters/IpfsPlaying/.webpack
+    /main/index.js:107575:20)
+
+
+[2021-02-04 11:01:33] <raphael10-collab> People of IPFS Project made, kindly,  thoughrough analysis of the problem, discovering that there is a collision between two versions of jsonfile:
+
+There are two copies of jsonfile in my node_modules folder:
+
+    $ find . -type d -name jsonfile
+    ./node_modules/jsonfile                          <-- v4.0.0
+    ./node_modules/fs-extra/node_modules/jsonfile    <-- v6.1.0
+
+I removed all the packages not stricly required for ipfs and for a bare minimum electron-react-typescript app. 
+And discovered that, in accordance what was already found by IPFS's people, 
+these are the modules which depend on jsonfile :  
+
+    (base) marco@pc01:~/webMatters/electronMatters/IpfsPlaying$ npm ls jsonfile
+    IpfsPlaying@2.0.2 /home/marco/webMatters/electronMatters/IpfsPlaying
+    ├─┬ @electron-forge/cli@6.0.0-beta.54
+    │ ├─┬ @electron-forge/core@6.0.0-beta.54
+    │ │ └─┬ electron-packager@15.2.0
+    │ │   └─┬ galactus@0.2.1
+    │ │     ├─┬ flora-colossus@1.0.1
+    │ │     │ └─┬ fs-extra@7.0.1
+    │ │     │   └── jsonfile@4.0.0  deduped
+    │ │     └─┬ fs-extra@4.0.3
+    │ │       └── jsonfile@4.0.0  deduped
+    │ ├─┬ @electron/get@1.12.2
+    │ │ └─┬ fs-extra@8.1.0
+    │ │   └── jsonfile@4.0.0 
+    │ └─┬ fs-extra@9.0.1
+    │   └── jsonfile@6.1.0 
+    └─┬ @electron-forge/maker-squirrel@6.0.0-beta.54
+      └─┬ electron-winstaller@4.0.1
+        └─┬ fs-extra@7.0.1
+          └── jsonfile@4.0.0  deduped
+
+[2021-02-04 11:01:47] <raphael10-collab> If I remove the jsonfile v4 I get the error: "An unhandled exception has occured inside Forge":
+
+    (base) marco@pc01:~/webMatters/electronMatters/IpfsPlaying$ rm -rf ./node_modules/jsonfile/
+    (base) marco@pc01:~/webMatters/electronMatters/IpfsPlaying$ yarn start
+    yarn run v1.22.5
+    $ cross-env NODE_ENV=development electron-forge start
+
+    An unhandled exception has occurred inside Forge:
+    Cannot find module 'jsonfile'
+    Require stack:
+    - /home/marco/webMatters/electronMatters/IpfsPlaying/node_modules/@electron/get/node_modules/fs-extra/lib/json/jsonfile.js
+    - /home/marco/webMatters/electronMatters/IpfsPlaying/node_modules/@electron/get/node_modules/fs-extra/lib/json/index.js
+    - /home/marco/webMatters/electronMatters/IpfsPlaying/node_modules/@electron/get/node_modules/fs-extra/lib/index.js
+    - /home/marco/webMatters/electronMatters/IpfsPlaying/node_modules/@electron/get/dist/cjs/utils.js
+    - /home/marco/webMatters/electronMatters/IpfsPlaying/node_modules/@electron/get/dist/cjs/artifact-utils.js
+    - /home/marco/webMatters/electronMatters/IpfsPlaying/node_modules/@electron/get/dist/cjs/index.js
+    - /home/marco/webMatters/electronMatters/IpfsPlaying/node_modules/@electron-forge/core/dist/api/make.js
+    - /home/marco/webMatters/electronMatters/IpfsPlaying/node_modules/@electron-forge/core/dist/api/index.js
+    - /home/marco/webMatters/electronMatters/IpfsPlaying/node_modules/@electron-forge/cli/dist/util/check-system.js
+    - /home/marco/webMatters/electronMatters/IpfsPlaying/node_modules/@electron-forge/cli/dist/electron-forge.js
+    Error: Cannot find module 'jsonfile'
+    Require stack:
+    - /home/marco/webMatters/electronMatters/IpfsPlaying/node_modules/@electron/get/node_modules/fs-extra/lib/json/jsonfile.js
+    - /home/marco/webMatters/electronMatters/IpfsPlaying/node_modules/@electron/get/node_modules/fs-extra/lib/json/index.js
+    - /home/marco/webMatters/electronMatters/IpfsPlaying/node_modules/@electron/get/node_modules/fs-extra/lib/index.js
+    - /home/marco/webMatters/electronMatters/IpfsPlaying/node_modules/@electron/get/dist/cjs/utils.js
+    - /home/marco/webMatters/electronMatters/IpfsPlaying/node_modules/@electron/get/dist/cjs/artifact-utils.js
+    - /home/marco/webMatters/electronMatters/IpfsPlaying/node_modules/@electron/get/dist/cjs/index.js
+    - /home/marco/webMatters/electronMatters/IpfsPlaying/node_modules/@electron-forge/core/dist/api/make.js
+    - /home/marco/webMatters/electronMatters/IpfsPlaying/node_modules/@electron-forge/core/dist/api/index.js
+    - /home/marco/webMatters/electronMatters/IpfsPlaying/node_modules/@electron-forge/cli/dist/util/check-system.js
+    - /home/marco/webMatters/electronMatters/IpfsPlaying/node_modules/@electron-forge/cli/dist/electron-forge.js
+        at Function.Module._resolveFilename (internal/modules/cjs/loader.js:1030:15)
+        at Function.Module._load (internal/modules/cjs/loader.js:899:27)
+        at Module.require (internal/modules/cjs/loader.js:1090:19)
+        at require (internal/modules/cjs/helpers.js:75:18)
+        at Object.<anonymous> (/home/marco/webMatters/electronMatters/IpfsPlaying/node_modules/@electron/get/node_modules
+    /fs-extra/lib/json/jsonfile.js:4:18)
+        at Module._compile (internal/modules/cjs/loader.js:1201:30)
+        at Object.Module._extensions..js (internal/modules/cjs/loader.js:1221:10)
+        at Module.load (internal/modules/cjs/loader.js:1050:32)
+        at Function.Module._load (internal/modules/cjs/loader.js:938:14)
+        at Module.require (internal/modules/cjs/loader.js:1090:19)
+
+[2021-02-04 11:02:19] <raphael10-collab> In a nutshell the problem is that electron-forge uses the version 4 of jsonfile, while Ipfs uses version 6 of jsonfile. And webpack loads the version 4.
+[2021-02-04 11:02:48] <raphael10-collab> How to make webpack loading a specific version of a module, if two versions are present within the npm tree?
+[2021-02-04 12:25:12] <brettz9> Hiya... Per https://github.com/webpack/webpack/issues/11597#issuecomment-705114717 and  https://github.com/JSONPath-Plus/JSONPath/issues/145 , a couple of projects have run into issues where `type: 'commonjs'` is used and webpack is using this fact to insist that *all* `.js` exports must therefore be CommonJS. However, in my understanding of the `type` property per the Node docs, this is specified for the sake of Node. A `browser` or other build should not need to be similarly constrained, and indeed:
+
+1. I would expect more browser builds using `package.json` (esp. within `exports` since it has been around) are exposing standard ESM.
+2. I understand some browser versions which support modules nevertheless do not automatically treat ".mjs" as JavaScript when a content-type header is absent, causing problems for downstream users. Besides the possible inconvenience of a project being forced to switch to "type: 'module'" to work around this, it seems some testing frameworks like mocha do not support *native* ESM testing, so this would force such projects to write their tests without using ESM.
+
+In my humble opinion (and as someone who is not a regular user but is impacted by such users), Webpack should either allow its users configuration to choose the `exports` one desires, expect a specific `umd` type if wishing to allow users to specify other non-ESM browser builds, or just assume ESM for the browser by default.
+[2021-02-04 14:45:01] <henricook> Hi everyone, i've just installed webpack 5 and am packaging images so I can `import` them in my very simple web components project
+
+I get it, i've done it just like this example: https://webpack.js.org/guides/asset-management/#loading-images
+
+I can import them
+
+But can I use them in a tag? Like <img src={myImage} alt="Foo" />
+
+At the moment I can't figure out a way to do it other than the myIcon/element.appendChild example in the webpack 5 docs here ^
+[2021-02-04 14:47:00] <henricook> lol figured it out, <img src=${myImage> /> - coming from react that was _not_ clear to me !
+[2021-02-04 14:55:26] <raphael10-collab> Can someone tell me what's wrong with this webpack config file?     // eslint-disable-next-line @typescript-eslint/no-var-requires
+    const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
+
+    const CopyPlugin = require("copy-webpack-plugin");
+
+    const webpack = require('webpack');
+
+    module.exports = [
+      new ForkTsCheckerWebpackPlugin(),
+      new webpack.ExternalsPlugin('commonjs', [
+        'electron'
+      ]),
+      new webpack.ExternalsPlugin("commonjs", [
+        'leveldown'
+      ]),
+      new CopyPlugin({
+        patterns: [
+          { from: 'node_modules/leveldown/prebuilds/${platform}-${arch}', to: 'prebuilds/${platform}-${arch}' },
+        ],
+      }),
+    ];
+
+[2021-02-04 14:55:39] <raphael10-collab> I get this error:    
+
+[2021-02-04 14:56:03] <raphael10-collab>      An unhandled error has occurred inside Forge:
+        compilation.getCache is not a function
+        TypeError: compilation.getCache is not a function
+          at /home/marco/webMatters/electronMatters/IpfsPlaying/node_modules/copy-webpack-plugin/dist/index.js:459:33
+[2021-02-04 15:42:06] <mdix> I know that webpack 5 stopped to expose process.env to the bundle. I need to use it anyway as we have libraries that I can't adapt. Therefore, I decided to manually define process.env like suggested in the webpack 5 configuration.
+
+
+```
+    },
+    plugins: [
+        new webpack.DefinePlugin({
+            'process.env.NODE_ENV': process.env.NODE_ENV,
+        }),
+```
+
+But no matter what I try, I can't use `process.env.NODE_ENV` in my application (the js provded as "entry") as `process` is always undefined. process.env.NODE_ENV is defined in the webpack.config - I already checked that. Any ideas? 
+[2021-02-04 16:16:38] <mdix> Is there some setting or something that tells webpack about my target? Like, if I build for node, I don't need to inline process.env, but if I build for browser, I would like to...
+[2021-02-04 16:25:35] <mdix> Gosh, I got it... so, if you define the plugins like above (as strings), webpack won't expose a "process" object, but just replace the ocurrences of "process.env.NODE_ENV". So, if you want to have a process object in your output, you need to completely redefine process. In my opinion the WARNING of this page is wrong: https://webpack.js.org/plugins/define-plugin/. Now, that webpack does no longer expose process to the build, if you wan't to have process in the build, you need to define it the way they say is not safe.
+
+```
+        new webpack.DefinePlugin({
+            process: {
+                env: {
+                    NODE_ENV: JSON.stringify(process.env.NODE_ENV)
+                }
+            }
+        }),
+``` 
+
+Holy cow... 3 hours... :-( 
+[2021-02-04 18:48:39] <paullaffitte> Is there any way to override compiler.inputFileSystem?
+[2021-02-04 18:48:51] <paullaffitte> I'm trying for hours without any success
+[2021-02-04 19:01:47] <paullaffitte> Actually I figured it out. memory-fs is just the worst thing ever, it's not compatible with other fs like memfs
+[2021-02-04 19:01:59] <paullaffitte> so I was wasting my time trying to use memfs
+[2021-02-04 19:02:55] <paullaffitte> what the fuck? Why don't make a library that respects standards?...
+[2021-02-04 21:04:05] <brianvalerius_twitter> I switched over to using webpack-dev-server v4 beta, and the watchOptions option is gone. Did this functionality move to somewhere else? I'm not seeing much in the options.
+[2021-02-04 21:13:00] <mdix> @brianvalerius_twitter `the contentBase, contentBasePublicPath, serveIndex, staticOptions, watchContentBase, watchOptions were removed in favor of the static option`
+[2021-02-04 21:13:18] <mdix> @brianvalerius_twitter source: https://github.com/webpack/webpack-dev-server/releases/tag/v4.0.0-beta.0
+[2021-02-04 21:14:18] <mdix> @brianvalerius_twitter There's a whole section in the release notes on static. It explains how to configure watchOptions with v4.
+[2021-02-04 21:49:33] <kantorcodes> Howdy - I am tinkering around with `module-federation` and would like to simply share `react` and `react-dom` between multiple react apps on the same page (its on a WordPress site) One of the things that I'm struggling with is that I've only been able to get one app to share the code, and by importing it with something like this  
+```
+const loadAndInitiateWebpackContainer = async () => {
+  try {
+      // low level webpack api to enable module sharing.
+     await __webpack_init_sharing__('default');
+      // default shared deps
+        const sharedDeps = __webpack_share_scopes__.default;
+       const container = window['host_app'];
+      // Initialize the container, it may provide shared modules
+      await container.init(sharedDeps);
+     }
+     catch (e) {
+        console.log(e);
+   // either we couldn't find the remote or container is already booted up.
+ } };
+``` 
+when I use the same snipper on the other apps, it defaults to using the fallback react/react-dom node_module
+[2021-02-04 21:50:27] <kantorcodes> However, when I specify `import: false` like such 
+```
+      react: {
+        import: false,
+        shareKey: 'react',
+        shareScope: 'default',
+        requiredVersion: '17.0.1',
+        singleton: true,
+      },
+      'react-dom': {
+        import: false,
+        shareKey: 'react-dom',
+        shareScope: 'default',
+        singleton: true,
+        requiredVersion: '17.0.1',
+      },
+    },
+```
+[2021-02-04 21:51:01] <kantorcodes> Then it suddenly works, but the fallback option is lost.
+[2021-02-04 21:51:14] <kantorcodes> Has anyone successfully implemented module-federation like so? 
+[2021-02-04 21:57:08] <kantorcodes> also, is there any clarification on what's required to share node_modules? is it supposed to be automatic? or is the `init` function supposed to be called? if the init  function is meant to be called, who is meant to call it? The host app? or any app?
+[2021-02-04 22:22:01] <brianvalerius_twitter> @mdix not sure how I missed that, thanks!
+[2021-02-05 09:08:18] <matyasf> Hi What does this message mean in the webpack compile log?
+` Field 'browser' doesn't contain a valid alias configuration`? Thanks
+[2021-02-05 10:30:42] <thw0rted> From what I understand, the Webpack team's position is that either all your dependencies should configure their `exports` field to explicitly specify exactly what to provide, correctly (using conditionals, etc), or you as the consumer can set `resolve.exportsFields: []` and ignore `exports` completely
+[2021-02-05 10:31:17] <thw0rted> I'm not sure I agree
+[2021-02-05 12:40:40] <raphael10-collab> Can someone kindly explain me what's wrong with this webpack configuration for an electron app ? /tools/webpack/webpack.main.js :          module.exports = {
+      /**
+       * This is the main entry point for your application, it's the first file
+       * that runs in the main process.
+       */
+      entry: ['./src/main.ts'],
+      // Put your normal webpack config below here
+      module: {
+        rules: require('./webpack.rules'),
+      },
+      resolve: {
+        extensions: ['.js', '.ts', '.jsx', '.tsx', '.css', '.json'],
+        alias: require('./webpack.aliases'),
+      },
+      // https://github.com/electron/electron/issues/9920
+      target: 'electron-main',
+      node: {
+        global: true,
+        __dirname: true,
+        __filename: true
+      },
+      externals: {
+        "pouchdb": "require('pouchdb')"
+      }
+    };
+
+
+[2021-02-05 12:41:17] <raphael10-collab> /tools/webpack/webpack.renderer.js   :  
+[2021-02-05 12:42:44] <raphael10-collab>      * eslint-disable @typescript-eslint/no-var-requires */
+    const rules = require('./webpack.rules');
+    const plugins = require('./webpack.plugins');
+    const aliases = require('./webpack.aliases');
+
+    module.exports = {
+      // https://github.com/electron/electron/issues/9920
+      target: 'electron-renderer',
+      //target: 'web',      // <-------------------------- Changing the target from electron-renderer to 'web' doesn't solve the problem
+      module: {
+        rules,
+      },
+      plugins: plugins,
+      resolve: {
+        extensions: ['.js', '.ts', '.jsx', '.tsx', '.css'],
+        alias: {
+          // React Hot Loader Patch
+          'react-dom': '@hot-loader/react-dom',
+          // Custom Aliases
+          ...aliases,
+        },
+      },
+    };
+[2021-02-05 12:42:57] <raphael10-collab> /tools/webpack/webpack.helpers.js :   
+[2021-02-05 12:43:11] <raphael10-collab>     /* eslint-disable @typescript-eslint/no-var-requires */
+    /* eslint-disable @typescript-eslint/explicit-function-return-type */
+    const path = require('path');
+    const cwd = process.cwd();
+
+    // Creates Webpack Aliases using CWD path
+    const createWebpackAliases = (als) => {
+      const result = {};
+      for (const name in als) {
+        result[name] = path.join(cwd, als[name]);
+      }
+      return result;
+    };
+
+    // Export webpack helpers
+    module.exports = {
+      createWebpackAliases,
+    };
+
+[2021-02-05 12:43:18] <raphael10-collab> /tools/webpack/webpack.aliases.js :   
+[2021-02-05 12:43:28] <raphael10-collab>     // eslint-disable-next-line @typescript-eslint/no-var-requires
+    const { createWebpackAliases } = require('./webpack.helpers');
+
+    // Webpack aliases to resolve
+    const aliases = createWebpackAliases({
+      '@src': 'src',
+      '@app': 'src/app',
+      '@static': 'src/static',
+      'jsonfile': './node_modules/fs-extra/node_modules/jsonfile',
+      'nanoid/random': './node_modules/nanoid',
+      'nanoid/format': './node_modules/nanoid'
+    });
+
+    // Export aliases
+    module.exports = aliases;
+[2021-02-05 12:43:37] <raphael10-collab> /tools/webpack/webpack.plugins.js :  
+[2021-02-05 12:43:47] <raphael10-collab>     // eslint-disable-next-line @typescript-eslint/no-var-requires
+    const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
+
+    const webpack = require('webpack');
+
+    module.exports = [
+      new ForkTsCheckerWebpackPlugin(),
+      new webpack.ExternalsPlugin('commonjs', [
+        'electron'
+      ]),
+      new webpack.ExternalsPlugin("commonjs", [
+        'leveldown'
+      ])
+    ];
+[2021-02-05 12:43:56] <raphael10-collab> /tools/webpack/webpack.rules.js : 
+[2021-02-05 12:44:08] <raphael10-collab>     const inDev = process.env.NODE_ENV === 'development';
+
+    module.exports = [
+      {
+        // Add support for native node modules
+        test: /\.node$/,
+        use: 'node-loader',
+      },
+      {
+        // Typescript loader
+        test: /\.tsx?$/,
+        exclude: /(node_modules|\.webpack)/,
+        use: {
+          loader: 'ts-loader',
+          options: {
+            transpileOnly: true,
+          },
+        },
+      },
+      {
+        // CSS Loader
+        test: /\.css$/,
+        use: [{ loader: 'style-loader' }, { loader: 'css-loader' }],
+      },
+      {
+        // Less loader
+        test: /\.less$/,
+        use: [
+          { loader: 'style-loader' },
+          { loader: 'css-loader' },
+          { loader: 'less-loader' },
+        ],
+      },
+      {
+        // Images Loader
+        test: /\.(gif|jpe?g|tiff|png|webp|bmp)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              publicPath: 'images',
+              outputPath: inDev ? 'images' : './main_window/images',
+            },
+          },
+        ],
+      },
+    ];
+
+[2021-02-05 12:44:58] <raphael10-collab> According to ipfs (package) people the problems I'm having are due to the webpack configuration: https://github.com/ipfs/js-ipfs/issues/3531#issuecomment-773989083
+[2021-02-05 12:45:27] <raphael10-collab> But I do not understand where the problem is. Can you please help me?
+[2021-02-05 19:09:10] <ktb92677> Hi all, I am having trouble with webpack and web workers. Specifically I have a pretty heavy process that I want to run in the background. I've followed this guide to the dot: https://webpack.js.org/loaders/worker-loader/. But it seems to still freeze the page when I run the worker. Any suggestions?
+[2021-02-05 19:20:39] <kantorcodes> While likely incorrect, I was able to solve sharing react/react-dom between multiple apps by adding the following (before lazy loading a react app) 
+```
+const loadAndInitiateWebpackContainer = async () => {
+  try {
+    // low level webpack api to enable module sharing.
+    // @ts-ignore
+    await __webpack_init_sharing__('default');
+    // default shared deps
+    // @ts-ignore
+    const sharedDeps = __webpack_share_scopes__.default;
+    const container = window['global_host'];
+
+    if (container && container.sharedDeps) {
+      // @ts-ignore
+      __webpack_share_scopes__.default = container.sharedDeps;
+    } else if (container) {
+      // Initialize the container, it may provide shared modules
+      await container.init(sharedDeps);
+    }
+  } catch (e) {
+    console.log(e);
+    // either we couldn't find the remote or container is already booted up.
+  }
+}; ```
+[2021-02-05 22:43:00] <mtom55> i'm having  a couple of issues  with webpack 4,  i'm trying to get require("#root/validations.js") to work but  resolve: { alias: {  "#root": path.resolve(__dirname, '/src')}} doesn't seem to do the trick
+[2021-02-05 22:43:03] <mtom55> thoughts?
+[2021-02-06 09:06:04] <raphael10-collab> I re-ask the question asked yesterday. May be someone will try to answer this time: What's wrong with this webpack configuration?
+[2021-02-06 09:06:41] <raphael10-collab> /tools/webpack/webpack.main.js : 
+[2021-02-06 09:07:41] <raphael10-collab>     module.exports = {
+      /**
+       * This is the main entry point for your application, it's the first file
+       * that runs in the main process.
+       */
+      entry: ['./src/main.ts'],
+      // Put your normal webpack config below here
+      module: {
+        rules: require('./webpack.rules'),
+      },
+      resolve: {
+        extensions: ['.js', '.ts', '.jsx', '.tsx', '.css', '.json'],
+        alias: require('./webpack.aliases'),
+      },
+      // https://github.com/electron/electron/issues/9920
+      target: 'electron-main',
+      node: {
+        global: true,
+        __dirname: true,
+        __filename: true
+      },
+      externals: {
+        "pouchdb": "require('pouchdb')"
+      }
+    };
+
+
+[2021-02-06 09:07:51] <raphael10-collab> /tools/webpack/webpack.renderer.js : 
+[2021-02-06 09:08:09] <raphael10-collab>      /* eslint-disable @typescript-eslint/no-var-requires */
+    const rules = require('./webpack.rules');
+    const plugins = require('./webpack.plugins');
+    const aliases = require('./webpack.aliases');
+
+    module.exports = {
+      // https://github.com/electron/electron/issues/9920
+      target: 'electron-renderer',
+      module: {
+        rules,
+      },
+      plugins: plugins,
+      resolve: {
+        extensions: ['.js', '.ts', '.jsx', '.tsx', '.css'],
+        alias: {
+          // React Hot Loader Patch
+          'react-dom': '@hot-loader/react-dom',
+          // Custom Aliases
+          ...aliases,
+        },
+      },
+    };
+[2021-02-06 09:08:22] <raphael10-collab> /tools/webpack/webpack.plugins.js : 
+[2021-02-06 09:08:41] <raphael10-collab>     // eslint-disable-next-line @typescript-eslint/no-var-requires
+    const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
+
+    // https://stackoverflow.com/questions/44008674/how-to-import-the-electron-ipcrenderer-in-   
+    a-react-webpack-2-setup
+    const webpack = require('webpack');
+
+    module.exports = [
+      new ForkTsCheckerWebpackPlugin(),
+      new webpack.ExternalsPlugin('commonjs', [
+        'electron'
+      ]),
+      new webpack.ExternalsPlugin("commonjs", [
+        'leveldown'
+      ])
+    ];
+[2021-02-06 09:08:48] <raphael10-collab> /tools/webpack/webpack.rules :
+[2021-02-06 09:09:09] <raphael10-collab>     const inDev = process.env.NODE_ENV === 'development';
+
+    module.exports = [
+      {
+        // Add support for native node modules
+        test: /\.node$/,
+        use: 'node-loader',
+      },
+      {
+        // Typescript loader
+        test: /\.tsx?$/,
+        exclude: /(node_modules|\.webpack)/,
+        use: {
+          loader: 'ts-loader',
+          options: {
+            transpileOnly: true,
+          },
+        },
+      },
+      {
+        // CSS Loader
+        test: /\.css$/,
+        use: [{ loader: 'style-loader' }, { loader: 'css-loader' }],
+      },
+      {
+        // Less loader
+        test: /\.less$/,
+        use: [
+          { loader: 'style-loader' },
+          { loader: 'css-loader' },
+          { loader: 'less-loader' },
+        ],
+      },
+      {
+        // Images Loader
+        test: /\.(gif|jpe?g|tiff|png|webp|bmp)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              publicPath: 'images',
+              outputPath: inDev ? 'images' : './main_window/images',
+            },
+          },
+        ],
+      },
+    ];
+
+[2021-02-06 09:09:16] <raphael10-collab> /tools/webpack/webpack.helpers.js : 
+[2021-02-06 09:09:32] <raphael10-collab>     /* eslint-disable @typescript-eslint/no-var-requires */
+    /* eslint-disable @typescript-eslint/explicit-function-return-type */
+    const path = require('path');
+    const cwd = process.cwd();
+
+    // Creates Webpack Aliases using CWD path
+    const createWebpackAliases = (als) => {
+      const result = {};
+      for (const name in als) {
+        result[name] = path.join(cwd, als[name]);
+      }
+      return result;
+    };
+
+    // Export webpack helpers
+    module.exports = {
+      createWebpackAliases,
+    };
+[2021-02-06 09:09:40] <raphael10-collab> /tools/webpack/webpack.aliases.js : 
+[2021-02-06 09:10:01] <raphael10-collab>     // eslint-disable-next-line @typescript-eslint/no-var-requires
+    const { createWebpackAliases } = require('./webpack.helpers');
+
+    // Webpack aliases to resolve
+    const aliases = createWebpackAliases({
+      '@src': 'src',
+      '@app': 'src/app',
+      '@static': 'src/static',
+      'jsonfile': './node_modules/fs-extra/node_modules/jsonfile',
+      'nanoid/random': './node_modules/nanoid',
+      'nanoid/format': './node_modules/nanoid'
+      //'main' : './.webpack/main'
+    });
+
+    // Export aliases
+    module.exports = aliases;
+
+[2021-02-06 09:10:09] <raphael10-collab> This is the /tools/forge/forge.config.js
+[2021-02-06 09:10:37] <raphael10-collab>     /* eslint-disable @typescript-eslint/no-var-requires */
+    // Forge Configuration
+    const path = require('path');
+    const rootDir = process.cwd();
+
+    module.exports = {
+      // Packager Config
+      packagerConfig: {
+        // Create asar archive for main, renderer process files
+        asar: true,
+      },
+      // Forge Makers
+      makers: [
+        {
+          // Squirrel.Windows is a no-prompt, no-hassle, no-admin method of installing
+          // Windows applications and is therefore the most user friendly you can get.
+          name: '@electron-forge/maker-squirrel',
+          config: {
+            name: 'electron_react_typescript_webpack_2020',
+          },
+        },
+        {
+          // The Zip target builds basic .zip files containing your packaged application.
+          // There are no platform specific dependencies for using this maker and it will run on
+     any platform.
+          name: '@electron-forge/maker-zip',
+          platforms: ['darwin'],
+        },
+        {
+          // The deb target builds .deb packages, which are the standard package format for 
+    Debian-based
+          // Linux distributions such as Ubuntu.
+          name: '@electron-forge/maker-deb',
+          config: {},
+        },
+        {
+          // The RPM target builds .rpm files, which is the standard package format for
+          // RedHat-based Linux distributions such as Fedora.
+          name: '@electron-forge/maker-rpm',
+          config: {},
+        },
+      ],
+      // Forge Plugins
+      plugins: [
+        [
+          // The Webpack plugin allows you to use standard Webpack tooling to compile both your 
+    main process code
+          // and your renderer process code, with built in support for Hot Module Reloading in 
+    the renderer
+          // process and support for multiple renderers.
+          '@electron-forge/plugin-webpack',
+          {
+            // Main process webpack configuration
+            mainConfig: path.join(rootDir, 'tools/webpack/webpack.main.js'),
+            // Renderer process webpack configuration
+            renderer: {
+              // Configuration file path
+              config: path.join(rootDir, 'tools/webpack/webpack.renderer.js'),
+              // Entrypoints of the application
+              entryPoints: [
+                {
+                  // React Hot Module Replacement (HMR)
+                  rhmr: 'react-hot-loader/patch',
+                  // HTML index file template
+                  html: path.join(rootDir, 'src/html/index.html'),
+                  // Renderer
+                  js: path.join(rootDir, 'src/renderers/renderer.ts'),
+                  // Main Window
+                  name: 'main_window',
+                  // Preload
+                  preload: {
+                    js: path.join(rootDir, 'src/preload.ts'),
+                  },
+                },
+                {
+                  // React Hot Module Replacement (HMR)
+                  rhmr: 'react-hot-loader/patch',
+                  // HTML index file template
+                  html: path.join(rootDir, 'src/html/index_A.html'),
+                  // Renderer
+                  js: path.join(rootDir, 'src/renderers/renderer_A.ts'),
+                  // Main Window
+                  name: 'main_window2',
+                  // Preload
+                  preload: {
+                    js: path.join(rootDir, 'src/preload.ts'),
+                  },
+                },
+                {
+                  // React Hot Module Replacement (HMR)
+                  rhmr: 'react-hot-loader/patch',
+                  // HTML index file template
+                  html: path.join(rootDir, 'src/html/index_B.html'),
+                  // Renderer
+                  js: path.join(rootDir, 'src/renderers/renderer_B.ts'),
+                  // Main Window
+                  name: 'main_window3',
+                  // Preload
+                  preload: {
+                    js: path.join(rootDir, 'src/preload.ts'),
+                  },
+                },
+              ],
+            },
+          },
+        ],
+      ],
+
+
+[2021-02-06 09:10:50] <raphael10-collab> When running the app I'm getting this error:
+[2021-02-06 09:11:05] <raphael10-collab>     TypeError: get is not a function
+        at getPubsubRouter (/home/marco/webMatters/electronMatters/IPFS-Forge/.webpack
+    /main/index.js:103294:20)
+        at getLibp2pOptions (/home/marco/webMatters/electronMatters/IPFS-Forge/.webpack
+    /main/index.js:103311:15)
+        at module.exports../node_modules/ipfs-core/src/components/libp2p.js.module.exports 
+    (/home/marco/webMatters/electronMatters/IPFS-Forge/.webpack/main/index.js:103262:25)
+        at configureRepo (/home/marco/webMatters/electronMatters/IPFS-Forge/.webpack
+    /main/index.js:107188:18)
+        at async loadRepo (/home/marco/webMatters/electronMatters/IPFS-Forge/.webpack
+    /main/index.js:107037:17)
+        at async Function.start (/home/marco/webMatters/electronMatters/IPFS-Forge/.webpack
+    /main/index.js:107018:41)
+        at async Object.create (/home/marco/webMatters/electronMatters/IPFS-Forge/.webpack
+    /main/index.js:102486:21)
+
+
+[2021-02-06 09:11:12] <raphael10-collab> this is the tsconfig.json :  
+[2021-02-06 09:11:24] <raphael10-collab>     {
+      "compilerOptions": {
+        "jsx": "react",
+        "allowJs": true,
+        "target": "ES6",
+        "module": "ESNext",
+        "skipLibCheck": true,
+        "esModuleInterop": true,
+        "noImplicitAny": false,
+        "sourceMap": true,
+        "baseUrl": ".",
+        "outDir": "dist",
+        "moduleResolution": "node",
+        "resolveJsonModule": true,
+        // https://www.typescriptlang.org/tsconfig#suppressExcessPropertyErrors
+       "suppressExcessPropertyErrors": true,
+       "paths": {
+          "*": ["node_modules/*"],
+          "@app/*": ["./src/app/*"],
+          "@static/*": ["./src/static/*"],
+          "@src/*": ["./src/*"]
+        }
+      },
+      "include": ["src/**/*"]
+    }
+
+[2021-02-06 09:11:32] <raphael10-collab> This is package.json:
+[2021-02-06 09:11:48] <raphael10-collab>     {
+      "name": "IPFS-Forge",
+      "description": "IPF-Forge",
+      "version": "1.0.0",
+      "main": "./.webpack/main",
+      "scripts": {
+        "start": "electron-forge start",
+        "package": "electron-forge package",
+        "make": "electron-forge make",
+        "publish": "electron-forge publish",
+        "lint": "eslint --ext .ts ."
+      },
+      "config": {
+        "forge": "./tools/forge/forge.config.js"
+      },
+      "devDependencies": {
+        "@electron-forge/cli": "^6.0.0-beta.54",
+        "@electron-forge/maker-deb": "^6.0.0-beta.54",
+        "@electron-forge/maker-rpm": "^6.0.0-beta.54",
+        "@electron-forge/maker-squirrel": "^6.0.0-beta.54",
+        "@electron-forge/maker-zip": "^6.0.0-beta.54",
+        "@electron-forge/plugin-webpack": "^6.0.0-beta.54",
+        "@types/react": "^17.0.1",
+        "@types/react-dnd": "^3.0.2",
+        "@types/react-dnd-html5-backend": "^3.0.2",
+        "@types/react-dom": "^17.0.0",
+        "@types/webpack-env": "^1.16.0",
+        "@typescript-eslint/eslint-plugin": "^4.14.2",
+        "@typescript-eslint/parser": "^4.14.2",
+        "copy-webpack-plugin": "^7.0.0",
+        "cross-env": "^7.0.3",
+        "electron": "^11.2.2",
+        "electron-rebuild": "^2.3.4",
+        "eslint": "^7.19.0",
+        "eslint-import-resolver-alias": "^1.1.2",
+        "eslint-plugin-import": "^2.22.1",
+        "eslint-plugin-react": "^7.22.0",
+        "fork-ts-checker-webpack-plugin": "^6.1.0",
+        "ipfs": "^0.54.1",
+        "less": "^4.1.1",
+        "node-loader": "^1.0.2",
+        "react-hot-loader": "^4.13.0",
+        "test-ipfs-example": "^2.0.3",
+        "ts-loader": "^8.0.14",
+        "typescript": "^4.1.3",
+        "webpack": "4"
+      },
+      "greenkeeper": {
+        "ignore": [
+          "electron"
+        ]
+      },
+      "dependencies": {
+        "@hot-loader/react-dom": "^17.0.1",
+        "electron-squirrel-startup": "^1.0.0",
+        "ipfs-http-client": "^49.0.1",
+        "ipfs-utils": "^6.0.0",
+        "react": "^17.0.1",
+        "react-dnd": "^11.1.3",
+        "react-dnd-html5-backend": "^11.1.3"
+      }
+    }
+
+
+[2021-02-06 09:12:00] <raphael10-collab> According to ipfs people the problems I'm having are due to the webpack configuration: https://github.com/ipfs/js-ipfs/issues/3531#issuecomment-773989083
+But I do not understand where the problem is. 
+
+[2021-02-06 09:12:08] <raphael10-collab> - node: v14.5.0
+- O.S.: Ubuntu 18.04.4 Desktop
+[2021-02-06 09:12:50] <raphael10-collab> Looking forward to your kind help (today is gonna be a lucky day))
+[2021-02-06 10:26:51] <raphael10-collab> Instead of aliasing what can be used?
+[2021-02-06 10:44:52] <raphael10-collab> A further question: is the "webpack-community" alive?
+[2021-02-06 11:57:32] <raphael10-collab> I removed the aliases and used instead resolve in webpack.main.js  :  
+
+    var path = require('path');
+
+    module.exports = {
+      /**
+       * This is the main entry point for your application, it's the first
+     file
+       * that runs in the main process.
+       */
+      entry: ['./src/main.ts'],
+      // Put your normal webpack config below here
+      module: {
+        rules: require('./webpack.rules'),
+      },
+      resolve: {
+        extensions: ['.js', '.ts', '.jsx', '.tsx', '.css', '.json'],
+        alias: require('./webpack.aliases'),
+      },
+      target: 'electron-main',
+      node: {
+        global: true,
+        __dirname: true,
+        __filename: true
+      },
+      resolve: {
+        modules: ['node_modules']
+      }
+    };
+
+But still get this error:
+
+
+    TypeError: get is not a function
+        at getPubsubRouter (/home/marco/webMatters/electronMatters/IPFS-
+    Forge/.webpack/main/index.js:103184:20)
+        at getLibp2pOptions (/home/marco/webMatters/electronMatters/IPFS-
+    Forge/.webpack/main/index.js:103201:15)
+        at module.exports../node_modules/ipfs-core/src/components
+    /libp2p.js.module.exports (/home/marco/webMatters/electronMatters
+    /IPFS-Forge/.webpack/main/index.js:103152:25)
+        at configureRepo (/home/marco/webMatters/electronMatters/IPFS-
+    Forge/.webpack/main/index.js:107078:18)
+        at async loadRepo (/home/marco/webMatters/electronMatters/IPFS-
+    Forge/.webpack/main/index.js:106927:17)
+        at async Function.start (/home/marco/webMatters/electronMatters
+    /IPFS-Forge/.webpack/main/index.js:106908:41)
+        at async Object.create (/home/marco/webMatters/electronMatters
+    /IPFS-Forge/.webpack/main/index.js:102376:21)
+[2021-02-06 12:46:41] <raphael10-collab> Running the node debugging tool I get this error:
+
+    (base) marco@pc01:~/webMatters/electronMatters/IPFS-Forge$ node-
+    nightly --inspect ./node_modules/webpack/bin/webpack.js
+     New nightly available. To upgrade: `node-nightly --upgrade` 
+    Debugger listening on ws://127.0.0.1:9229/fdab8bb4-cd2c-415d-8154-
+    ac4b554a0c0f
+    For help, see: https://nodejs.org/en/docs/inspector
+    Hash: a1c0ce406046af77594b
+    Version: webpack 4.46.0
+    Time: 24ms
+    Built at: 02/06/2021 1:41:03 PM
+
+    WARNING in configuration
+    The 'mode' option has not been set, webpack will fallback to 
+    'production' for this value. Set 'mode' option to 'development' or 
+    'production' to enable defaults for each environment.
+    You can also set it to 'none' to disable any default behavior. Learn 
+    more: https://webpack.js.org/configuration/mode/
+
+    ERROR in Entry module not found: Error: Can't resolve './src' in 
+    '/home/marco/webMatters/electronMatters/IPFS-Forge'
+
+Error, which I do not understand, because this is the path to main.ts : 
+
+    (base) marco@pc01:~/webMatters/electronMatters/IPFS-Forge/src$ ls -lah 
+     | grep main.ts 
+    -rwxr-xr-x 1 marco marco 1,6K feb  6 09:22 main.ts
+
+that I defined in /tools/webpack/webpack.main.js :   
+
+     entry: ['./src/main.ts'],
+[2021-02-06 19:33:28] <aspirisen> Hi, i have a question, is it possible to tell webpack not to wrap modules into functions?
+I have a set of super legacy code that relies on global object, without explicit access to window. But as webpack wraps code to function there is no more global scope. I created an entry point which value is array of the files: `{entry: {legacy: ['one.js', "two.js" ...etc]}}`
+how to tell webpack just concat these files, but anyway I need them to path through loaders i.e. babel
+[2021-02-08 15:53:50] <aspirisen> Hi, am trying to write a plugin, is it possible to get module (NormalModule) by source (CachedSource) ?
+[2021-02-10 08:49:04] <KhoiasdKhoiasd1_twitter> 12
+[2021-02-10 13:19:14] <thw0rted> I upgraded to Webpack 5 a few weeks ago, and so instead of running `webpack-dev-server` at the command line I'm running `webpack serve`.  This came with some changes to `watchOptions`, etc.  One thing that bothers me is that before, when I changed a source file, the dev server console immediately printed something like "file xyz changed, building..." (I can't remember the actual message), but now with `webpack serve`, the build kicks off without printing anything until it's basically done, so I don't actually know that it noticed the change
+[2021-02-10 13:20:33] <thw0rted> My app is pretty big so a rebuild takes about 20 seconds, which is a long time to wait to see if it's actually building.  The thing is, I don't even know exactly where that message I remember came from, so I'm not sure where to look for a config option to get it to show up again (or who to file an issue with to add it as a feature under the new way of doing things)
+[2021-02-10 20:16:38] <dzearing> @sokra Hey, I'm working on various apps over at Microsoft. We recently upgraded to v5 recently in the Fluent UI repo, and production builds of our doc site now fail with concat errors: `"Target module of reexport from './node_modules/@fluentui/react/lib/components/Dropdown/Dropdown.types.js' is not part of the concatenation (export 'ResponsiveMode')`. We have been working on isolating a smaller repo. I see this was resolved back in November (https://github.com/webpack/webpack/issues/12071), but we are still seeing this on the latest bits (5.21.2.) How should we proceed here? Disabling concatenation can work around it, but it will regress bundle sizes pretty bad. I can continue isolating a repro, but maybe this is already known or being tracked. Should I open a new issue?
+[2021-02-10 23:00:44] <JudahMeek_twitter> Greetings. I've encountered a possible bug for webpack-dev-server 4.0.0-beta.0 and am asking about it here before creating an issue.
+
+With my current configuration (hot: true, injecthot: default, hotOnly: default), webpack-dev-server is not attaching any functions to `window` (such as `webpackhotupdate()`) which webpack-dev-server 3.11.1 does. Am I missing something here or is this unintended behavior?
+[2021-02-11 16:11:44] <thw0rted> I have a dependency that uses some pack-in assets (images) that are part of its NPM package, and I have to copy them using CopyPlugin, then tell the library where they are at runtime.  This works fine.  What I'd like to do now is, get a list of the files that were copied, so I can show them to the user.
+
+Ex., say I have 10 PNGs under `node_modules/somelib/images/` and the CopyPlugin is putting them in `dist/Assets/somelib_img/`.  I want the equivalent of `context.require("node_modules/somelib/images/", false, /\.png$/).keys()` but without sticking the contents of the images into my bundle (since they're already being copied to my output directory)
+[2021-02-11 16:21:29] <thw0rted> I'm not positive but I think just using the line above with `null-loader!` up front does what I wanted
+[2021-02-11 16:21:45] <thw0rted> Any reason not to use that solution?
+[2021-02-11 17:36:10] <KutnerUri> @aspirisen - check libraryTarget. You can set it to use global object, though I can't remember the type.  'umd' probably covers it
+https://webpack.js.org/configuration/output/#module-definition-systems
+[2021-02-11 18:57:32] <aspirisen> it also wraps the code into function, but allow to use this module in window i.e.
+[2021-02-11 21:54:47] <james0r> setting up webpack for the first time with an existing project, i'm seeing that webpack wants to load the fonts declared in my @font-face declarations in my Scss code, but i dont want webpack managing those assets, they're in the output folder already. I have resolve-url-loader in-line already to rewrite the urls which is fine.
+[2021-02-11 21:55:57] <james0r> my working webpack.config.js --> https://gist.github.com/james0r/72268db084a12ccf63d38ad7088b7f59
+[2021-02-12 05:00:53] <Aloneduckling> Hello, I want to contribute to Webpack can someone guide me
+[2021-02-12 08:59:50] <kivi> I am seeing this error `Error: Module Federation only works with Webpack 5    at withModuleFederation` in devDeps I have "webpack": "5.21.2"
+[2021-02-12 09:03:06] <kivi> Is that possibly typescript related?
+
+[2021-02-12 09:34:55] <thw0rted> Kivi, I think more context might be helpful.  I don't see anything there that points to Typescript
+[2021-02-12 09:56:10] <kivi> I am using Blitz.js, which is built on top of Next.js
+And I am using @module-federation/nextjs-mf
+[2021-02-12 11:07:11] <kivi> Same problem with, whit a new Next project. I tried as described on: https://github.com/module-federation/nextjs-mf
+[2021-02-12 11:16:59] <thw0rted> This sounds like it's an issue with that framework rather than with Webpack generally, you'd be better off asking them
+[2021-02-12 12:48:42] <kivi> Nope... I tried the examples as well with next.js 
+I think there is something broken.
+[2021-02-13 05:42:44] <gauravgupta98> Gus, I've been working on React and built a WhatsApp Web clone. Checkout the demo here - https://whatsapp-clone-36b61.web.app/
+If you have any suggestions or you liked it or want to contribute then checkout the GitHub repo here - https://github.com/gauravgupta98/whatsapp-clone
+**Don't be lazy to give a star** ;)
+[2021-02-13 17:01:11] <iamarpitpatidar> Hey guys, i am new to js my code works it just looks like crap and it would be really great if someone can tell me a better way to do it. Thanks
+```
+<div data-target="deleteModal">Foo</div>
+<div id="deleteModal">Bar</div>
+
+<script>
+    $('div[data-target="deleteModal"]').on('click', function() {
+        $(`#${$(this).attr('data-target')}`).text('something');
+    })
+</script>
+```
+[2021-02-14 09:03:29] <Booster2ooo> Hello, I'm developping for Angular (if that matters :)) and I was wondering how to dynamically load modules at runtime. I thought Module Federation would be an option but it still seems a bit "static" from my (poor) understanding. Maybe you might enlighten me, here is the conceptual use case: an "infra team" builds and deploys a "dummy" app shell. This app shell only knows a "module registry" concept, it doesn't know about any other modules. There are other teams, A, B and C, that dev their modules on their own and publish the said modules in the "module registry". At runtime, the use access the app shell. He can choose "I want to use module A and module C but not module B". Tomorrow, team D arrives with its module and publish it. Without recompiling app shell, the user now have the possibility to load module D if he wants to. Could this scenario be covered by MF (or any other webpack feature) and if so, how? If not, would you have any suggestion ?
+[2021-02-14 17:31:08] <amery> hi, is it "normal" to get a dist/css/foo.js additionally to dist/css/foo.css as output of src/scss/foo.scss ? https://github.com/amery/go-webpack-starter/tree/master
+[2021-02-14 20:31:02] <dutchenkoOleg> I guess, yes. You can live with this))
+[2021-02-14 20:31:32] <amery> narf
+[2021-02-14 20:32:21] <amery> thanks @dutchenkoOleg. I thought I was doing something wrong 
+[2021-02-15 09:55:03] <mkamalkayani> Hi, I am getting this error(shown below). Strangely, it only occurs sometimes. Anyone knows how to fix it?
+
+```
+TypeError: Cannot read property 'call' of undefined
+    at __webpack_require__ (bootstrap:21)
+    at fn (hot module replacement:61)
+    at Module../common/components/layouts/BaseLayout.js (bootstrap_js.chunk.js:631)
+    at __webpack_require__ (bootstrap:21)
+    at fn (hot module replacement:61)
+    at Module../common/components/layouts/index.js (bootstrap_js.chunk.js:720)
+    at __webpack_require__ (bootstrap:21)
+    at fn (hot module replacement:61)
+    at Module../modules/smoove/pages/Router.js (modules_smoove_index_js-webpack_sharing_consume_default_react_react-webpack_sharing_consume_d-c84e7c.chunk.js:29446)
+    at __webpack_require__ (bootstrap:21)
+```
+[2021-02-16 12:01:54] <taburetkin> huy guys,
+what is the best way to include modernizr in build?
+i've tested three options
+1. manualy build modernizr.js and then CopyWebpackPlugin. - do not find a way to inject it in htmlwebpackplugin without custom template. (i do not want use custom template)
+2. use modernizr-loader - no success here at all
+3. use webpack-modernizr-loader - and this one
+
+actually 2 and 3 i just do not understand, the documentation is pretty pure for me.
+
+so, is there a way to ship modernizr in default template of html-webpack-plugin?
+or is there some working setups with loaders?
+[2021-02-16 13:14:41] <taburetkin> nvm. i think i found the solution.
+[2021-02-16 23:34:03] <RonnyRo90649997_twitter> I am new to opting webpack and bit lack of knowledge on linux commands. kindly let me know how to intigrate webpack or any apli to enchance my source code of the html based static website.
+[2021-02-17 00:40:39] <mike-clark-nvoq> I'm trying to disable "use static" in webpack output. Seems webpack decides to emit this based on `const allStrict = allModules.every(m => m.buildInfo.strict);`, but I'm not sure how to turn off strict for an individual module?
+[2021-02-17 00:53:06] <mike-clark-nvoq> Ah - I just had to configure TypeScript to not emit "use strict" into its output. :)
+[2021-02-17 05:04:44] <robertmain> Hey folks
+[2021-02-17 05:05:02] <robertmain> Got a weird issue with my webpack config where I'm totally missing my CSS - could someone take a look and tell me if I'm doing something dumb?
+[2021-02-17 05:05:44] <robertmain> ```js
+
+module.exports = ({ mode = 'development' }) => ({
+  module: {
+    rules: [
+      {
+        test: /\.tsx?$/,
+        include: client.src.rootDir,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: 'ts-loader',
+            options: {
+              happyPackMode: true,
+            },
+          },
+        ],
+      },
+      {
+        test: /\.s?css$/,
+        use: [
+          'vue-style-loader',
+          'css-loader',
+        ],
+      },
+      {
+        test: /\.vue$/,
+        loader: 'vue-loader',
+      },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+        },
+      },
+      {
+        test: /\.(png|ico|jpg)/,
+        loader: 'url-loader',
+      },
+    ],
+  },
+  plugins: [
+    new VueLoaderPlugin(),
+  ],
+});
+```
+[2021-02-17 05:35:50] <robertmain> Fixed it.
+[2021-02-17 05:35:54] <robertmain> I was missing `style-loader`
+[2021-02-17 07:12:23] <gauravgupta98> Guys, I've been working on React and built a WhatsApp Web clone. Checkout the demo here - https://whatsapp-clone-36b61.web.app/
+If you have any suggestions or you liked it or want to contribute then checkout the GitHub repo here - https://github.com/gauravgupta98/whatsapp-clone
+**Don't be lazy to give a star** ;)
+[2021-02-17 08:19:04] <taburetkin> a question about splitChunks
+i have this output
+[2021-02-17 08:19:06] <taburetkin> [![image.png](https://files.gitter.im/529f74f4ed5ab0b3bf04ef26/EwL1/thumb/image.png)](https://files.gitter.im/529f74f4ed5ab0b3bf04ef26/EwL1/image.png)
+[2021-02-17 08:20:38] <taburetkin> and this config in cacheGroups
+```
+            vendors: {
+                test: /[\\/]node_modules[\\/]/,
+                name: 'vendors',
+                filename: 'assets/vendors.[contenthash].js'
+                maxSize: 150000
+            }
+```
+i want to redefine file names of vendors chunks but dont understand how to do that
+
+[2021-02-17 10:01:47] <taburetkin> okey. found the answer )
+[2021-02-17 17:24:02] <retorquere> I'm trying to create a custom librarytarget plugin. In the code of EnableLibraryPlugin.js I see "Plugins which provide custom library types must call EnableLibraryPlugin.setEnabled(compiler, type) to disable this error.`);". Is there sample code that shows this, or documentation for this?
+[2021-02-18 06:42:46] <saidmammadov2005> Guys. How to hack insta? (Educational purposes)
+[2021-02-18 06:42:54] <saidmammadov2005> And how to use brute force?
+[2021-02-18 06:43:01] <saidmammadov2005> Does anyone have a video?
+[2021-02-18 08:40:37] <iamarpitpatidar> is there a way to have HtmlWebpackPlugin replace css styles with the one generated with css-modules in webpack. this is my current partial config
+```
+use: [
+    { loader: MiniCssExtractPlugin.loader },
+
+    {loader: 'css-loader',
+     options: {
+            modules: {
+                compileType: "module",
+                localIdentName: '[sha1hex:4]',
+            },
+            importLoaders: 1
+     }
+   }],
+```
+[2021-02-18 10:07:25] <b3nk3> morning, I've got a question about html-loader, am I at the right spot?
+
+as of v2 my partial stopped embedding the HTML file, and instead prints [objec Object]
+
+I am using the following syntax: `<%= require('html-loader!./content.html') %>`
+
+this works fine in v1.3.2 however doesn't work in v2
+
+For now we've rolled back to v1.3.2 - would be good to know if the syntax changed or the option itself has been removed, as I didn't see a mention of it in the changelog.
+[2021-02-18 10:50:48] <MV10> I'm trying to migrate from webpack v4 to v5 ... everything is working except `devServer.writeToDisk: true` is returning a webpack-cli "invalid configuration object" error. I'm running webpack 5.22.0, cli 4.5.0, and dev-server 4.0.0-beta.0. Not sure why it would stop working, it's still in the docs. Hmm, if I comment that out, next it complains about `publicPath: '/'` ... so it looks like a problem somehow related to webpack-dev-middleware. Do I need to explicitly reference that now, somehow? It wasn't necessary previously...
+[2021-02-18 11:19:24] <thw0rted> I have a working v5 config and don't explicitly configure dev-middleware, but I haven't tried using `writeToDisk`.  One thing to note, I don't think all the docs have been updated to reflect changes in v5 -- I opened https://github.com/webpack/webpack-dev-server/issues/2935
+[2021-02-18 11:20:42] <thw0rted> A couple times I've brought up a problem and linked to the docs, only to be told that *those* docs haven't been updated and actually option X was removed / renamed.  Usually in that case I'm referred to the changelog, which does have bullet points describing option changes
+[2021-02-18 11:21:02] <thw0rted> specifically https://github.com/webpack/webpack-dev-server/blob/master/CHANGELOG.md
+[2021-02-18 11:21:53] <thw0rted> aha!
+
+> the fs, index, mimeTypes, publicPath, serverSideRender, and writeToDisk options were moved in the dev option (webpack-dev-middleware options)
+
+[2021-02-18 11:23:19] <MV10> Thanks, I didn't think to look for a changelog but that's looking promising.
+[2021-02-18 17:04:53] <mrdoob> Hello!
+[2021-02-18 17:06:00] <mrdoob> Does anyone know why Rollup tree-shakes this but Webpack doesn't?
+[2021-02-18 17:06:04] <mrdoob> https://rollupjs.org/repl/?version=2.39.0&shareable=JTdCJTIybW9kdWxlcyUyMiUzQSU1QiU3QiUyMm5hbWUlMjIlM0ElMjJtYWluLmpzJTIyJTJDJTIyY29kZSUyMiUzQSUyMmltcG9ydCUyMCU3QiUyMEZvbyUyMCU3RCUyMGZyb20lMjAnLiUyRkZvby5qcyclM0IlMjIlMkMlMjJpc0VudHJ5JTIyJTNBdHJ1ZSU3RCUyQyU3QiUyMm5hbWUlMjIlM0ElMjJGb28uanMlMjIlMkMlMjJjb2RlJTIyJTNBJTIyY2xhc3MlMjBGb28lMjAlN0IlN0QlNUNuRm9vLnByb3RvdHlwZS5pc0ZvbyUyMCUzRCUyMHRydWUlM0IlNUNuZXhwb3J0JTIwJTdCJTIwRm9vJTIwJTdEJTIyJTJDJTIyaXNFbnRyeSUyMiUzQWZhbHNlJTdEJTVEJTJDJTIyb3B0aW9ucyUyMiUzQSU3QiUyMmZvcm1hdCUyMiUzQSUyMmVzJTIyJTJDJTIybmFtZSUyMiUzQSUyMm15QnVuZGxlJTIyJTJDJTIyYW1kJTIyJTNBJTdCJTIyaWQlMjIlM0ElMjIlMjIlN0QlMkMlMjJnbG9iYWxzJTIyJTNBJTdCJTdEJTdEJTJDJTIyZXhhbXBsZSUyMiUzQW51bGwlN0Q=
+[2021-02-18 22:27:31] <strarsis> hi
+[2021-02-18 22:28:09] <strarsis> I want to move an emitted file into a specific folder. The webpack copy plugin can copy the emitted files to the intended folder, however, the files also still go to their original destinations.
+[2021-02-18 22:28:45] <strarsis> Is there a move/mv/rename webpack plugin? Or a skip emit plugin so I can filter out the emitted original files and only keep the copied ones?
+[2021-02-18 22:28:47] <strarsis> thanks
+[2021-02-18 22:45:43] <strarsis> Hm, in gulp one would just stream the emitted file to another target.
+[2021-02-18 22:57:46] <robertmain> Hey folks. I'm using webpack5.
+The following POC:
+
+```js
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackRootElementPlugin = require('html-webpack-root-element-plugin');
+
+module.exports = {
+  plugins: [
+    new HtmlWebpackRootElementPlugin(),
+    new HtmlWebpackPlugin(),
+  ],
+};
+```
+
+Produces:
+\> webpack
+
+ webpack: Starting Build
+ command: A webpack error occured while building: use --log-level=debug for more error detail
+ command: Cannot read property 'tap' of undefined
+
+[2021-02-18 22:58:35] <robertmain> ---
+> Is there a move/mv/rename webpack plugin? Or a skip emit plugin so I can filter out the emitted original files and only keep the copied ones?
+
+@strarsis  Why not specify those files as `ignore` to your loader(s)?
+[2021-02-18 23:12:59] <strarsis> @robertmain: The loader would be the thing that uses the actual emitted files, right? In this case the loader is a PostCSS plugin, PostCSS itself is used as a webpack plugin. How can I access the actual loader?
+[2021-02-18 23:24:28] <strarsis> Is there a webpack loader for converting TTF to WOFF/WOFF2?
+[2021-02-18 23:24:37] <strarsis> that would be the actual way to use it
+[2021-02-18 23:39:03] <robertmain> @strarsis the loader would be the thing inside `module.rules`
+[2021-02-18 23:39:55] <robertmain> and no, I'm not aware of a loader that converts TTF to WOFF. That's not really what webpack is for. 
+[2021-02-19 07:21:20] <ghost~602f65fc6da037398462657b> Hello everyone, Im using webpack 5, or better to say, was upgrading from webpack v4 to v5 and upgrading from react-loadable to loadable-component and now I have really strange issue with react devtools, more here
+
+[Webpack issue](https://stackoverflow.com/questions/66256367/react-devtools-is-showing-multiple-apps)
+
+Thank you
+[2021-02-19 10:09:17] <thw0rted> Re: converting fonts, it would be wasteful to do that on every build.  Packages like `@fontsource` generally ship all the popular formats, then you can just import the main CSS for the font and the style loader will add the fonts as assets.   If you're using Webpack 5 asset modules, you can pick where the file winds up like this:
+
+````
+        {
+            test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/,
+            type: "asset",
+            generator: {
+                dataUrl: {
+                    mimetype: "application/font-woff",
+                },
+                filename: "./Assets/[name][ext]"
+            },
+        }
+````
+[2021-02-19 10:11:50] <eskydar> Hey,
+
+I am wondering gif someone could point me into the right direction. I am currently building an app in react using Scandit for barcode scanning and scandit requires a engineLocation which by their example they get from their CDN. We do not want external calls and we have the engine in our node_modules folder. Would it somehow be an option for me to make this accessible at some location using webpack. (can deliver code examples of course if required)
+[2021-02-19 10:19:41] <thw0rted> It sounds like maybe you want to use `copy-webpack-plugin`
+[2021-02-19 10:21:16] <thw0rted> https://webpack.js.org/plugins/copy-webpack-plugin/ -- you tell it where the asset ("engine"?) is in the filesystem, and during the build it will copy the file(s) to the output directory.  Then in your code, you tell the library a relative path where it got copied
+[2021-02-19 10:25:07] <eskydar> I think that is exactly what I am looking for!
+[2021-02-19 10:25:08] <eskydar> thanks
+[2021-02-19 10:25:33] <thw0rted> A simple config would look like `plugins: [ new CopyPlugin({from: "node_modules/scandit/engine", to: "Assets/scandit_engine"}) ]`. That copies the `engine` directory into `./dist/Assets/scandit_engine`, then you can tell the library `scandit.setup("./Assets/scandit_engine/data.json")` or whatever
+[2021-02-19 10:54:40] <eskydar> Although, it doesn't seem to be working but thats for me to figure out
+[2021-02-19 10:54:41] <eskydar> Thanks
+[2021-02-19 11:27:32] <bbepis> i'm trying to figure out bundle splitting but the documentation is confusing
+my goal is to split bundle.js into two bundles; `addon.js` which contains my app logic, and `vendor.js` which contains all of my NPM modules
+
+this is my current optimize property
+```
+  optimization: {
+    minimize: false,
+    splitChunks: {
+      chunks: 'all',
+      name: true,
+      cacheGroups: {
+        defaultVendors: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendor',
+          reuseExistingChunk: true,
+        },
+        default: {
+          name: 'addon',
+          reuseExistingChunk: true,
+        }
+      }
+    }
+  },
+```
+
+what it's doing is putting both vendor and app code into `addon.js` and creating a `bundle.js` which only has bootstrap code, as i'm guessing it's still the entrypoint. what am I doing wrong? i don't understand what cache groups are supposed to be
+[2021-02-19 12:08:16] <thw0rted> I don't think you need a `default`, and try `test: /node_modules/` for your vendor test
+[2021-02-19 12:10:07] <thw0rted> Mine is just
+
+````
+                commons: {
+                    test: /node_modules/,
+                    name: "vendor",
+                    chunks: "all",
+                },
+````
+
+and it works, the app code goes in a bundle named by `output.filename` and everything from `node_modules` goes into `vendor-{hash}.js`
+[2021-02-19 12:10:30] <thw0rted> I've had issues trying to include path separators in `test` before
+[2021-02-19 12:12:32] <bbepis> @thw0rted thanks that works
+[2021-02-19 12:13:28] <bbepis> is it possible to rename the "main" chunk to something else? since i have this to generate .map files, and it always creates "main.js.map" instead of "addon.js.map" as i create through output.filename
+```
+  plugins: [
+    new webpack.SourceMapDevToolPlugin({
+      filename: '[name].js.map',
+      exclude: ['vendor.js']
+    })
+  ]
+```
+[2021-02-19 12:15:20] <bbepis> normally i'd use `devtool: 'source-map',` but i don't want a mapping to be created for the vendor file
+[2021-02-19 12:43:40] <krutoo> Hi to all. How can i log webpack work result when using Node API exactly same as with CLI (colored text in terminal)? 
+There is some kind of default callback for `webpack(options, callback)`?
+[2021-02-19 14:33:26] <thw0rted> @bbepis that's interesting, I've never tried to customize sourcemaps like that.  Seems like an issue with that plugin?  One thing you could try, if you're not already, is to configure `optimization.minimizer` using the `TerserPlugin`, to exclude node_modules from minification
+[2021-02-19 14:33:35] <thw0rted> Because if it's not getting minified in the first place it shouldn't have sourcemaps
+[2021-02-19 14:33:45] <thw0rted> (just using `devtool: 'source-map'` or whatever)
+[2021-02-19 14:36:19] <thw0rted> actually it's kind of bonkers that the default config does not appear to exclude node_modules -- I don't want to re-minify all my dang dependencies on every build, they should be exposing pre-minified sources via their package file in the first place
+[2021-02-19 15:42:45] <bbepis> @thw0rted i actually ended up getting that sorted out by changing the entry property to this:
+```
+  entry: {
+    'addon': path.join(__dirname, 'app', 'addon')
+  },
+```
+before i was just specifying a string, so it was just inferring it as "main"
+[2021-02-19 15:43:06] <bbepis> as for minification being disabled and stuff, it's just all out of whack because i was playing around with it
+[2021-02-19 15:44:15] <bbepis> thanks for the help though, you're doing a public service helping people here
+[2021-02-19 16:13:19] <thw0rted> You're quite welcome, I actually came to ask for help and just stayed because I learn from watching what other people do with webpack
+[2021-02-19 16:14:23] <thw0rted> I'm a lot more productive because of webpack but of all the tools in my figurative toolbox, it still feels like the one with the most "magic", or at least the one that I have the hardest time debugging when it doesn't do what I expected
+[2021-02-19 20:32:11] <robertmain> Hey folks, given the following webpack config file, does anyone know why webpack dev server isn't actually serving anything?
+
+```js
+module.exports = {
+  mode: 'development',
+  entry: './src/index.js',
+  output: {
+    publicPath: '/',
+  },
+  devServer: {
+    host: '0.0.0.0',
+    port: 8000,
+    contentBase: __dirname,
+    serveIndex: true,
+    publicPath: '/'
+  },
+};
+
+```
+[2021-02-19 20:34:19] <robertmain> [![image.png](https://files.gitter.im/529f74f4ed5ab0b3bf04ef26/36Xj/thumb/image.png)](https://files.gitter.im/529f74f4ed5ab0b3bf04ef26/36Xj/image.png)
+[2021-02-19 20:34:27] <robertmain> The build works - but nothing gets served up
+[2021-02-19 20:36:06] <robertmain> wait....i just realized - I was being dumb. I need to run `webpack-dev-server` not -`webpack`. D'oh
+[2021-02-20 02:37:30] <amery> @dutchenkoOleg fyi, https://libraries.io/npm/webpack-remove-empty-scripts got rid of the empty .js file
+[2021-02-20 16:47:49] <dtabuenc> Anyone familiar with the internals of  module federation consume plugin?
+[2021-02-20 16:49:00] <dtabuenc> I'm trying  out sharing and I have something like:
+[2021-02-20 16:49:06] <dtabuenc> ```
+ new ModuleFederationPlugin(
+            {
+                remotes: getFederationRemotes(),
+                shared: [
+                    "mobx"
+                ]
+            }
+        ),
+
+```
+
+
+[2021-02-20 16:50:01] <dtabuenc> And in the bundle I get:
+[2021-02-20 16:50:03] <dtabuenc> ```
+	var moduleToHandlerMapping = {
+/******/ 			"webpack/sharing/consume/default/mobx/mobx?7805": () => (loadStrictVersionCheckFallback("default", "mobx", [,[-1,6,0,0],[0,5,8,0],2,[-1,5,0,0],[0,4,8,0],2,1], () => (__webpack_require__.e("node_modules_mobx_lib_mobx_module_js").then(() => (() => (__webpack_require__(/*! mobx */ "../../../node_modules/mobx/lib/mobx.module.js"))))))),
+/******/ 			"webpack/sharing/consume/default/mobx/mobx?cef6": () => (loadStrictVersionCheckFallback("default", "mobx", [1,5,10,1], () => (__webpack_require__.e("node_modules_mobx_lib_mobx_module_js").then(() => (() => (__webpack_require__(/*! mobx */ "../../../node_modules/mobx/lib/mobx.module.js"))))))),
+/******/ 			"webpack/sharing/consume/default/mobx/mobx?f3e5": () => (loadStrictVersionCheckFallback("default", "mobx", [,[1,5,0,0],[1,4,0,0],1], () => (__webpack_require__.e("node_modules_mobx_lib_mobx_module_js").then(() => (() => (__webpack_require__(/*! mobx */ "../../../node_modules/mobx/lib/mobx.module.js"))))))),
+/******/ 			"webpack/sharing/consume/default/mobx/mobx?dd37": () => (loadStrictVersionCheckFallback("default", "mobx", [4,5,14,2], () => (__webpack_require__.e("node_modules_mobx_lib_mobx_module_js").then(() => (() => (__webpack_require__(/*! mobx */ "../../../node_modules/mobx/lib/mobx.module.js")))))))
+/******/ 		};
+/******/ 		// no consumes in initial chunks
+/******/ 		var chunkMapping = {
+/******/ 			"main_real-nvo-start_ts": [
+/******/ 				"webpack/sharing/consume/default/mobx/mobx?7805",
+/******/ 				"webpack/sharing/consume/default/mobx/mobx?cef6",
+/******/ 				"webpack/sharing/consume/default/mobx/mobx?f3e5",
+/******/ 				"webpack/sharing/consume/default/mobx/mobx?dd37"
+/******/ 			]
+/******/ 		};
+```
+[2021-02-20 16:50:20] <dtabuenc> Why are there 4 different ones with different hashes? Is that normal?
+[2021-02-20 18:40:12] <dtabuenc>   Nevermind, I think I understand after stepping through the code. If you don't specify a specific version in your "share"  then it will infer version ranges from every module that consumes  it (including third-party modules in node_modules) by looing in their package.json
+[2021-02-21 16:50:38] <cjblomqvist> A) https://webpack.js.org/guides/build-performance/#persistent-cache says to clear cache on npm postinstall. How do you clear the persistent cache? Is there a command or are we simply talking about manually removing all files (assuming filesystem cache type) using something like 'rm -R <location of webpack persistent cache>'?
+B) Why is this really needed? From https://github.com/webpack/changelog-v5/blob/master/guides/persistent-caching.md#performance-optimizations is seems like webpack is able to detect changes through package.json fields (specifically version) of all components. Then doesn't this mean that in all normal scenarios it will already be handled? 
+[2021-02-21 19:01:53] <cjblomqvist> C) Does persistent cache not work with webpack-dev-middleware / webpack-hot-middleware ?
+[2021-02-21 19:08:23] <cjblomqvist> Never mind C) btw. :)
+[2021-02-22 02:11:57] <iheyunfei> I'm writing a loader to do some tricky work and has a question. Can a loader know processing file is imported dynamically or statically?
+[2021-02-22 08:16:49] <Liarus> Hello, got problem with karma and webpack that are launched on Azure Devops.  My ts.config.json is emitting declaration files and seems like somewhere wrong path is created: Here is the result on Devops pipeline default agent: 
+[2021-02-22 08:20:24] <Liarus> ```
+Generating script.
+Script contents:
+npx karma start karma.conf.js
+========================== Starting Command Output ===========================
+"C:\windows\system32\cmd.exe" /D /E:ON /V:OFF /S /C "CALL "D:\a\_temp\b209e545-cd89-4b4b-a142-8fa0d494f6fa.cmd""
+webpack was not included as a framework in karma configuration, setting this automatically...
+Webpack bundling...
+Error: EINVAL: invalid argument, mkdir 'C:\Users\VSSADM~1\AppData\Local\Temp\_karma_webpack_494403\D:\a\1\s\TestApp\dist\src'
+Terminate batch job (Y/N)? 
+```
+[2021-02-22 08:20:41] <Liarus> my ts.config.json:
+[2021-02-22 08:21:02] <Liarus> ```
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "module": "commonjs",
+    "target": "es5",
+    "allowJs": true,
+    "outDir": "./dist",
+    "declaration": true,
+    "declarationDir": "./dist",
+  },
+  "exclude": [
+    "node_modules/*",
+    "**/*.spec.ts"
+  ]
+}
+```
+[2021-02-22 08:21:20] <Liarus> my webpack.config.js:
+[2021-02-22 08:21:38] <Liarus> ```
+const path = require('path');
+const webpack = require('webpack');
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+
+module.exports = {
+  entry: path.resolve(__dirname, './src/index.ts'),
+  devtool: 'source-map',
+  plugins: [
+    new webpack.ProgressPlugin(),
+    new CleanWebpackPlugin()
+  ],
+  module: {
+    rules: [{
+      test: /\.(ts|tsx)$/,
+      loader: 'ts-loader',
+      include: [path.resolve(__dirname, 'src')],
+      exclude: [/node_modules/]
+    }]
+  },
+
+  resolve: {
+    extensions: ['.tsx', '.ts', '.js']
+  },
+
+  output: {
+    filename: 'test.js',
+    path: path.resolve(__dirname, 'dist'),
+    library: ['Test'],
+    libraryTarget: 'umd',
+    globalObject: 'this',
+    umdNamedDefine: true
+  }
+}
+
+```
+[2021-02-22 08:21:51] <Liarus> my karma.conf.js:
+[2021-02-22 08:22:15] <Liarus> ```
+const webpack = require("webpack");  
+
+module.exports = function (config) {
+  config.set({
+    basePath: '',
+    frameworks: ['jasmine'],
+    files: ['test/*.spec.ts'],
+    mime: {
+      'text/x-typescript': ['ts','tsx'] 
+    },
+    preprocessors: {
+        'test/*.spec.ts': ['webpack', 'sourcemap']
+    },
+    webpack: {
+      resolve: {
+          extensions: ['.js', '.ts', '.tsx']
+      },
+      module: {
+        rules: [{
+          test: /\.tsx?$/,
+          use: [{
+            loader: 'ts-loader'
+          }],
+          exclude: /node_modules/
+        }]
+      },
+      stats: {
+        colors: true,
+        modules: true,
+        reasons: true,
+        errorDetails: true
+      },
+      plugins: [
+        new webpack.SourceMapDevToolPlugin({
+          filename: null,
+          test: /\.(ts|js)($|\?)/i,
+          exclude: [ /node_modules/ ]
+        })
+      ]
+    },
+    reporters: ['spec'],
+    port: 9876,
+    colors: true,
+    logLevel: config.LOG_INFO,
+    autoWatch: false,
+    browsers: ['Chrome'],
+    singleRun: true,
+    concurrency: Infinity
+  });
+};
+
+```
+[2021-02-22 08:24:52] <Liarus> Locally everything works fine (karma start karma.conf.js) and I've got one c: partition. on Devops I have an error because absolute path is taken to create a directory. Anyone had same issue or have some advice? Of course I can stop emitting declaration for tests, but I want o do project reference and then there will be other files emitted and not only declarations
+[2021-02-22 08:27:33] <Liarus> I was thinking about creating a bug on karma-webpack github, since their path resides in temp, but first I wanted to ask here
+[2021-02-22 08:53:32] <thw0rted> I don't know how it can be working locally because the error from the console is correct: you don't have "webpack" in your Karma config's `frameworks`
+[2021-02-22 08:54:54] <thw0rted> see the example on [the docs page](https://github.com/ryanclark/karma-webpack)
+[2021-02-22 08:59:57] <Liarus> I believe, that in a new version they're able to resolve it out of box, and this is a warning only. Webpack bundling is launched anyway
+[2021-02-22 10:41:06] <paras151> Hi I am new to Webpack. It's unclear about how I can install this project on my machine. I guess 'npm install --save-dev webpack' would install the original Webpack software, but what I want to install is this project on my machine.
+
+[2021-02-22 10:47:36] <thw0rted> I'm not sure I understand your question.  What are you trying to do with webpack?
+[2021-02-22 10:48:48] <thw0rted> there's a good [getting started guide](https://webpack.js.org/guides/getting-started/) on the website that walks you through using Webpack to bundle a simple site
+[2021-02-22 11:41:31] <ghost~602f65fc6da037398462657b> hello guys, anyone had similar issue?
+
+[Link](https://i.stack.imgur.com/RkEJ1.png)
+[2021-02-22 12:06:06] <ghost~5cc84854d73408ce4fbf0b0b> can webpack externals Components such as ag-grid-react ?
+[2021-02-22 15:41:33] <strarsis> hi
+[2021-02-22 15:41:48] <strarsis> I got a question about webpack internals (hook, events),anyone here who can help with this?
+[2021-02-23 16:19:45] <ht55ght55> hello fellow humans, I'm having trouble getting understanding why I'm getting CORS errors using Webpack to build a Svelte front end and Access an API.  
+[2021-02-23 16:20:49] <ht55ght55> The error is: Access to fetch at 'https://...some-website.../' from origin 'http://localhost:8080' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: Redirect is not allowed for a preflight request.
+[2021-02-23 16:21:17] <ht55ght55> I can't seem to figure out whether this is on my end (front) or server-side
+[2021-02-23 16:23:25] <ht55ght55> I've tested the API with Insomnia, and everything works fine.  I even set up the API locally on another port and that worked.
+[2021-02-23 16:23:55] <ht55ght55> Any help would be MUCH appreciated.
+[2021-02-23 16:24:08] <ht55ght55> Oh yeah, I'm using webpack
+[2021-02-23 16:24:15] <ht55ght55> And I've set up the proxy
+[2021-02-23 16:26:32] <ht55ght55> ```
+proxy: {
+			'/note': {
+				target: 'https://...some-website.com/',
+				headers: {
+					"Access-Control-Allow-Origin": "*",
+					"Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
+				},
+			},
+
+		}
+```
+[2021-02-23 16:33:37] <ht55ght55> I apologise for the indention
+[2021-02-23 16:49:51] <ht55ght55> What I really don't understand is how I know if the proxy is correctly configured
+[2021-02-23 18:00:24] <howdyAnkit> Invalid configuration object. Webpack has been initialized using a configuration object that does not match the API schema.
+ - configuration.node has an unknown property 'process'. These properties are valid:
+   object { __dirname?, __filename?, global? }
+   -> Options object for node compatibility features.
+[2021-02-23 18:00:33] <howdyAnkit> Can anyone help me with this
+[2021-02-23 18:00:44] <howdyAnkit> was trying to migrate from w4 to w5
+[2021-02-23 18:01:06] <howdyAnkit>   node: {
+    process: false,
+  },
+
+  resolve: {
+    fallback: {
+      process: false,
+    },
+  },
+[2021-02-23 18:01:18] <howdyAnkit> tried to fix with resolve but no progress
+[2021-02-23 18:14:19] <ht55ght55> Sorry, I can not help you, I'm new to this.
+[2021-02-23 18:14:37] <ht55ght55> 20k people and nobody around
+[2021-02-23 18:20:14] <howdyAnkit> Thanks @ht55ght55 for reply I taught this might be active channel
+[2021-02-23 23:10:22] <b-e-r-t-o> Hello, I was wondering if anyone would have some insight on this as I have not been able to find a solution. Basically, I'm trying to see if it is possible to strip out a variable (along with any imports it references) from the file it's in into a separate file?
+```
+import helper from 'helpers'
+
+export default class MyClass {
+	static fooBar = helper("test");
+  
+  ....
+}
+```
+In this example, I'd want to be able to extract `fooBar` along with anything it references on the right side of the assignment operator.
+[2021-02-24 04:38:17] <dotnetshadow> Hi all I'm trying to use the `TerserWebpackPlugin` with webpack5 it sasys  _If you are using webpack v5 or above you do not need to install this plugin. Webpack v5 comes with the latest terser-webpack-plugin out of the box_
+
+So I removed the package from my package.json file, but when I go to run my webpack it says that the module cannot be found. I'm trying to customize using
+```
+new TerserPlugin({
+                    exclude: [/node_modules/, /\.min\.js$/gi],
+                    extractComments: false,
+                    terserOptions: {
+                        compress: true,
+                        ecma: 6,
+                        format: {
+                            comments: false,
+                        },
+                        mangle: true,
+                        warnings: false
+                    }
+                    //,sourceMap: false
+                })
+```
+
+Any ideas?
+[2021-02-25 01:27:18] <samhuk> [![image.png](https://files.gitter.im/529f74f4ed5ab0b3bf04ef26/jh5P/thumb/image.png)](https://files.gitter.im/529f74f4ed5ab0b3bf04ef26/jh5P/image.png)
+[2021-02-25 01:27:30] <samhuk> Is anyone else having problems with no page reloading with webpack-dev-middleware + webpack-hot-middleware + react, after updating all to latest versions? I'm getting the above error about unaccepted modules and nothing to update. It worked with old versions of each, but since updating, it stopped. I can't find anything in the docs about this...
+
+[2021-02-25 09:45:36] <samhuk> Ah, for the above, it is a known issue for a few months guys. Issue #390.
+[2021-02-25 09:46:29] <samhuk> https://github.com/webpack-contrib/webpack-hot-middleware/issues/390
+[2021-02-25 12:32:48] <elisabetperez> Hey guys! I'm having trouble with html-loader and static-i18n. When I run the building command html-loader processes everything correctly (css, Js and images processed), but when I execute i18n (before or after the build, the output does not change) , the output html source has no mention to any CSS or any JS scripts. It's like static-i18n is not compatible with html-loader and I can't find any loaders for this. Has somebody else experienced this issue? 
+
+Just in case, let me add my webpack.common.js
+```
+const webpack = require('webpack');
+const path = require('path');
+
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const currentTask = process.env.npm_lifecycle_event;
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
+
+module.exports = {
+    
+    entry: {
+        main: './src/js/home.js',
+    },
+
+    module:{
+        rules: [
+            {
+                test: /\.js$/,
+                exclude: /(node_modules)/,
+                use:'babel-loader'
+            },
+            {
+                test: /\.html$/i,
+                loader: 'html-loader',
+            },
+            { 
+                test: /\.vue$/, 
+                use: 'vue-loader'
+            },
+   
+           {
+            test: /\.(png|svg|gif|jpg)$/,
+            use: [
+                {
+                    loader: 'file-loader',
+                    options: {
+                        name: "[name].[hash].[ext]",
+                        outputPath: "img/",
+                        publicPath: './img/'
+                    }
+                },
+            ],
+        },
+         {
+            test: /\.(pdf)$/,
+            use: {
+                loader: 'file-loader',
+                options:{
+                    name: '[name].[ext]',
+                    outputPath: "files/",
+                    publicPath: './files/'  
+                }
+            },
+        },
+        {
+            test: /\.(mp4|mov|avi|wmv|webm)$/,
+            use: {
+                loader: 'file-loader',
+                options:{
+                    name: '[name].[hash].[ext]',
+                    outputPath: "video/",
+                    publicPath: './video/'
+                }
+            },
+        },
+        {
+            test: /\.(woff|woff2|svg)$/,
+            exclude: [path.resolve(__dirname, './src/img/')],
+            use: {
+                loader: 'file-loader',
+                options:{
+                    name: '[name].[ext]',
+                    limit: 4096,
+                    mimetype: "application/font-woff",
+                    outputPath: 'css/fonts/',
+                    publicPath: './css/fonts/',  
+                }
+            },
+        }
+
+        ],
+    },
+    plugins:[
+        new VueLoaderPlugin(),
+        new HtmlWebpackPlugin({
+            minify: false,
+            filename: './index.html',
+            template: './src/index.html',
+            chunks: ['main'],
+            
+        })
+    ],
+    resolve: {
+        alias: {
+            '@scss': path.resolve(__dirname, 'src/scss'),
+            '@img': path.resolve(__dirname, 'src/img'),
+            '@': path.resolve(__dirname, 'src')
+        }
+    }
+}
+```
+and this is my package.json and its commands:
+
+```
+"i18n": "static-i18n -l en -i fr -i es -i en -o dist/  src --localesPath src/locales/",
+ "dev": "webpack serve --config webpack.dev.js --open",
+ "build": "webpack --config webpack.prod.js"
+```
+
+Thanks in advance!
+[2021-02-25 14:02:00] <raphael10-collab> I have a questoin somewhat similar to what asked by @elisabetperez . How to include during webpack's build phase of an electron-react-typescript-webpack app python and C scripts? The objective is to copy the python files and the C executables in the correct sub-folders.
+
+In package.json I have :  
+[2021-02-25 14:03:31] <raphael10-collab>     "scripts": {
+            "type-check": "tsc -w",
+            "start:dev": "webpack serve",
+            "build": "webpack --config ./webpack.config.js",
+            "start": "yarn run build && electron ./dist/main/main.js",
+            "babel": "babel ./src/**/* -d dist",
+            "lint": "cross-env NODE_ENV=development eslint . --cache --ext .js,.jsx,.ts,.tsx",
+            "lint:fix": "yarn run lint -- --fix",
+            "dev": "yarn webpack --config ./webpack.config.js",
+            "postinstall": "yarn electron-rebuild"
+          },
+          "build": {
+            "files": [
+              "./dist/**/*",
+              "./dist/index.html",
+              "./dist/index_A.html",
+              "./src/*.js"
+            ],
+            "extraFiles": [
+              "./src/*.py",
+              "./src/*.c",
+              "./src/*.cpp",
+              "./src/scripts/**/*"
+            ],
+[2021-02-25 14:03:48] <raphael10-collab> I also included in webpack.config.js's rules and CopyPlugin: 
+[2021-02-25 14:03:58] <raphael10-collab>        {
+          // python files
+          test: /\.py$/,
+          use: {
+            loader: 'file-loader',
+          },
+        },
+
+
+
+        new CopyPlugin({
+          patterns: [
+            {
+              from: path.resolve(__dirname, "./src/scripts/python/*"),
+              to: path.resolve(__dirname, "./dist/scripts/python/*")
+            },
+            { 
+              from: path.resolve(__dirname, "./src/scripts/cpp/*"),
+              to: path.resolve(__dirname, "./dist/scripts/cpp/*")
+            },
+          ],
+          options: {
+            concurrency: 100,
+          },
+        }),
+
+[2021-02-25 14:04:58] <raphael10-collab>  But this doesn't work .  Manually copying the file, makes it work. But it's not a "solution"...
+
+[2021-02-25 14:18:13] <raphael10-collab> Is there someone who can explain us how to copy folders intact to th webpack compiled folder?
+[2021-02-25 16:11:43] <thw0rted> When you say the above "doesn't work", you mean like nothing happens?  Because that looks more or less right
+[2021-02-25 16:15:59] <thw0rted> You don't need a wildcard in `from`, just `from: path.resolve("./src/whatever")` or even `from: "./src/whatever"`, and I use relative paths for `to`, like `to: "Assets/Images"` copies stuff from the `from` directory into `./dist/Assets/Images`
+[2021-02-25 16:16:41] <thw0rted> you might just need to take out all the asterisks
+[2021-02-25 16:48:15] <raphael10-collab> Hi @thw0rted ! Thank you for giving an hand. With :
+[2021-02-25 16:50:38] <raphael10-collab>         new CopyPlugin({
+          patterns: [
+            //{
+              //from: path.resolve(__dirname, "./src/scripts"),
+              //to: path.resolve(__dirname, "./dist/scripts")
+            //},
+            {
+              from: path.resolve(__dirname, "./src/scripts/python"),
+              to: path.resolve(__dirname, "./dist/scripts/python")
+            },
+            {
+              from: path.resolve(__dirname, "./src/scripts/cpp"),
+              to: path.resolve(__dirname, "./dist/scripts/cpp")
+            },
+          ],
+          options: {
+            concurrency: 100,
+          },
+
+[2021-02-25 16:51:05] <raphael10-collab> It actually copies the .py file : 
+[2021-02-25 16:51:19] <raphael10-collab>      /dist/scripts/python$ ls -lah
+    total 20K
+    drwxr-xr-x 2 marco marco 4,0K feb 25 17:49 .
+    drwxr-xr-x 4 marco marco 4,0K feb 25 17:49 ..
+    -rw-r--r-- 1 marco marco  606 feb 25 17:49 executeFactorial.js
+    -rw-r--r-- 1 marco marco  625 feb 25 17:49 executeFactorial.js.map
+    -rw-r--r-- 1 marco marco  140 feb 25 17:49 factorial.py
+
+[2021-02-25 16:52:31] <raphael10-collab> But the execution of the app doesn't produce any output, which is strange
+[2021-02-25 16:58:05] <raphael10-collab> If I comment all the CopyPlugin code of webpack.config.js , execute `type-check (tsc -w)` and then manually copy the python file with `cp -i src/scripts/python/factorial.py dist/scripts/python/` then,  when I execute `npx webpack --config ./webpack.config.js`  I get the correct output: 
+[2021-02-25 16:58:12] <raphael10-collab>     executeFactorial.js-callFactorial-numberToFactorize:  20
+    executeFactorial.js-results=  2432902008176640000
+    executeFactorial.js-callFactorial-numberToFactorize:  6
+    executeFactorial.js-results=  720
+
+[2021-02-25 21:17:04] <Cavmpt> Hi i have some webpack questions if that okay
+[2021-02-25 21:17:35] <Cavmpt> With webpack you can specify eslint loaders prettier loaders and other things like that
+[2021-02-25 21:18:59] <Cavmpt> what would be the purpose of those loaders as we could use eslint in the root of our project and webpack outputs the uglified code 
+[2021-02-25 23:54:21] <user72349823> Hi! Despite hours of Googling, Stack Overflow, etc, I can't find anyone else who has had this issue.
+
+A bit of background: Previously, we were using jasmine, karma, webpack v4, and karma-webpack to use webpack as a preprocessor, all without issue. To be honest, our tests are a bit of a mess—in many files ES6 imports and global state are overwritten with spies which aren't cleaned up, which occasionally caused issues where tests would fail because of spies which were leftover from tests which ran earlier. But regardless of this, everything was working and tests were running in an order such that they were passing.
+
+Cue upgrades to webpack v5 and karma-webpack v5. After upgrading both packages, about half of our 5,000 tests fail for various reasons, but most because of the reason I mentioned above: a lot of "already spied on" errors from previous files and within files (if spied are defined in multiple describe blocks).
+
+I've been able to gather that some of this is because webpack v5 causes tests to run in a different order (therefore surfacing some of the run order dependencies which already existed). But randomizing test order using webpack v4 results in ~100 failures (slightly different on each run, obviously), while with webpack v5 it's ~2,500 failures, so there must be something else going on. Has something changed with the way webpack handles imported modules from v4 -> v5? Perhaps it caches differently than in previous versions?
+
+Any suggestions on what's going on are greatly appreciated. Thanks in advance. I'm pulling my hair out here!
+[2021-02-26 10:10:27] <thw0rted> The idea behind webpack is that all the build steps needed for your application are orchestrated with one tool, based on a single config
+[2021-02-26 10:12:14] <thw0rted> that said I don't know why you'd want to run eslint or prettier in a loader, that doesn't sound like part of a build process to me
+[2021-02-26 10:13:07] <thw0rted> I'm a bit confused what you mean about "uglified code", eslint does not uglify / minify / compress code
+[2021-02-26 10:23:11] <thw0rted> I also use jasmine/karma/karma-webpack, and recently migrated from v4 to v5.  I rarely have to spy on module members so I haven't run into the behavior you're describing.  Have you tried using before/after hooks to clean up the spied-on stuff at the spec level?  (`afterAll(() => { myModule.foo.and.callThrough(); myModule.bar.and.returnValue(originalBar); }`, etc)
+[2021-02-26 10:26:20] <thw0rted> If something major changed, it seems more likely to have been on the karma-webpack side than something with Webpack itself.  Just to confirm, you're using CJS modules for your test build, right?  Modifying "real" ES6 modules like this isn't supposed to work, AFAIK.
+[2021-02-26 15:22:10] <deanc> How does the `asset/resource` loader work exactly in webpack 5. I have a file inside my src directory called `app.js` which imports `app.css` which references a font using absolute path. But there is no concept of absolute path here, and in fact the fonts themselves live OUTSIDE the `src/` dir inside a directory called `static/`. I saw the existing webpack config i inherited is using some copy webpack plugin which copies the `static` dir to the output directory. Do the steps happen in synchronous way so that once the copy is done, that when the asset/resource loader encounters my font file with the absolute path of /files that it will look int he configured output directory and it should be there?
+[2021-02-26 15:46:16] <user72349823> Hello, thanks for the reply! I did start to clean up spies as you described, since the issue is ultimately with how the tests themselves are written. It does fix the failures, although it's slow work. I guess I'm mostly wondering why the upgrade caused the issues to surface all at once. Thanks for the tip, I'll check with karma-webpack to see if they are aware of any changes.
+[2021-02-27 07:47:47] <taburetkin> i am using relative path and also i have file-loader with rule for fonts.
+
+[2021-02-28 00:47:43] <fivethreeo> Looking for suggestions on how make a plugin that works with hmr that can react to yarn workspace packages being rebuilt. I want to use a watching build on a package and in another process run a webpack-dev-server that autoreloads when the package being watched is compiled. Would it be enough to just add it to the compilers dependencies? Or do I somehow need the dependencies to be added to whichever module imports the dependency. 
+[2021-02-28 04:55:02] <Devinora> guys, tell me a stable build that runs webpack-dev-server
+[2021-02-28 05:44:03] <AswinCG2002> Hello everyone, how should I get started with webpack. what are the first things to do around here?
+[2021-02-28 10:32:08] <nickjj_gitlab> Hi, does someone happen to know how to associate an `outputPath` and `publicPath` to the new webpack 5 `type: 'asset/resource'`? I combed over the asset/resource docs but didn't see a way to set this, i'm trying to convert an older file-loader to this new format -- here's a gist of a working version using file-loader and what i'm trying to replicate using 'asset/resource', thanks! https://gist.github.com/nickjj/a33a0ca8585a01e848ff5a757e658e14
+[2021-02-28 14:52:59] <baruchyochai> Hi Everyone,
+
+Error: Couldn't find a style target. How to fix it?
+
+I had a CSR app and now implemented Server-Side Rendering (SSR) with React, and get this error
+
+> Error: Couldn't find a style target. This probably means that the value for the 'insert' parameter is invalid
+
+Get this error when I run the server and try to access the page.
+Tech sack in use: nodejs, reactjs, antdesign, babel and webpack.
+I already tried a lot of solutions from StackOverflow and other sources, nothing helped! Please, help me to solve it.
+
+Thank you!
+[2021-02-28 14:53:18] <baruchyochai> Need your help. Thanks
+[2021-02-28 16:58:05] <fivethreeo> @baruchyochai you need to provide us more info/ setup a minimal example or show us your webpack setup
+[2021-02-28 20:36:41] <fivethreeo> @baruchyochai I know what it is, you cannot use style-loader server side.
+[2021-03-01 10:13:18] <lazytyper> I’m looking for a Webpack config file, with Webpack version 4 or 5, with CoffeeScript, Pug, Stylus, copying files to the /app folder 
+[2021-03-01 12:06:08] <baruchyochai> const { resolve } = require("path");
+require("ignore-styles");
+
+module.exports = {
+  webpack: function (config) {
+    config.entry = resolve(dirname, "../client/src/ssr");
+    config.optimization = undefined;
+    config.output = {
+      filename: "ssr.js",
+      globalObject: 'this',
+      libraryTarget: "commonjs",
+      path: resolve(dirname, "../client/build"),
+    };
+
+    return config;
+  },
+};
+[2021-03-01 12:06:34] <baruchyochai> this is webpack-override-file
+
+we use react-app-rewired
+[2021-03-01 12:07:17] <baruchyochai> Hi  @fivethreeo please, see our webpack config above
+[2021-03-01 12:07:38] <baruchyochai> const { resolve } = require("path");
+require("ignore-styles");
+
+module.exports = {
+webpack: function (config) {
+config.entry = resolve(dirname, "../client/src/ssr");
+config.optimization = undefined;
+config.output = {
+filename: "ssr.js",
+globalObject: 'this',
+libraryTarget: "commonjs",
+path: resolve(dirname, "../client/build"),
+};
+
+return config;
+},
+};
+[2021-03-01 12:08:06] <baruchyochai> Hello and thank you for your help. 
+[2021-03-01 12:08:08] <baruchyochai> this is webpack-override-file
+
+we use react-app-rewired
+[2021-03-01 13:02:42] <fivethreeo> Find the loader like this: https://github.com/codebandits/react-app-rewire-css-modules/blob/master/index.js just use style-loader instead, and remove it.. or switch to razzle :)
+[2021-03-01 13:26:22] <baruchyochai> @fivethreeo Razzle is relatively new and still not so popular. So, I do not know if it's better to use Razzle)) 
+[2021-03-01 13:26:24] <baruchyochai> https://www.npmtrends.com/next-vs-razzle
+[2021-03-01 13:37:26] <baruchyochai> Also, we used isomorphic-style-loader
+BUT it generated another error with Antd (ant design)
+
+[2021-03-01 13:39:53] <baruchyochai> Error: No PostCSS Config found in: D:_PROJECT\....\client\node_modules\antd\dist
+[2021-03-01 13:40:59] <baruchyochai> Then we did what is mentioned here in the comment under solution https://stackoverflow.com/questions/51570134/how-can-i-use-style-loader-in-react-ssr-server-side-rendering and it also led to the errors
+[2021-03-01 15:29:48] <baruchyochai> We also tried these loaders
+css-loader, sass loader and style-loader
+[2021-03-01 15:48:25] <baruchyochai> here is more details: https://stackoverflow.com/questions/66383230/error-couldnt-find-a-style-target-it-started-to-appear-after-ssr-with-react-i
+[2021-03-01 16:23:11] <fivethreeo> I made a example with bleeding edge razzle https://codesandbox.io/s/razzle-examples-basic-forked-9ld58 - you could probably do this in rewire aswwll, look in razzle.config.js for the antd regex amt the less configuration
+[2021-03-01 16:35:32] <fivethreeo> @Devinora all should work
+[2021-03-01 16:56:23] <malloy045> Anyone have any idea why I get `null` for these file names when using `webpack-dev-server`?  I assume that null field is either the chunk id/name or entry point?  
+```
+Time: 33099ms
+Built at: 03/01/2021 11:35:56 AM
+                                   Asset       Size        Chunks                         Chunk Names
+                              index.html   2.59 KiB                [emitted]
+                           manifest.json  514 bytes                [emitted]
+           null.ae5296a817faa5858edf.css   14.4 KiB          null  [emitted] [immutable]  null
+       null.ae5296a817faa5858edf.css.map   20.1 KiB          null  [emitted] [dev]        null
+            null.ae5296a817faa5858edf.js   1.29 MiB          null  [emitted] [immutable]  null
+        null.ae5296a817faa5858edf.js.map    755 KiB          null  [emitted] [dev]        null
+         runtime.ae5296a817faa5858edf.js   33.5 KiB       runtime  [emitted] [immutable]  runtime
+     runtime.ae5296a817faa5858edf.js.map   35.1 KiB       runtime  [emitted] [dev]        runtime
+    vendors.null.ae5296a817faa5858edf.js   2.52 MiB  vendors.null  [emitted] [immutable]  vendors.null
+vendors.null.ae5296a817faa5858edf.js.map   2.08 MiB  vendors.null  [emitted] [dev]        vendors.null
+Entrypoint null = runtime.ae5296a817faa5858edf.js runtime.ae5296a817faa5858edf.js.map vendors.null.ae5edf.js null.ae5296a817faa5858edf.css.map null.ae5296a817faa5858edf.js.map
+```
+
+It fills in the entry point name fine when doing a plain webpack build, this only happens when using dev server.
+
+Here is the relevant part of my config:
+```
+const config = {
+		entry: path.resolve(srcPath, 'index.jsx'),
+		output: {
+			path: distPath,
+			publicPath: '/',
+			filename: '[name].[hash].js',
+			library: 'MyProject',
+			libraryTarget: 'umd'
+		},
+		optimization: {
+			runtimeChunk: 'single',
+			splitChunks: {
+				chunks: 'all',
+				automaticNameDelimiter: '.'
+			}
+		},
+		devServer: {
+			publicPath: '/',
+			open: {
+				app: ['chrome', '--remote-debugging-port=9222']
+			},
+			https: true
+		},
+```
+
+
+
+
+[2021-03-01 17:04:05] <thw0rted> You can basically omit `optimization` completely when in dev, the defaults are kinda-sorta-fine
+[2021-03-01 17:05:01] <thw0rted> you only need it if you're debugging something specific to the way Webpack is chunking your stuff
+[2021-03-01 17:13:37] <malloy045> Thanks, @thw0rted.  I removed that just to test and I still get `null`s:
+```
+Built at: 03/01/2021 12:10:25 PM
+                            Asset       Size  Chunks                         Chunk Names
+                       index.html   2.48 KiB          [emitted]
+                    manifest.json  270 bytes          [emitted]
+    null.c59bf1d5278b35035895.css   14.4 KiB    null  [emitted] [immutable]  null
+null.c59bf1d5278b35035895.css.map   20.1 KiB    null  [emitted] [dev]        null
+     null.c59bf1d5278b35035895.js   3.84 MiB    null  [emitted] [immutable]  null
+ null.c59bf1d5278b35035895.js.map   2.85 MiB    null  [emitted] [dev]        null
+Entrypoint null = null.c59bf1d5278b35035895.css null.c59bf1d5278b35035895.js null.c59bf1d5278b35035895.css.map null.c59bf1d5278b35035895.js.map
+```
+
+The last line is interesting.  Makes me wonder if the entrypoint name is null?  I tried defining it in the config, but I get the same results.
+```
+		entry: {
+			myProject: path.resolve(srcPath, 'index.jsx')
+		},
+```
+
+The command I'm using is:
+`webpack-dev-server --entry ./src/index.dev.jsx --hot`
+
+
+This ultimately isn't a big deal, but it's annoying seeing null somewhere it shouldn't be.
+[2021-03-01 17:20:38] <baruchyochai> Do you recommend Razzle? Does it have strong advantages? Just don't want to use additional frameworks such as nextjs only because of SSR...which will lead to additional maintenance and heavy app
+[2021-03-01 17:26:21] <fivethreeo> Razzle is really agnostic as to what you use. I am the maintainer of Razzle. Razzle just handles the building. Everyhing else is up to you.
+[2021-03-01 17:28:08] <fivethreeo> I would recommend it :)
+[2021-03-01 17:49:10] <malloy045> Update on the message above.  I fixed it:
+- use a static filename in the output config section
+- remove the optimization piece when using webpack-dev-server along 
+
+@thw0rted, thanks for your help!
+[2021-03-01 17:55:06] <baruchyochai> haha)) Thank you will try to implement based on the code that you sent. Let's see what happens
+[2021-03-01 17:58:04] <fivethreeo> See here aswell to see how razzle does it here: https://github.com/jaredpalmer/razzle/blob/master/packages/razzle-plugin-less/index.js#L121
+[2021-03-01 17:59:24] <fivethreeo> https://github.com/jaredpalmer/razzle/blob/canary/packages/razzle/config/createConfigAsync.js#L364
+[2021-03-01 18:03:01] <baruchyochai> Try to use this one https://github.com/jaredpalmer/razzle/tree/master/packages/razzle-plugin-typescript
+[2021-03-01 18:03:33] <baruchyochai> I really not so interested in using razzle, but I feel that I am forced to because of situation))
+[2021-03-01 18:05:53] <baruchyochai> why do you recommend less instead of typescript
+[2021-03-01 18:14:19] <fivethreeo> I am releasing 4.0 today, Razzle 4.0 works without that plugin for typescript. Instead of less? You mean babel instead if ts-loader?
+[2021-03-01 18:16:02] <fivethreeo> you just need MiniCSSExtractPlugin/loader / less-loader / css-loader
+[2021-03-01 18:22:38] <baruchyochai> Ok, we'll wait until you will release Razzle 4.0
+[2021-03-01 21:13:08] <fivethreeo> https://github.com/jaredpalmer/razzle/issues/1377#issuecomment-788212740 - watch this for when release happens
+[2021-03-02 00:47:37] <monokrome> Does anyone know what the proper way is to directly assign the exports from a source file to the exported module from webpack? Like, to never export the object with a namespace. The docs say to set library to empty string, but doing that yields `configuration.output.library should be an non-empty string.` while a GitHub issue says that is a documentation bug and not an implementation bug
+[2021-03-02 00:48:27] <monokrome> when I require my module in node, it exports `{ mymodule: { ... } }` instead of just `{ ... }`
+[2021-03-02 00:51:20] <monokrome> I thought if I just set llibraryTarget to "commonjs", it'd work as expected - but it adds a weird namespace
+[2021-03-02 00:51:48] <k1ddarkn3ss> [![CleanShot 2021-03-01 at 16.50.49.png](https://files.gitter.im/529f74f4ed5ab0b3bf04ef26/5Zff/thumb/CleanShot-2021-03-01-at-16.50.49.png)](https://files.gitter.im/529f74f4ed5ab0b3bf04ef26/5Zff/CleanShot-2021-03-01-at-16.50.49.png)
+[2021-03-02 00:52:12] <monokrome> uh?...
+[2021-03-02 00:55:59] <monokrome> like if `index.js` is just `module.exports = 12`
+[2021-03-02 00:56:34] <monokrome> how do I get it to output `module.exports = 12` instead of `module.exports = { mylibrary: 12 }`
+[2021-03-02 02:30:02] <fivethreeo> @monokrome webpack 4 or 5?
+[2021-03-02 08:11:08] <baruchyochai> Thanks. But, I see that you started to talk there about canary 4.0.1 and what's about razzly 4.0 still not released
+[2021-03-02 11:46:29] <kks773711_twitter> 2  
+[2021-03-02 13:11:51] <fivethreeo> 4.0.1-canary.2  is a prerelease, to ensure that 4.0 is perfect, need to have people verify my fix
+[2021-03-02 13:14:13] <fivethreeo> 4.0.1-canary.2  will probably become 4.0.1
+[2021-03-02 14:36:50] <elisabetperez> has anyone tried html-webpack-plugin and static-i18n together? it's acting up for me, like if they had conflicts and the html output isn't what it should be 
+[2021-03-02 15:12:18] <fivethreeo> @elisabetperez don't think they will work together at all
+[2021-03-02 15:43:58] <baruchyochai> So, when you are going to release razzle 4.0.1?
+[2021-03-02 15:46:11] <elisabetperez> @fivethreeo any workaround in mind?
+[2021-03-02 15:47:44] <fivethreeo> Hopefully tomorrow, waiting for the one who reported the error i fixed to confirm it is fixed.
+[2021-03-02 15:48:47] <fivethreeo> run it thru webpack twice is the only way i see
+[2021-03-02 15:51:22] <elisabetperez> @fivethreeo then the dynamic vars or data-t from the json are not rendered in the html  it's like html webpack plugin adds the css and the js to my html and does not render the locales and i18n renders the data from the locales but removed the css and js. Never ending story!
+[2021-03-02 16:04:28] <fivethreeo> maybe do a custom loader
+[2021-03-02 16:04:45] <fivethreeo> https://github.com/jantimon/html-webpack-plugin/blob/main/lib/loader.js
+[2021-03-02 16:12:22] <fforres> Hey folks! Do you know how can I match a `beforeCompile` hook run, with its corresponding `afterCompile` ? 
+[2021-03-02 16:16:17] <fforres> Been trying to play with hooks for a bit and cant seem to make it happen.
+Maybe they are sequential? As in... if we are going to run multiple compilations a compilation will always close/seal before starting a new one? 
+So I'll always see a:  `beforeCompile` -> `afterCompile` -> `beforeCompile` -> `afterCompile` 
+
+And never a `beforeCompile (A)` -> `beforeCompile (B)` -> `afterCompile (A) `-> `beforeCompile (C)` -> `afterCompile (B)`  -> `afterCompile (C)` ?
+[2021-03-02 17:00:23] <baruchyochai> We used as base this https://github.com/jaredpalmer/razzle/tree/master/examples/with-typescript
+[2021-03-02 17:00:47] <baruchyochai> on src folder we set client and server folder, 
+but also, on src folder we have client.tsx file (error :()
+also, I have .babelrc file
+{
+   "presets": [
+     "razzle/babel", // NEEDED
+     ["@babel/preset-env", {"targets": {"node": "current"}}],
+    ["@babel/preset-react", {"targets": {"node": "current"}}]
+
+    ],
+    "plugins": [
+       "@babel/plugin-syntax-jsx",
+       ["@babel/plugin-proposal-decorators", { "legacy": true }]
+    ] 
+[2021-03-02 17:02:47] <baruchyochai> In addition, we have this error
+[2021-03-02 17:02:49] <baruchyochai> SyntaxError: D:_PROJECT\testtyperazzle\with-typescript\src\client.jsx: Support for the experimental syntax 'jsx' isn't currently enabled (65:3):
+
+  63 |
+  64 | hydrate(
+65 |   <Provider store={store}>
+     |   ^
+  66 |         <ApolloProvider client={client}>
+  67 |             <ApolloHooksProvider client={client}>
+  68 |                 <App />
+[2021-03-02 17:03:26] <fivethreeo> usin 3.3.11?
+[2021-03-02 17:04:09] <fivethreeo> or 4.0.1-canary.2
+[2021-03-02 17:05:03] <fivethreeo> https://github.com/jaredpalmer/razzle/blob/canary/examples/with-typeorm-graphql/.babelrc
+[2021-03-02 17:07:09] <baruchyochai> we don't use typeorm, we use mongoose
+[2021-03-02 17:07:25] <baruchyochai>     "razzle": "^3.3.13",    "razzle": "^3.3.13",
+[2021-03-02 17:07:30] <fivethreeo> yes, but you use decoratirs
+[2021-03-02 17:08:45] <baruchyochai> Yes
+[2021-03-02 17:09:07] <baruchyochai> So, do you know anything about the errors?
+[2021-03-02 17:09:24] <fivethreeo> jsx is supported by default
+[2021-03-02 17:09:39] <fivethreeo> in 4.0.1-canary.2
+[2021-03-02 17:11:05] <fivethreeo> it is so close to 4.0.1 so you can safely use it
+[2021-03-02 17:14:27] <fivethreeo> 3.3.13 why I had to fix razzle
+[2021-03-02 17:14:39] <baruchyochai> ok, where is the link to this one
+[2021-03-02 17:14:56] <baruchyochai> to 4.0.1-canary.2
+[2021-03-02 17:15:08] <baruchyochai> I only found 4.0.0-canary.2
+[2021-03-02 17:16:47] <fivethreeo> https://razzle-git-canary-jared.vercel.app/getting-started#dependencies - just add @4.0.1-canary.2 to the razzle dependencies
+[2021-03-02 17:17:44] <fivethreeo> https://razzle-git-canary-jared.vercel.app/docs/upgrade-guide
+[2021-03-02 17:19:04] <baruchyochai> Cool. thanks
+[2021-03-02 17:48:27] <baruchyochai> yarn run v1.22.10
+$ tsc -b && razzle build
+internal/modules/cjs/loader.js:969
+  throw err;
+  ^
+
+Error: Cannot find module 'razzle-dev-utils/webpackMajor'
+Require stack:
+- D:_PROJECT\testtyperazzle\with-typescript\node_modules\razzle\config\createConfigAsync.js
+- D:_PROJECT\testtyperazzle\with-typescript\node_modules\razzle\scripts\build.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:966:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:842:27)
+    at Module.require (internal/modules/cjs/loader.js:1026:19)
+    at require (internal/modules/cjs/helpers.js:72:18)
+    at Object.<anonymous> (D:_PROJECT\testtyperazzle\with-typescript\node_modules\razzle\config\createConfigAsync.js:26:22)
+    at Module._compile (internal/modules/cjs/loader.js:1138:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1158:10)
+    at Module.load (internal/modules/cjs/loader.js:986:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:879:14)
+    at Module.require (internal/modules/cjs/loader.js:1026:19) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'D:\_PROJECT\testtyperazzle\with-typescript\node_modules\razzle\config\createConfigAsync.js',
+    'D:\_PROJECT\testtyperazzle\with-typescript\node_modules\razzle\scripts\build.js'
+  ]
+}
+[2021-03-02 18:08:55] <fivethreeo> do yarn why razzle-dev-utils
+[2021-03-02 18:12:11] <baruchyochai> what?
+[2021-03-02 18:12:36] <fivethreeo> type in your app dir
+[2021-03-02 18:12:54] <fivethreeo> yarn why razzle-dev-utils
+[2021-03-02 18:13:46] <baruchyochai> we installed razzle-dev-utils
+[2021-03-02 18:14:14] <baruchyochai> ..but it dont work, same error  'razzle-dev-utils/webpackMajor'
+
+[2021-03-02 18:14:27] <fivethreeo> yarn add --dev \
+  razzle@4.0.1-canary.2 \
+  razzle-dev-utils@4.0.1-canary.2 \
+  babel-preset-razzle@4.0.1-canary.2
+[2021-03-02 18:14:28] <baruchyochai> 1 min
+[2021-03-02 18:19:55] <fivethreeo> Or just create a new procect with "npx create-razzle-app@canary --example with-typescript with-typescript"
+[2021-03-02 18:26:54] <Sauloxd> 
+Hey everyone! I've been looking for a json plugin/loader that extracts all the jsons from my bundle  into a single json! (very similar to mini-css-extract-plugin)
+Just to explain my reasoning, I want my translations to be next to my components and coupled via import 
+(to avoid bundling/sending translation json that's not currently being used)
+But, I still want to load them when my application starts (and not in a by component way, which is somewhat suggested in surviveJs (https://survivejs.com/webpack/techniques/i18n/))
+I want to make a poc on how to keep translations near the component that consumes it... has anyone seen something similar out there?
+[2021-03-02 18:28:49] <baruchyochai> yarn run v1.22.10yperazzle\with-typescript>yarn build
+$ tsc -b && razzle build
+If you have issues with css make sure postcss resolves to v8.2.4.
+See: https://razzlejs.org/getting-started#common-problems
+
+CssMinimizerPlugin currently uses clean-css,
+we will switch to cssnano once it supports postcss v8.2.4.
+
+? This runs the production build, are you sure you want to run it?
+Add --noninteractive to remove this prompt. Yes
+
+Compiling client default build...
+
+Failed to compile client default build.
+
+[
+  {
+    moduleIdentifier: 'D:\_PROJECT\testtyperazzle\with-typescript\node_modules\razzle\config\babel-loader\razzle-babel-loader.js??ruleSet[1].rules[0].use[0]!D:\_PROJECT\testtyperazzle\with-typescript\src\client.tsx',
+    moduleName: './src/client.tsx',
+    message: 'Module build failed (from ./node_modules/razzle/config/babel-loader/razzle-babel-loader.js):\n' +
+      "Error: Cannot find module 'babel-plugin-transform-typescript-metadata' from 'D:\_PROJECT\testtyperazzle\with-typescript'\n" +
+      '    at Function.resolveSync [as sync] (D:\_PROJECT\testtyperazzle\with-typescript\node_modules\resolve\lib\sync.js:102:15)\n' +
+      '    at resolveStandardizedName (D:\_PROJECT\testtyperazzle\with-typescript\node_modules\@babel\core\lib\config\files\plugins.js:101:31)\n' +
+[2021-03-02 18:29:04] <baruchyochai> Failed
+[2021-03-02 18:29:42] <fivethreeo> Are yo trying the typeorm example?
+[2021-03-02 18:29:44] <fivethreeo> you
+[2021-03-02 18:30:07] <fivethreeo> yarn add --dev babel-plugin-transform-typescript-metadata
+[2021-03-02 18:30:18] <baruchyochai> the 4.0.1-canary2
+[2021-03-02 18:30:52] <baruchyochai> YES, we used babelrc file
+[2021-03-02 18:31:19] <fivethreeo>  any extra plugins in .babel must be installed
+[2021-03-02 18:31:41] <baruchyochai> which ones?
+[2021-03-02 18:31:59] <fivethreeo> all
+[2021-03-02 18:44:27] <baruchyochai> ? This runs the production build, are you sure you want to run it?
+Add --noninteractive to remove this prompt. Yes
+Compiling client default build...
+
+Failed to compile client default build.
+
+[
+  {
+    moduleIdentifier: 'D:\_PROJECT\testtyperazzle\with-typescript\node_modules\razzle\config\babel-loader\razzle-babel-loader.js??ruleSet[1].rules[0].use[0]!D:\_PROJECT\testtyperazzle\with-typescript\src\client\src\redux\store.manager.ts',
+    moduleName: './src/client/src/redux/store.manager.ts',
+    message: 'Module build failed (from ./node_modules/razzle/config/babel-loader/razzle-babel-loader.js):\n' +
+      "SyntaxError: D:\_PROJECT\testtyperazzle\with-typescript\src\client\src\redux\store.manager.ts: Support for the experimental syntax 'decorators-legacy' isn't currently enabled (17:1):\n" +
+      '\n' +
+
+
+[2021-03-02 18:45:42] <baruchyochai> installed other dependencies, 
+but this dont know, what is the dependency
+[2021-03-02 19:07:16] <baruchyochai> we set "@babel/plugin-proposal-decorators", but it for this doesnt work
+
+[2021-03-02 19:08:19] <fivethreeo> investigating .. i may have broken something, this examaple with decorators is the most complex one
+[2021-03-02 19:09:07] <baruchyochai> ok
+[2021-03-02 19:20:31] <baruchyochai> as I think it will take time. in the meantime, we will try next.js
+[2021-03-02 19:31:29] <fivethreeo> i will give you a shout if i figure it out, i got it to build from fresh now, i need to figure this out so.. good that you found issues :)
+[2021-03-02 19:34:59] <baruchyochai> cool)) thanks
+[2021-03-02 20:40:31] <hponde_gitlab> Hello! I'm having a few problems using webpack to bundle a VSCode Extension (I've asked on their developer slack, no answers yet). I am able to bundle just fine with the current configuration. But I want to be able to use `WeakRef` and for that I need to add `esnext` as the `lib` (instead of the current `es2019`). I am able to make that change in the VSCode config file and it runs fine, but I can't get the `webpack` command to run correctly because I don't know what to change in my `webpack.config.ts` file (adding in thread).
+
+I'm very inexperienced with webpack and typescript in genenral, any help would be very appreciated, thanks in advance!
+[2021-03-02 20:40:45] <hponde_gitlab> `webpack.config.ts` file:
+[2021-03-02 20:40:57] <hponde_gitlab> ```
+import * as path from 'path';
+import { Configuration } from 'webpack';
+
+const config: Configuration = {
+    target: 'node', // vscode extensions run in a Node.js-context  -> https://webpack.js.org/configuration/node/
+
+    entry: {
+        extension: './src/extension.ts', // extension bundle entrypoint
+        test: './test/test.ts',          // test bundle entrypoint
+    },
+    output: { // the bundle is stored in the 'dist' folder (check package.json),  -> https://webpack.js.org/configuration/output/
+        path: path.resolve(__dirname, 'dist'),
+        filename: '[name].js',
+        libraryTarget: "commonjs2",
+        devtoolModuleFilenameTemplate: "../[resource-path]",
+    },
+    devtool: 'source-map',
+    externals: {
+        'vscode': "commonjs vscode", // the vscode-module is created on-the-fly and must be excluded. Add other modules that cannot be webpack'ed,  -> https://webpack.js.org/configuration/externals/
+        'applicationinsights-native-metrics': 'commonjs applicationinsights-native-metrics', // ignored because we don't ship native module
+        '@opentelemetry/tracing': 'commonjs @opentelemetry/tracing' // optional dependency
+    },
+    resolve: { // support reading TypeScript and JavaScript files,  -> https://github.com/TypeStrong/ts-loader
+        extensions: ['.ts', '.js']
+    },
+    module: {
+        rules: [{
+            test: /\.ts$/,
+            exclude: [
+                /node_modules/
+            ],
+            loader: 'ts-loader'
+        }]
+    },
+    optimization: {
+        // avoid mangling classnames - node-fetch checks for "AbortSignal"
+        minimize: false
+    },
+};
+
+export default config;
+```
+[2021-03-02 20:41:33] <hponde_gitlab> For reference this is the config that VSCode uses to build and debug an extension and where I was successful by changing `lib`:
+[2021-03-02 20:41:40] <hponde_gitlab> ```
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es2019",
+        "lib": ["ES2019"],
+        "sourceMap": true,
+        "rootDir": ".",
+        /* Strict Type-Checking Option */
+        "strict": true,   /* enable all strict type-checking options */
+        /* Additional Checks */
+        "noUnusedLocals": true /* Report errors on unused locals. */
+    },
+    "include": [
+        "src",
+        "test"
+    ]
+}
+```
+[2021-03-02 20:46:04] <hponde_gitlab> For reference the output of running `npm run webpack` is:
+```
+...
+[tsl] ERROR in [path]
+      TS2304: Cannot find name 'WeakRef'.
+ @ ./src/extension.ts 22:20-42
+```
+[2021-03-02 20:47:09] <hponde_gitlab> ```
+ ./node_modules/webpack/bin/webpack.js -v
+webpack 5.17.0
+webpack-cli 4.4.0
+```
+[2021-03-02 21:10:00] <fivethreeo> can you show the imports in extension.ts?
+[2021-03-02 21:10:57] <hponde_gitlab> These are the non local file imports:
+```
+import 'source-map-support/register';
+
+import {
+    ExtensionContext,
+    commands,
+    Disposable,
+    Uri,
+    WorkspaceEdit,
+    ExtensionMode,
+    window,
+    languages,
+    Range,
+    workspace
+} from 'vscode';
+import { AbortError } from 'fetch-h2';
+```
+[2021-03-02 21:11:46] <hponde_gitlab> When I added `esnext` into the `lib` field of  `tsconfig.json` I didn't need to add any import to get `WeakRef` to work. But I assume your questions points to the fact that I might need some explicit import?
+[2021-03-02 21:11:50] <fivethreeo> Where is weakref used?
+[2021-03-02 21:12:15] <fivethreeo> yeah, might be it
+[2021-03-02 21:14:03] <hponde_gitlab> I don't have any explicit import for it as of now. Nor could I find any good solution online. It seems to be part of the standard if you link with `esnext`? Which is what I'm unable to do with `webpack` currently
+[2021-03-02 21:19:04] <fivethreeo> but webpack might need it. you coul try removetonlytypeiports cant remember the option
+[2021-03-02 21:42:28] <hponde_gitlab> Sorry I don't know what that means, what does it do? cannot find it in the `Configuration` object: https://github.com/webpack/webpack/blob/master/types.d.ts#L1831
+[2021-03-02 21:53:25] <fivethreeo> it is a tsconfig option
+[2021-03-02 21:54:24] <fivethreeo> you use ts-loader in webpack right?
+[2021-03-02 21:54:46] <hponde_gitlab> I believe so yes
+[2021-03-02 21:55:19] <hponde_gitlab> I can't find a reference for `removetonlytypeiports` (or `removeonlytypeiports`) anywhere.
+[2021-03-02 21:56:27] <fivethreeo> Sorry, I remembered wrong it was babel https://babeljs.io/docs/en/babel-plugin-transform-typescript#onlyremovetypeimports
+[2021-03-02 21:58:22] <fivethreeo> but still, ts removes imports that webpack may need
+[2021-03-02 21:59:34] <hponde_gitlab> is there no way to set `lib` as a compiler option for `webpack` how the `tsconfig.json` that VSCode uses does?
+[2021-03-02 22:00:35] <hponde_gitlab> If one wanted to use `esnext` instead of `es2019` or `es2020`?
+[2021-03-02 22:07:46] <fivethreeo> tsl is from the loader, maybe the loader dors not read the rsconfig
+[2021-03-02 22:08:12] <fivethreeo> tsconfig
+[2021-03-02 22:14:12] <fivethreeo> https://github.com/TypeStrong/ts-loader#configfile
+[2021-03-02 23:27:13] <fivethreeo> If you give me another chance, try this now :)
+[2021-03-02 23:30:44] <fivethreeo> npx create-razzle-app@canary --verbose --example with-typeorm-graphql decorators
+
+[2021-03-02 23:31:24] <fivethreeo> then strip it down to your needs
+[2021-03-03 02:40:26] <mikecarenzo> Hey everyone! I've been working on migrating my plugin over to webpack 5, but have been having some issues:
+
+**The original (Webpack 4) plugin:** 
+```
+apply(compiler) {
+    compiler.hooks.emit.tap("DtsBundlerPlugin", (compilation) => {
+        // Get assets whose name ends in ".d.ts", 
+        // bundle them, emit single ".d.ts" file.
+    });
+}
+```
+
+**The Warning:**
+```
+BREAKING CHANGE: No more changes should happen to Compilation.assets after sealing the Compilation.
+        Do changes to assets earlier, e. g. in Compilation.hooks.processAssets.
+        Make sure to select an appropriate stage from Compilation.PROCESS_ASSETS_STAGE_*.
+```
+
+**The Problem:**
+
+So I get it, I can't modify assets this late in the compilation and it has to be done earlier. So I did that:
+```
+apply(compiler) {
+    compiler.hooks.compilation.tap("DtsBundlerPlugin", (compilation) => {
+        compilation.hooks.processAssets.tap({
+            name: "DtsBundlerPlugin",
+            state: Compilation.PROCESS_ASSETS_STAGE_OPTIMIZE_INLINE,
+        }, (assets) => {
+            // Get assets whose name ends in ".d.ts", 
+            // bundle them, emit single ".d.ts" file.
+        })
+    });
+}
+```
+
+But the ".d.ts" assets (being generated by `ts-loader`) don't appear at the:
+* `processAssets` phase
+* `afterProcessAssets` phase
+
+They don't show up until `needAdditionalSeal` which is too late to modify assets. I'm not sure what I'm missing here. Is this some kind of bug? Am I missing a phase?
+
+
+[2021-03-03 08:17:31] <baruchyochai> ok. we'll try
+[2021-03-03 10:40:28] <jkalay> Hi all. This is super weird. My laptop powered down earlier but before that everything was working fine with the webpac config I had. But I just ran `npm run dev` and while my Express server and webpack dev server start fine, the proxy request no longer works! I get this message in my console: `[HPM] Error occurred while trying to proxy request /api/donuts from localhost:3000 to http://localhost:3001 (ECONNRESET) (https://nodejs.org/api/errors.html#errors_common_system_errors)`
+
+Here is my webpack config:
+```
+require('dotenv/config');
+const path = require('path');
+
+const clientPath = path.join(__dirname, 'client/');
+const publicPath = path.join(__dirname, 'server/public/');
+
+module.exports = {
+  resolve: {
+    extensions: ['.js', '.jsx']
+  },
+  entry: clientPath,
+  output: {
+    path: publicPath
+  },
+  module: {
+    rules: [
+      {
+        test: /\.jsx/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            plugins: [
+              '@babel/plugin-transform-react-jsx'
+            ]
+          }
+        }
+      }
+    ]
+  },
+  devtool: 'source-map',
+  devServer: {
+    contentBase: publicPath,
+    historyApiFallback: true,
+    host: '0.0.0.0',
+    port: process.env.DEV_SERVER_PORT,
+    proxy: {
+      '/api': `http://localhost:${process.env.PORT}`
+    },
+    stats: 'minimal',
+    watchContentBase: true
+  }
+};
+```
+
+I've tried every solution I could Google.
+[2021-03-03 14:31:55] <mkamalkayani> Hi, I want to exclude dynamic import from the bundle, based on an environment variable.
+```javascript
+if (process.env.CONDITION) {
+  const { myfunction } = import("./myfunction");
+}
+```
+
+if process.env.CONDITION=true, the webpack should not include the dynamic import into the bundle. Any suggestion?
+[2021-03-03 14:37:25] <fivethreeo> Use DefinePlugin, define process.env.CONDITION as JSON.stringify(process.env.CONDITION), then use TerserPlugin so it is treeshaked out.
+[2021-03-03 15:16:47] <janschill:matrix.org> Hi dear community,
+
+I have a fairly basic configuration from the official documentations, but for some reason I still get two files. One that is just as I have specified with the correct filename and then another one that has `657.my-output-filename.js`. What is this about?
+Thank you very much.
+[2021-03-03 15:29:47] <fivethreeo> You probably generate a extra chunk. try
+          new webpack.optimize.LimitChunkCountPlugin({
+            maxChunks: 1,
+          })
+[2021-03-03 16:45:51] <rmsy> Hi everyone -- I have a question I can't seem to figure out. I have what I believe is a pretty standard node.js / TypeScript configuration, but I would like to "force include" a dependency in my final bundle, despite it not being used in my codebase. Is this possible?
+[2021-03-03 17:03:22] <fivethreeo> Just add it to the entry,  entry can be a list
+[2021-03-03 17:04:16] <rmsy> @fivethreeo ah, thank you -- I will give that a shot!
+[2021-03-03 17:10:46] <mkamalkayani> @rmsy ProvidePlugin could be another solution.  https://webpack.js.org/plugins/provide-plugin/
+[2021-03-03 17:11:39] <mkamalkayani> @fivethreeo thanks for the suggestion. 
+[2021-03-03 17:12:06] <rmsy> Ah, nice -- thank you, @mkamalkayani!
+[2021-03-03 17:16:38] <supnim> hello hello
+[2021-03-03 17:17:06] <supnim> does anyone have any idea on how i go about solving this:
+[2021-03-03 17:17:25] <supnim> [![image.png](https://files.gitter.im/529f74f4ed5ab0b3bf04ef26/YbLW/thumb/image.png)](https://files.gitter.im/529f74f4ed5ab0b3bf04ef26/YbLW/image.png)
+[2021-03-03 17:17:45] <supnim> [![image.png](https://files.gitter.im/529f74f4ed5ab0b3bf04ef26/MQ3C/thumb/image.png)](https://files.gitter.im/529f74f4ed5ab0b3bf04ef26/MQ3C/image.png)
+[2021-03-03 17:18:59] <supnim> its a css-loader err, around the '@import' feature and if i removed the "@" properities it builds. otherwise it breaks
+[2021-03-03 17:19:12] <supnim> any help would be wonderful :)
+[2021-03-03 17:23:54] <mkamalkayani> The Error says "cannot resolve Components/theme.scss". So it seems the webpack is not configured to compile .scss files. To convert .scss to css you have to use sass-loader. https://webpack.js.org/loaders/sass-loader/
+[2021-03-03 17:27:46] <supnim> thanks, ill try that now
+[2021-03-03 17:29:49] <supnim> good guess, sadly that didn't solve it. for context its a gatsby site build
+[2021-03-03 23:40:59] <anchepiece_twitter> A general question, is it possible to run a plugin to build some output (concatenated files) before transpiling with babel-loader?
+[2021-03-04 02:30:57] <Devinora> who will tell you how to solve this problem? in short, after an error in the js file, webpack-server stops reloading.
+https://stackoverflow.com/questions/65551999/webpack-5-dev-server-does-not-reload-on-file-changes
+[2021-03-04 04:22:09] <fivethreeo> https://webpack.js.org/configuration/dev-server/#devserverhot
+[2021-03-04 15:40:35] <ronnross> Does anyone know how to tell babel-loader where to find the babe.config.js file? We have moved them into a configs folder.
+[2021-03-04 15:55:11] <dMedia5> @ronnross check here for the babel option for configFile https://babeljs.io/docs/en/options#configfile
+[2021-03-04 15:56:08] <ronnross> Thanks! That is what I was looking for. 
+[2021-03-04 16:47:13] <saidmammadov2005> Guys
+[2021-03-04 16:47:24] <saidmammadov2005> How to hack instagram account?
+[2021-03-04 17:50:28] <haarsh01> Hey , I am a beginner and want to do an open source contribution to Webpack in javascript language. Can anybody guide me on how to take further steps?
+[2021-03-04 17:51:08] <pavlovp> Is it good project for beginners? :)
+[2021-03-04 17:53:07] <fivethreeo> Don't think so.
+[2021-03-04 17:53:32] <pavlovp> I would read the whole git history from begining :D
+[2021-03-04 17:54:10] <haarsh01> So should i not start the contribution if I am a beginner? 
+[2021-03-04 17:54:39] <fivethreeo> I would try a easier project first.
+[2021-03-04 17:54:54] <pavlovp> Or first just get understanding of the existing code maybe
+[2021-03-04 17:55:00] <pavlovp> BTW I'm playing a bit with vendor chunks, did separate React vendor chunk and trying to reuse it from the perspective of separate  webpack build. Is it even possible?  https://github.com/pavlovp/question-webpack-externals
+[2021-03-04 17:55:12] <haarsh01> Can you suggest me any project?
+[2021-03-04 17:58:21] <fivethreeo> @DllPlugin?
+[2021-03-04 17:58:39] <fivethreeo> @pavlovp DllPlugin
+[2021-03-04 18:11:21] <pavlovp> I'll check that - thanks!
+[2021-03-04 18:17:01] <fivethreeo> @haarsh01 something you think should be better than it is, anything you have used that missed one feature that would make it great
+[2021-03-04 18:21:21] <fivethreeo> @haarsh01 often when I am going to do a project, I start using some library and I end up not working on the project I should because that library has a bug that bugs me.
+[2021-03-05 08:50:23] <thw0rted> How sure are you that your ts-loader is reading the tsconfig file where you changed `lib`?
+[2021-03-05 08:53:21] <thw0rted> If the error comes from ts-loader then it's not a webpack problem, it's a loader config problem, and it sounds like `lib` isn't being respected
+[2021-03-05 08:53:45] <thw0rted> you should be able to pass the tsconfig file you're using to `tsc` and have your code typecheck correctly
+[2021-03-05 08:53:54] <thw0rted> (including use of `WeakRef`)
+[2021-03-05 16:46:27] <nesbtesh> =Hi
+[2021-03-05 16:46:28] <nesbtesh> Hi
+[2021-03-05 16:46:51] <nesbtesh> Does anyone know of a way to ignore the imports in webpack and only create one chunk
+[2021-03-05 17:21:49] <nesbtesh> ended up using this
+[2021-03-05 17:21:50] <nesbtesh>  new webpack.optimize.LimitChunkCountPlugin({
+                    maxChunks: process.env.BUILDFOR === "standalone" ? 1 : 20,
+                }),
+[2021-03-05 20:18:41] <aspirisen> Hi, is it possible from Compiler get list of added plugins ?
+[2021-03-05 20:59:38] <thomaschaaf> Hello! I am trying to write a webpack 5 config with two rules. Both of them call test with a function. This is a rather expensive call. I would have thought if the first call returned true that the next rules test function would not be called. This is not the case it calls both tests functions. Is this desired behavior or should I file a bug report? Is there a way to "bail early" so that other rules are not evaluated anymore?
+[2021-03-05 21:18:35] <thomaschaaf> Okay maybe it's wanted behavior even though I don't understand why. Using oneOf works as I thought it should: https://github.com/webpack/webpack/blob/master/lib/rules/RuleSetCompiler.js#L120
+[2021-03-07 11:17:15] <larsivi:matrix.org> Hi, I am trying to optimize my application a bit, doing codesplitting and such. I have two entrypoints with their own html files, but the chunks they need are somewhat different. The webpack output shows me which chunks an entrypoint needs, but how can get the HtmlWebpackPlugin to reference those for the given entrypoint?
+[2021-03-07 14:02:32] <ghost~6044dc906da037398465d411> Hey... I've been beating my head against the wall all morning with this -- but I can't figure out how to stop my <link> / <style> getting loaded after <script> -- this causes the script to momentarily block the css leading in this case to a flash of transition on page.  Obviously if I just reorder this manually it works fine! but how do I tell webpack to load my .css before my .js?
+[2021-03-07 18:31:42] <navxio> Hi! does the css loader(https://www.npmjs.com/package/css-loader) generate inline css in the generated webpack bundle file? 
+[2021-03-07 18:31:53] <navxio> I saw that it does not take output as a param...
+[2021-03-07 19:20:10] <Zayniddin98> Hi 
+[2021-03-07 19:22:08] <Zayniddin98> i am always having a problem with scss compile I do import i use terminal i have watch sass extension but everytime when i work with any page of scss it automatically opens css What should I do ??????
+[2021-03-07 19:23:40] <Zayniddin98> Who can help me please write to my private 
+[2021-03-07 19:46:57] <dutchenkoOleg> nice! thx
+[2021-03-08 01:47:04] <skoblenick> Hey all. Looking for some direction as to what I am doing wrong, or if this is a bug in the loaders. I have an experimental repo where I have been looking at webpack 5, mainly around using an html file as the entry rather than a js file. The repo is here https://github.com/skoblenick/webpack-experiment/tree/expandingExperiment. The html file contains script tag with a src/href to a js file, but it always generates `src="[Object object]". I am expecting it to use the js loader  to bundled and extract into a file like with other assets. What am I missing here?
+[2021-03-08 09:10:21] <thw0rted> The examples I've seen generally have JS entry points and use html-loader to inject the bundle.  What benefit are you looking for from changing that?  (I'm not saying it's a bad idea, I just haven't seen people try to use it this way)
+[2021-03-08 09:12:07] <thw0rted> You're relying on `extract-loader` a lot but the docs for that plugin say
+
+> When evaluating the source code, it provides a fake context which was especially designed to cope with the code generated by the html- or the css-loader. Thus it might not work in other situations
+[2021-03-08 09:12:40] <thw0rted> So using `extract-loader` to "extract" JS sounds like it might not work.  (Also, again, why?)
+[2021-03-08 12:32:23] <randyr:matrix.org> I wrote a plugin for webpack5 that adds an asset. How come `compilation.emitAsset(filename, new RawSource(source));` doesn't add a contenthash based on output.filename?
+[2021-03-09 08:59:59] <valentin9> Hey guys/girls!
+anyone has experience porting from webpack 3 to 4/5 with manually picked vendor file? I tried a couple of different strategies for code splitting but nothing works as well as custom vendor file, in terms of caching and reusability. We have tons of separate js files (multi-page-application).
+[2021-03-09 23:18:20] <internetofsteve> Hello peeps,  I think the documentation for splitChunks.chunks is showing incorrect default value of "async" because it looks like the default value is "all" in the source code?
+
+https://webpack.js.org/plugins/split-chunks-plugin/#splitchunkschunks
+https://github.com/webpack/webpack/blob/master/lib/optimize/SplitChunksPlugin.js#L388
+
+[2021-03-10 08:26:21] <henritoivar> Hi Guys,
+I wanted to share something me and my buddies created using webpack. It's an open-source, serverless, free, no-signup invoice management solution.
+You can check it on ProductHunt: https://www.producthunt.com/posts/serverless-invoices and Github: https://github.com/mokuappio/serverless-invoices 
+Hopefully some of you can use it as a starter kit.
+I would love to hear your feedback!
+Thanks
+[2021-03-10 13:16:12] <liviuba> hi, I'm trying to use a library (three.js) and compiling my code with webpack, but I would like webpack to build just three.js separately (out of my .node_modules) and use it in my code like an 'external', but from a cacheable file on my server, not from a CDN link. Is there any general way to do this?
+[2021-03-10 13:17:36] <liviuba> actually, ideally, I would like to disable bundling completely for development, so that I can add the cache headers that I need for any dependency
+[2021-03-10 14:21:04] <thw0rted> If you're trying to twiddle cache headers you're probably overthinking it -- have you tried `webpack-dev-server`?
+[2021-03-10 14:23:57] <thw0rted> You can use the [DLL Plugin](https://webpack.js.org/plugins/dll-plugin/) to make a precompiled bundle, or you can do the [externals thing](https://webpack.js.org/configuration/externals/).  I've used the former but not the latter.  It's a little bit of a headache and didn't actually help my use case 
+[2021-03-10 14:24:39] <thw0rted> Of course if you use the cacheable file from your server (via external or DLL reference), Webpack can't tree-shake for you
+[2021-03-10 16:20:37] <valentin9> > hi, I'm trying to use a library (three.js) and compiling my code with webpack, but I would like webpack to build just three.js separately (out of my .node_modules) and use it in my code like an 'external', but from a cacheable file on my server, not from a CDN link. Is there any general way to do this?
+
+I have the similar question, I tried different automatic code splitting strategies on WP 4/5 but nothing worked as well as manually splitting out a vendor chunk on WP 3 for me. I didn't manage to do reproduce it on the newer versions, I tried multiple tutorials but I struggle to get it to work exactly as with webpack 3.
+
+Hm when  I think about it, in your case its not a vendor chunk, you could just create a separate entrypoint and include it in the HTML
+[2021-03-10 16:24:33] <valentin9> @thw0rted Do you think I could use the DLL Plugin to create a custom vendor file in webpack 4/5?  :D
+[2021-03-10 20:01:55] <ryanbas21> I'm struggling with a complex webpack setup. Specifically the problem i'm having is we have a global stylesheet in a node_module, where its referenced in stylesheets in a monorepo as `./globalVariables.css`. I'm trying to use postcss / css-loader to import it in as such but i haven't got it working. Is there a way to do it with the more recent versions of plugins, our current plugins are many majors out of date
+[2021-03-11 08:29:52] <henritoivar> Thanks to everyone who checked it out! Serverless Invoices got #3 Product Of the Day!
+[2021-03-11 09:04:08] <thw0rted> Valentin, it's not exactly a "vendor file" but yeah, the DLL plugin makes a bundle that you include via reference.  The way I understand it, all the module metadata / exports / whatever get saved in a sort of index file, which the DLL reference plugin understands. Since the contents of the DLL have already been built and indexed, Webpack knows where to get them and doesn't have to introduce any new assets to the pipeline to provide them.
+[2021-03-11 09:44:20] <MR-Mostafa> Hello friends
+I had a question and I did not find anything (WebPack 5)
+I created a folder called `svg` inside of my `images` folder, but when webpack compiles it into the `build` folder, all of the images get flattened into that one images folder.
+Is there something to be able preserve subdirectories?
+```js
+{
+    test: /\.(png|jpe?g|gif|webp)$/i,
+    type: "asset/resource",
+    generator: {
+        filename: "images/[name][ext]",
+    },
+}
+```
+
+Thanks
+[2021-03-11 11:17:29] <thw0rted> Check out the [template string docs](https://webpack.js.org/configuration/output/#template-strings), there's a `[path]` token you can use
+[2021-03-11 11:17:43] <thw0rted> in my experience it's not 100% consistent which tokens can be used in which filename computations, though
+[2021-03-11 14:43:56] <mauritslamers> Hi all, what would be the best way to deal with a project in which the subproject is developed as well at the same time, and both have a separate webpack.config.js file? 
+[2021-03-11 14:44:30] <mauritslamers> I would like that the top project automatically also builds the subproject
+[2021-03-11 14:52:22] <mauritslamers> The specific problem I am running into is that I have a subproject (which is a library) having its own webpack.config.js, but when I refer to this subproject in the main project webpack config with "dependOn", it says entry not found. I understand that it has not been found, but I would like to know how I can make the main project webpack config see the "scope" of the subproject config
+[2021-03-11 14:53:50] <mauritslamers> should I use runtime instead of dependOn?
+[2021-03-11 16:36:45] <elisabetperez> Hey guys, I'm working with webpack 4 on a project where my src folder is called app and dist is docs instead. My file-loader is  ignoring my fonts and no matter what I do the output is all the time the same (localhost/fonts/proxima-nova/ProximaNova-Regular.ttf) even if my file loader is set up this way:
+
+```
+{
+            test: /\.(woff(2)?|ttf|eot|svg)$/,
+            exclude: [path.resolve(__dirname, './app/img/')], 
+            use: [
+                {
+                    loader: 'file-loader',
+                    options: {
+                        name: '[name].[ext]',
+                        outputPath: 'css/fonts/',
+                        publicPath: './app/css/fonts'
+                    }
+                }
+            ]
+        },
+```
+
+Images, css, scss and html are working okay. What am I missing? Is it the names of the folders for this very particular loader? \_(ツ)_/
+Thanks in advance
+[2021-03-11 16:48:59] <ryanbas21> I'm struggling with upgrading our outdated css loaders. I have a lot of warnings related to `"export 'default' (imported as 'styles') was not found in <file>"` 
+[2021-03-12 02:56:43] <dMedia5> Anyone around using module federation in webpack 5?
+[2021-03-12 03:15:48] <fivethreeo> @dMedia5 yes
+[2021-03-12 03:24:42] <fivethreeo> @mauritslamers not possible to do that, the best might be to make the library use a watching compiler and make the project consuming it watch the dist dir of the library.
+[2021-03-12 03:44:46] <dMedia5> @fivethreeo Do you have a process for developing remote modules outside of the shell? Ideally I would just run webpack dev server locally, but i would also need the shell running locally as well. Is there a way around this to develop a remote module in isolation? 
+[2021-03-12 12:52:58] <mauritslamers> @fivethreeo So, that means webpack completely depends on package.json for referring to outside / external modules?
+[2021-03-12 21:55:56] <ryanbas21> Has anyone upgraded to webpack 5 and had an issue being thrown in `url.js` package on charCodeAt is not a function
+[2021-03-12 22:28:13] <fivethreeo> @dMedia5 I would just make a simple example using the federated module and run one devserver for the federated module and one for the example
+[2021-03-12 22:30:13] <fivethreeo> In Razzle we have a example with a monorepo that runs two devservers with bi-directional federation.
+[2021-03-12 22:31:32] <fivethreeo> https://github.com/jaredpalmer/razzle/tree/canary/examples/with-module-federation 
+[2021-03-12 22:49:13] <mauritslamers> Can anyone tell me how I could create an entry consisting of other entries? I am trying to get a bundle of a subset of entries in the same webpack file, which actually loads/includes those bundles
+[2021-03-12 23:13:28] <fivethreeo> @mauritslamers webpack5?
+[2021-03-12 23:13:33] <mauritslamers> yes
+[2021-03-12 23:14:20] <mauritslamers> I now tried it as a no-op js file, with dependOn defining the bundles to include, but that obviously doesn't work
+[2021-03-12 23:15:01] <mauritslamers> important note: I am trying to build a non-module library (pre es5 strict)
+[2021-03-12 23:19:53] <fivethreeo> I think the best way is to generate the entrypoint configuration from a custom datastructure where you can list entrypoints aswell as modules.
+[2021-03-12 23:23:47] <fivethreeo> so just take the config you have, add a includeEntrypoints key, then process that to add the modules in the other entrypoints to the entrypoint with includeEntrypoints
+[2021-03-12 23:28:29] <fivethreeo> Or if some parts are built seldom use dllplugin and import in the entrypoint  entry
+[2021-03-12 23:29:15] <mauritslamers> I am trying to find any docs on includeEntrypoints...
+[2021-03-12 23:29:52] <fivethreeo> It is just a name i came up with
+[2021-03-12 23:30:45] <mauritslamers> ah ok :)
+[2021-03-12 23:31:45] <fivethreeo> But it may be better ways if you tell the purpose 
+[2021-03-12 23:32:48] <mauritslamers> So, I have this library, which is pre ES5 strict, so simply a bunch of js files which expect to be running in a single global env
+[2021-03-12 23:33:13] <mauritslamers> this library consists of several sublibs, each in a different folder.
+[2021-03-12 23:34:59] <mauritslamers> I want to try to build this library with webpack. My attempt at the moment is to make of every sublib an "index.js" file, which requires all the files belonging to a sublib in the correct order. Every sublib has a separate entry in the webpack config. 
+[2021-03-12 23:36:32] <mauritslamers> For the basic use of this library, I don't need all sublibs, but a selection of those. I want to be able to export this basic set under a single name, so in a different project I can simply "require" it, and have it loaded before the project (which depends on this lib) starts
+[2021-03-12 23:37:22] <fivethreeo> Is this a browser or node module?
+[2021-03-12 23:37:29] <mauritslamers> browser
+[2021-03-12 23:38:15] <mauritslamers> My current attempt was to try to make a separate bundle, which has the basic set of sublibs as dependencies through dependOn. If I use dependOn without an "import" it fails. if I say "myLib: ['sublib1','sublib2']" it also fails 
+[2021-03-12 23:38:46] <mauritslamers> because it cannot resolve sublib1 or 2
+[2021-03-12 23:42:37] <mauritslamers> I understand that, because they are not "modules" in that sense, they don't have a package.json. They do get built as chunks / bundles. The separate bundle I created has the (empty) index.js, plus an array of dependency bundles. This separate bundle is set as main in the package.json for the lib. For the project I setup a resolve where it picks up the lib. The project build does include the separate bundle, but when loaded in the browser, the dependencies of the separate bundle are not loaded.
+[2021-03-12 23:51:31] <fivethreeo> I think DllPlugin could work for your purpose. Build each sublib as dll library and use import in the entry
+[2021-03-14 10:16:16] <kumarldh> Am trying to set up a module federation repo, using a  remote entry  results in build failure, `ERROR in main.bundle.js from Terser
+Unexpected token: operator (!==) [external "SimpleGrid":3,0][main.bundle.js:106052,12], ` the error is not helpful and stack trace is also not help ful
+[2021-03-14 10:17:06] <kumarldh> how can I debug  it further?
+[2021-03-14 10:34:04] <kumarldh>  my bad, was running in production mode, turned to development and got this error Uncaught SyntaxError: Unexpected token '!=='
+[2021-03-14 10:34:44] <kumarldh> this is the code that's been bugging me ```"use strict";
+var __webpack_error__ = new Error();
+module.exports = new Promise((resolve, reject) => {
+	if(typeof  !== "undefined") return resolve();
+	__webpack_require__.l("SimpleGrid", (event) => {
+		if(typeof  !== "undefined") return resolve();
+		var errorType = event && (event.type === 'load' ? 'missing' : event.type);
+		var realSrc = event && event.target && event.target.src;
+		__webpack_error__.message = 'Loading script failed.\n(' + errorType + ': ' + realSrc + ')';
+		__webpack_error__.name = 'ScriptExternalLoadError';
+		__webpack_error__.type = errorType;
+		__webpack_error__.request = realSrc;
+		reject(__webpack_error__);
+	}, "");
+}).then(() => ());```
+[2021-03-14 10:54:20] <sancelot> hi guys,  I have a question about versioning, I have .d.ts files created by webpack. I would like to know if I must ignore thse files in git or not ? Since they are generated 
+[2021-03-14 13:39:38] <kumarldh> why is webpack generating this code `if(typeof  !== "undefined") return resolve();`
+[2021-03-14 14:53:32] <saurabhmehta1601> Hello Everyone , I am new to open source . Can you suggest / guide me on how to get started on contributing to webpack ?   
+[2021-03-14 16:49:11] <kumarldh> > why is webpack generating this code `if(typeof  !== "undefined") return resolve();`
+
+Was my mistake, I have progressed from no compilations to new error  Initialization of sharing external failed: ReferenceError: SimpleButton is not defined
+[2021-03-15 07:27:15] <saurabhmehta1601> I am having problem in running tests for the webpack repository  The tests are not running  on using the script yarn test instead 125909 errors message printed with message    error  Delete ``  prettier/prettier 
+
+
+[2021-03-15 09:34:00] <thw0rted> Your .d.ts files are created by Typescript, so you'd be better off asking in that channel.  The short version is yes, .d.ts files should be excluded by your `.gitignore` like any other build output
+[2021-03-15 09:35:53] <thw0rted> But that should already be covered by the rule that excludes your other build output -- Webpack's `output.path`, default "dist"
+[2021-03-15 09:38:14] <thw0rted> `prettier` is a code formatting tool.  It sounds like your Git is configured in a way that converts newlines on checkout, and `prettier` is running before the actual tests and enforcing a rule that line-endings should be LF rather than CR/LF
+[2021-03-15 09:40:19] <thw0rted> So you'd need to wipe your copy of the repository, reconfigure Git to preserve newlines on checkout.  I think the setting is `core.autocrlf=input`
+[2021-03-15 13:53:48] <saurabhmehta1601> thank you very much  for your suggestion . can you please tell me what does this command do 
+[2021-03-15 13:53:51] <saurabhmehta1601>  yarn-deduplicate --fail --list -s highest yarn.lock
+[2021-03-15 13:58:15] <saurabhmehta1601> I am getting this
+[2021-03-15 13:58:16] <saurabhmehta1601> Package "lodash" wants ^4.17.15 and could get 4.17.21, but got 4.17.20
+Package "lodash" wants ^4.17.19 and could get 4.17.21, but got 4.17.20
+Package "lodash" wants ^4.17.20 and could get 4.17.21, but got 4.17.20
+Package "lodash" wants ^4.17.4 and could get 4.17.21, but got 4.17.20
+[2021-03-15 13:58:49] <saurabhmehta1601> even after i installed the version 4.17.15 it is still showing the same message
+[2021-03-15 15:19:38] <thw0rted> Yarn probably has its own channel here somewhere, I'm still using vanilla NPM so I can't tell you exactly what to do there.  I know the dev version of NPM CLI (7.x) has started to take peer dependencies more seriously, so you wind up in a situation like yours pretty often where several transitive dependencies expect different (slightly incompatible) versions of a common package
+[2021-03-15 15:20:40] <thw0rted> and before just running `npm install` would make a best effort to pick one and not bug you about it, but now you need extra CLI arguments to work around it (because seriously, are you going to get every package you use to agree on a single version of whatever dep it is?)
+[2021-03-15 15:21:28] <thw0rted> In your case with vanilla NPM my first step would be to look through `npm ls` and see what 4 deps are all trying to load (different versions of) lodash
+[2021-03-15 15:24:36] <thw0rted> It does seem like just installing 4.17.21 should make all of those happy, per [the semver calculator](https://semver.npmjs.com/)
+[2021-03-15 15:31:52] <aspirisen> Hi, looks like when webpack starts minification it doesn't  free its own used memory, so for example webpack during build takes 2.5 gb memory and when it starts minification the memory usage only increase and as minification is also memory consuming operation together they reach high memory usage, is it possible to tell webpack first free its memory and then start minification
+[2021-03-17 08:18:01] <eamon.woortman_gitlab> Hi there!
+I've just ported a (quite large) React template to electron-forge and it all appear to be working fine but when running the dev build (`yarn start`). The webpack takes 14 seconds to build after the app has started.
+I can see in the debug webpage that the main_window is 40mb, i'm not sure if these numbers make sense for a large react project. 
+
+Does anyone have any tips on debugging the size of webpack with electron-forge and how to optimize build times in development runs? 
+I've tried the optimize option in webpack, but that didn't do too much for the build time.
+[2021-03-17 08:38:41] <eamon.woortman_gitlab> Also, I've tried getting the stats and putting into that profiler webpage but it sort of failed to generate the stats saying something 'cannot load .src/ file'. So that didn't help me too much.
+[2021-03-17 10:55:38] <sancelot> Hi, may be I am wrong, but ... can I use path in web target application ?
+[2021-03-17 14:51:19] <Numline1> Hey folks :) I might be looking in a wrong place, but we're having this strange issue. So we have a fairly low-cost dev server, it's a $10 droplet on DigitalOcean. Whenever we run a build (yarn prod) it gets stuck at 95% or 98% emitting. The issue is resolved whenever we add a second core, however I was wondering whether there's some sort of internal timeout in Webpack or Laravel Mix that should be considered? It's difficult to debug, since it could either be CircleCI, or PHP Deployer or Yarn or Webpack or even Mix that's enforcing this, but that's all I have. It timeouts after about 10ish minutes with Error code -1 and causes the entire deploy/build to fail. Thx for any suggestions
+[2021-03-17 14:53:04] <Numline1> Here's pretty much all I can give you in terms of error log - https://privatebin.net/?c99519e31b2de20b#867NEfj9yyHe5R4FzVLquTnu1UsynqFyttKwFgWTiVGe
+[2021-03-17 14:53:21] <Numline1> the stuff inbetween has some sensitive stuff like project name etc. I'm not allowed to disclose :/
+[2021-03-17 14:54:00] <Numline1> It's fine when run locally or when executed on more powerful machine, I'm just trying to figure out where the bottleneck is :) Any help appreciated and thanks!
+[2021-03-17 15:46:50] <eamon.woortman_gitlab> Have you tried setting a `no_output_timeout` flag on your CircleCI task? https://support.circleci.com/hc/en-us/articles/360007188574-Build-has-hit-timeout-limit?utm_medium=SEM&utm_source=gnb&utm_campaign=SEM-gb-DSA-Eng-emea&utm_content=&utm_term=dynamicSearch-
+[2021-03-17 15:47:03] <eamon.woortman_gitlab> Not familiar with CircleCI or Webpack but that might do the trick
+[2021-03-17 17:49:32] <Numline1> @eamon.woortman_gitlab I wasn't aware of that, I'll check our CircleCI config. It might be that it times out when there's no change on the CLI
+[2021-03-17 17:49:33] <Numline1> thx
+[2021-03-17 17:50:23] <Numline1> oh okay, not it probably. It's set to 30 mins on our setup, plus the CircleCI itself seems to continue with other commands once the build fails. so it's likely Deployer or Webpack (Mix)
+[2021-03-17 20:59:44] <ronaldohoch> Hey guys!
+[2021-03-17 21:00:08] <ronaldohoch> Have you tryed the new Module Federation?
+[2021-03-17 21:01:28] <ronaldohoch> I'm trying to expose two modules of same micro front-end, but it doesn't work for me :/
+[2021-03-17 21:02:08] <ronaldohoch> Here, some code: https://pastebin.com/FWqJ1rw8
+[2021-03-18 07:50:46] <eamon.woortman_gitlab> > oh okay, not it probably. It's set to 30 mins on our setup, plus the CircleCI itself seems to continue with other commands once the build fails. so it's likely Deployer or Webpack (Mix)
+
+Try measuring the speed with https://github.com/stephencookdev/speed-measure-webpack-plugin. This will give you an indication of the actual build times on the fly. And try increasing that build time to an hour just for one test.
+[2021-03-18 08:07:35] <mauritslamers> Hi all, I am trying to create a webpack config for a non-module ES5 framework. This framework consists of subframeworks. I tried to generate the subframeworks as dlls, and then have an index.js file which imports the required subframeworks. This index.js is also built as a dll, and exported through package.json. I now try to import this in an app, which is assembled through a custom webpack config which inserts all the files in the correct order in the entries. I set the dependency to the framework, also using ProvidePlugin to have it automatically imported in every file, but for some reason it doesn't work at all. I see at least parts of the dlls on the top of the js bundle, but they are not evaluated, and the provide plugin doesn't seem to do anything in providing a global (which this system being ES5 depends on).
+[2021-03-18 08:28:49] <mauritslamers> The variable which should be exported in the library also doesn't appear in the webpack module cache.
+[2021-03-18 18:08:15] <ronnross> @ronaldohoch you do not need `library: { type: "var", name: "profile" },`. Also, when you start the app are you able to locate the `remoteEntry.js` in the browser? For example can you navigate to `localhost:3000/remoteEntry.js` and see the config in the browser? 
+[2021-03-18 19:33:55] <brombomb> My team just updated to webpack 5.  Our code is injected into our parents through a node module.  For local dev we've been using `yalc` to link our dev code into the parent repo where we run the webpack dev server.  Now that we've migrated to 5 we're finding that whenever `yalc` or `npm link` updates the parent the WDS crashes with an error `Bus Error: 10` which is a memory.  Has anyone else run into or solved linking modules under development?
+[2021-03-18 20:03:14] <ronaldohoch> @ronnross thank you, i've solved my problem xD
+
+See: https://github.com/module-federation/module-federation-examples/issues/717
+[2021-03-19 06:34:47] <tabcat> im searching for whether https://www.npmjs.com/package/webpack-dev-middleware can be used with the base nodejs http package and whether you can turn off file watching. thank you
+[2021-03-19 06:51:13] <tabcat> seems like i could give it my own memfs instance here https://github.com/webpack/webpack-dev-middleware#outputfilesystem which i could serve the file from
+and this looks like it turns off file watching https://github.com/webpack/webpack-dev-middleware#closecallback
+
+[2021-03-19 15:52:02] <rnarcos> Hello, everyone.
+
+I'm fairly new to webpack, and I've already been challenged by a task that is creating a loader for images and transforming them into React Components.
+
+I have been using url-loader as the image-source resolving loader, and that is working great. But for this use case, I don't think it will work for me. What I would like though, is to create a loader that "depends" on the url-loader, so whenever someone uses my loader, they will implicitly add the url-loader as-well.
+
+Is it possible to explicitly depend on another loader, or implicitly use it within my custom loader?
+[2021-03-19 23:43:02] <EECOLOR> I am migrating from 4 to 5 and I am getting the following error:
+
+```
+configuration.module.rules[0].oneOf[6].resource.or[0] has an unknown property 'exclude'. These properties are valid:
+   object { and?, not?, or? }
+```
+
+The relevant rule looks like this:
+
+```
+        {
+          resource: {
+            test: /(\.html\.js|\.js|\.mjs)$/,
+            or: [{ exclude: /node_modules/ }, ...compileWithBabel],
+          },
+          loaders: [babelLoader]
+        },
+```
+
+This rule worked in v4, is this a bug or am I doing something wrong?
+[2021-03-19 23:53:13] <EECOLOR> Hmm, it seems something is missing in the schema, the description of `rule.test`: `Shortcut for resource.test.`, this however seems not to be present in the schema for `resource`
+[2021-03-19 23:54:50] <o-alexandrov> Hello, when bundling with `webpack` & `terser`, **is it possible to trace why a certain module ended up in a bundle?**
+
+I've been trying to manually resolve whys of an unused library in the output bundle w/webpack 5 and played w/seemingly all `terser` options, but ended up being unable to remove such unused library from the code.
+The unused library does have `sideEffects` equal to `false`, written as ESM, and no variable references are present in the code, except for typings references from the globally `declare`d namespace.
+[2021-03-19 23:59:16] <o-alexandrov> Currently, I'm using only `webpack-bundle-analyzer` for the analysis.
+I'll explore using other tools for the bundle analysis described here:
+- https://survivejs.com/webpack/optimizing/build-analysis/#dependency-analysis
+
+But if you have experience in tracking such issues, please ping :)
+[2021-03-20 00:25:55] <o-alexandrov> Resolved by using the following pkg:
+
+https://www.npmjs.com/package/@statoscope/ui-webpack
+- is a good tool to find reasons with `webpack`'s built-in stats
+[2021-03-20 00:26:03] <EECOLOR> I would create a plugin that hooks into the `compilation` and `optimizeChunks`. There you have access to the chunk and the modules and can `console.log` (or use a step debugger) your way to the source of the dependency. Not sure if you will be able to track it that way. Creating a plugin is fairly simple:
+[2021-03-20 00:26:21] <EECOLOR> Ohw, haha, you solved it, great
+[2021-03-20 01:09:49] <o-alexandrov> Yes, fortunately :D
+The pkg above helped to identify a side effect within a dependency:
+- https://github.com/typeofweb/schema/blob/refinements/src/errors.ts#L4
+
+Btw, `@typeofweb/schema` is truly a nice library for data validation.
+[2021-03-20 01:10:49] <o-alexandrov> Thank you for the attention and desire to help

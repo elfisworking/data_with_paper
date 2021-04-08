@@ -1,0 +1,1134 @@
+[2021-01-01 04:07:54] <digimbyte> HELLO, I was wondering if anyone knew how to import materialize within a react/next app? all the examples use script tag imports
+the only reference I found was how to install the npm module 
+
+[2021-01-01 04:08:33] <digimbyte> I doubt I would import the css/js again with the script tags when I have the node module
+[2021-01-01 04:09:30] <digimbyte> I assume this is how I get started `import Materialize from 'materialize-css'`
+[2021-01-01 04:09:48] <digimbyte> but not sure what to do to apply it to my react/next app
+[2021-01-01 04:14:48] <digimbyte> or would I be better with MDBootstrap for next?
+[2021-01-01 09:38:56] <RafaelZasas> Does anyone know how to get the dropdown to work in Angular? I've tried everything :(
+[2021-01-01 15:30:24] <doughballs> @digimbyte have you read this? https://medium.com/@mattdlockyer/youre-using-materialize-css-wrong-470b593e78e9
+[2021-01-01 15:31:39] <doughballs> @RafaelZasas make sure you initialise the dropdown after the render, and make sure you take out the options variable if you’re not using options.
+[2021-01-01 17:14:02] <RafaelZasas> @doughballs I've initialized everything in the After View Init lifecycle method and the modals works, the forms work but the dropdown does not
+[2021-01-01 17:33:31] <tuffant21> @RafaelZasas Check out https://www.npmjs.com/package/angular2-materialize-v1
+[2021-01-01 17:34:29] <tuffant21> If you need any help, shoot me a message
+[2021-01-01 17:36:56] <RafaelZasas> I just tried both the trigger and the <ul> outside of the *ngFor loop and it worked. Is there any way to get it to work within the loop? I'm trying to have options display on multiple cards pulled from a database
+[2021-01-01 17:38:33] <RafaelZasas> Hey, I tried using ngx-materialize and it stopped my other materialize components from working, will this do the same?
+[2021-01-01 19:02:52] <tuffant21> @RafaelZasas this package shouldn't interfere with your other materialize components. Though I would suggest maybe switching your other components to use this library? It's really just a wrapper to get materialize to work with angular
+[2021-01-04 06:56:06] <Memiin> Hi guys, I would like to make a question, I believe I did an improvement in the materialize select, I created the itemSelect event, is there a way I can shared ?
+[2021-01-04 06:56:11] <Memiin> [![imagen.png](https://files.gitter.im/548e71a2db8155e6700df25f/8E3s/thumb/imagen.png)](https://files.gitter.im/548e71a2db8155e6700df25f/8E3s/imagen.png)
+[2021-01-04 06:57:22] <Memiin> Now everytime the user clicks an option in the select the event is triggers, works for multiple and non multiple selects 
+[2021-01-04 06:57:24] <Memiin> [![imagen.png](https://files.gitter.im/548e71a2db8155e6700df25f/j4w5/thumb/imagen.png)](https://files.gitter.im/548e71a2db8155e6700df25f/j4w5/imagen.png)
+[2021-01-04 08:11:21] <doughballs> Hi @Memiin maybe open a feature request over at the fork https://github.com/materializecss/materialize
+[2021-01-04 08:13:16] <doughballs> I was under the impression that this already exists though, `instance.getSelectedValues()`
+[2021-01-04 09:20:35] <Memiin> @doughballs  instance.getSelectedValues() exist, but there is no callback when the selectedItem changes
+[2021-01-04 12:45:02] <guyk-yahoo> Hey.
+Any idea why this happens?
+https://github.com/Dogfalo/materialize/issues/6608
+[2021-01-04 12:45:16] <guyk-yahoo> The update i made was upgrading to Parcel2
+[2021-01-04 12:45:26] <guyk-yahoo> Anything I should do differently?
+[2021-01-04 13:14:35] <doughballs> @Memiin bring it up at the fork, hopefully it will be be considered for implementing!
+[2021-01-04 22:03:55] <Fomundi> When could they upload more things to materialize as experimental things, since more things are needed and if they can they could go to the new version?
+[2021-01-05 15:51:21] <pauld0051> Hey there - I am having a lot of troubles with a Materialize select element. The first thing I am struggling with is you can not do an onchange() call for JS. I am really struggling to find a way around this. Also, this same select dropdown menu is small. I can't change its size. I already changed the size of other dropdown-content classes on another page in this site. So, I am wanting to target this particular ID for the select to make it wider. Any help greatly appreciated. Really stuck on this one. 
+[2021-01-06 09:19:38] <doughballs> Many ways to achieve this. Pass constrainWidth:false as an option inside dropdownOptions when initialising the select. In any case, you can always set a width on .dropdown-content.
+[2021-01-06 09:45:43] <doughballs> @pauld0051 also, onchange works just fine:
+
+````
+$('#my-select').on('change',function(){
+    
+    console.log('changed');
+    
+  });
+````
+[2021-01-06 09:45:59] <doughballs> https://codepen.io/doughballs/pen/zYGpGZJ
+[2021-01-06 11:22:54] <pauld0051> Yeah, I found out that it was my template and where the script was being called as the problem. It was a painful few hours when I worked that out. The onchange isn't needed now, but it does work :) Thanks for the reply too. 
+[2021-01-06 11:46:25] <pauld0051> I do have a question though about the Materialize datepicker. I am wanting users to just pick their birthday "day" (ie, month and day) but not how old they are. So I don't need them to pick year. But when ever I try to turn the year off, I seem to prevent the whole datepicker from working. Is there a simple way to just allow a user to pick 1 day of the 366 possible days (ie, will need to keep February 29th in regardless of the year)?
+[2021-01-06 12:57:25] <doughballs> @pauld0051 sounds like the datepicker is not for you. Just give the user a simple text field and ask for DD/MM
+
+The datepicker is set up to change the days to the correct ones depending on what year it is.
+[2021-01-06 15:16:52] <VikingsApp> I have a question how to insert & remove input field dynamically. i tried using jquery but when i click on add button it insert field but remove them instantly
+[2021-01-06 15:18:39] <prasan-24> Thanks jshster I have fixed that issue , I have imported the materialize file two times . Thats why I got this issue
+[2021-01-06 15:21:13] <prasan-24> Can anyone please help me to how to translate the date picker text . I have tried this option i18n from date picker , Its working . But my requirement is it should translate based on culture
+[2021-01-06 15:23:08] <VikingsApp> > I have a question how to insert & remove input field dynamically. i tried using jquery but when i click on add button it insert field but remove them instantly
+
+plz any solution
+[2021-01-06 15:29:14] <prasan-24> > Can anyone please help me to how to translate the date picker text . I have tried this option i18n from date picker , Its working . But my requirement is it should translate based on culture
+
+If anyone having idea please tell me 
+[2021-01-06 15:35:57] <tuffant21> @VikingsApp are you using a framework like angular or react?
+[2021-01-06 15:36:51] <tuffant21> @prasan-24 I don't know of any solutions for this. It's not something I've solved before
+[2021-01-06 15:40:50] <prasan-24> @tuffant21 Ok no problem thanks buddy!
+[2021-01-06 15:49:12] <VikingsApp> > @VikingsApp are you using a framework like angular or react?
+
+i have solved problem thanks for your support
+[2021-01-06 16:19:39] <prasan-24> > Can anyone please help me to how to translate the date picker text . I have tried this option i18n from date picker , Its working . But my requirement is it should translate based on culture
+
+Any support is there for this materialize css , I need to post this question . Can anyone please help me 
+[2021-01-06 19:57:26] <imprex92> Hello guys! I just started using  this materialize-css in my **Nextjs** app. I'm using sass, so downloaded sass-files...  I am importing  ```import '../styles/materialize.css'``` inside my **_app.js** then it should be accessible in every page? on my firs page "index.js" I have a few buttons ```<a className="waves-effect waves-light btn">button</a>```, all working with a nice wave-effect on click! but when I use the same code in another page the on click wave-effect doesn't work! except that, the styling works and the color but not the wave-affect... 
+I wonder if anyone have any ide why it doesn't work for me? This wave-effect come from the CSS-file right? Then it's strange the styling works, :/ 
+I'm grateful for any help 
+[2021-01-06 20:10:05] <imprex92> It did work if I added this ```if(typeof window !== 'undefined'){
+require( 'materialize-css/js/waves')
+}```
+could anyone explain this for me?
+[2021-01-06 20:23:15] <imprex92> Ah never mind! think I figured it out. It works now :)
+[2021-01-07 09:14:55] <prasan-24> > Can anyone please help me to how to translate the date picker text . I have tried this option i18n from date picker , Its working . But my requirement is it should translate based on culture
+
+???
+[2021-01-07 18:37:21] <er-dishantarora> Hello Guys,
+
+I need some help regarding the Carousel.
+In my recent project, I'm facing an issue with the default carousel when we have an even number of slides. 
+Basically, It hides the last slide.
+For example: If you have 4 slides it will show the first 3 slides only. Where as if you have 2 slides it will only show 1.
+
+Could anyone please help me out?
+[2021-01-07 19:07:05] <doughballs> @er-dishantarora you’ll need to link to the site or provide a codepen 
+[2021-01-08 02:21:39] <ManuTheCoder> Check out this website I made with Materialize
+	![Image](https://i.ibb.co/pXx2P63/Screenshot-2021-01-07-at-6-19-18-PM.png)
+[2021-01-08 02:23:03] <ManuTheCoder> And another one of mine 
+![alt](https://i.ibb.co/z57P8PH/Screenshot-2021-01-07-at-6-22-00-PM.png)
+http://homebase.rf.gd/
+[2021-01-08 03:51:29] <tuffant21> It's gorgeous!
+[2021-01-08 18:19:28] <ManuTheCoder> ![ALT](https://i.ibb.co/0tbVvws/Screenshot-2021-01-08-at-10-17-43-AM.png)
+
+[2021-01-08 18:19:35] <ManuTheCoder> Check out the mobile version of it
+[2021-01-08 18:19:39] <ManuTheCoder> in my android emulator
+[2021-01-08 18:57:01] <tuffant21> That's actually very impressive. It would be a great admin dashboard
+[2021-01-08 21:58:52] <ManuTheCoder> Yea, it's used for one of my projects https://homebase.rf.gd/
+[2021-01-08 22:00:05] <ManuTheCoder> lol, I use materialize for every one of my projects
+[2021-01-08 22:00:55] <ManuTheCoder> https://todoapp.rf.gd/poll/vote.php?id=82
+[2021-01-09 01:57:06] <EricTomphone> hi morning guys, happy to be here... i'm new for Materialize CSS...
+[2021-01-09 01:58:22] <EricTomphone> need your guys help for one question... maybe stupid since I'm just a beginner..
+[2021-01-09 01:58:41] <EricTomphone> how to customize the table font size....
+i have a table showing as below..
+[2021-01-09 01:58:46] <EricTomphone> [![image.png](https://files.gitter.im/548e71a2db8155e6700df25f/t54V/thumb/image.png)](https://files.gitter.im/548e71a2db8155e6700df25f/t54V/image.png)
+[2021-01-09 01:59:27] <EricTomphone> thx...
+[2021-01-09 02:06:40] <EricTomphone> hi... ok, after hundreds tryies... I got it... 
+add Style="font-size: xx px"
+simple liek that.. 
+[2021-01-09 03:31:02] <tuffant21> nice!
+[2021-01-09 03:54:41] <bassamanator> I love the font styling that is used in MaterializeCSS but I can't seem to be able to replicate it elsewhere. I want to experiment a bit. How do I replicate the the exact way the text looks?
+[2021-01-09 05:09:58] <ManuTheCoder> It's roboto i think 
+[2021-01-09 05:09:59] <ManuTheCoder> https://fonts.google.com/specimen/Roboto?sidebar.open=true&selection.family=Roboto:wght@100
+[2021-01-09 17:22:23] <bassamanator> Well when I set the font to Roboto, things don't look quite the same. This is the closest I've gotten to reproducing what materialize looks like but it's still slightly off I think 
+```
+  line-height: 1.5;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-weight: normal;
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 0.9rem;
+  -webkit-font-smoothing: subpixel-antialiased;
+```
+[2021-01-09 18:14:22] <doughballs> https://github.com/Dogfalo/materialize/blob/v1-dev/sass/components/_typography.scss
+[2021-01-09 18:15:52] <doughballs> https://github.com/Dogfalo/materialize/blob/v1-dev/sass/components/_variables.scss#303
+[2021-01-09 18:51:02] <bassamanator> @doughballs That helps a lot. Thanks!
+[2021-01-09 19:05:17] <doughballs> 
+[2021-01-09 19:37:37] <pauld0051> I have formalised my issue now with Materialize, I am aware now that the select styling isn't conducive to letting Javascript change select attributes. 
+
+For example: I was using a backend JSON file to populate a Materialize select dropdown with every country on Earth. A user would pick that, and then JS would listen to the variable being chosen (or loaded) and then populate a second dropdown with all the states. After a lot of fussing around, I got some JS to do this. But this was 5 days for something as simple as an adding an attribute function. I am still not 100% comfortable with how I finally got it to work. But I still have one more issue to solve - I need the original choice to remain in the select function regardless of the JS. 
+
+I can't seem to work that last part out. But that might not be for this forum. The first part is though. 
+[2021-01-09 20:42:45] <doughballs> “ I need the original choice to remain in the select function regardless of the JS.” I don’t really understand what you’re trying to do.
+[2021-01-09 23:34:00] <bassamanator> So I just checked 2 machines, Firefox and Chrome (Win10 and Linux) and Roboto is not the font that is being rendered, it's in fact```Font being Rendered:
+Segoe UI
+100.0% (local)```. This is also the case with the font on materializecss.com. I was expecting to see Roboto as the font being rendered. Does this make sense?
+[2021-01-10 17:17:54] <pauld0051> Apologies - I worked out my issue there with select function. It's all good. 
+
+But I am still having problems with datepicker. If A user picks 1970 for example, and I have a 99 year max... all of a sudden they can then pick 1870 too!
+
+How do I set a minimum date as far back as it can go? I tried this in the JS file: min: new Date(1910,1,1), but this didn't seem to work.
+[2021-01-10 17:54:33] <doughballs> Pass this as an option when initialising:
+`minDate: new Date('2020-01-13')`
+[2021-01-10 18:01:57] <doughballs> @bassamanator 
+
+````
+-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+````
+
+pretty sure the fonts will render in that order, as per the css
+[2021-01-10 19:20:35] <pauld0051> Here's an example of how I can keep going back in time on the Datepicker. https://gyazo.com/9a5fe5810845e216374714f1b5ec38e4
+[2021-01-10 19:21:04] <pauld0051> I tried the minDate: new Date('various dates') and this didn't seem to prevent it. 
+[2021-01-10 19:25:51] <bassamanator> @doughballs I'd be curious to know what results you get if you check to see what font is actually being rendered on your machine using the extension Font Finder (Firefox+Chrome) or Whatfont(Chrome).
+[2021-01-10 19:27:14] <doughballs>  @pauld0051 https://codepen.io/doughballs/pen/NWGzJpX
+[2021-01-10 19:31:47] <pauld0051> Thanks Sean. Appreciate that. I wonder why it's not a simple code within the Query? Ok - appreciate the link will copy and paste that into the file. Thanks again. 
+[2021-01-10 19:36:05] <pauld0051> Ok, I can't seem to get that to work either. Hmmmm... 
+[2021-01-10 19:38:37] <pauld0051> Wait, do I have to replace all this as well?  
+$('.datepicker').datepicker({
+        format: "dd mmmm, yyyy",
+        yearRange: 99,
+        showClearBtn: true,
+        selectMonths: true,
+        i18n: {
+            done: "Select"
+    }});
+[2021-01-10 19:44:23] <pauld0051> I wished there was much better documentation at the Materialize site that shows this. 
+[2021-01-10 19:55:21] <doughballs> The documentation isn’t great but it contains everything you need - re read it, and play around, and make sure you are using the correct formats. https://codepen.io/doughballs/pen/PoZbmOV
+[2021-01-10 19:56:06] <ManuTheCoder> Hi there I was wondering why my code isnt working. The onOpenEnd thing isnt working with jQuery. 
+```
+ $('.sidenav').sidenav({
+             onCloseEnd: function (){alert(1);show()},
+             onOpenStart: function (){hide()}
+         });
+```
+[2021-01-10 19:57:01] <doughballs> Your date format doesn’t look right - mmmm - never seen this. Yyyy for sure, but not mmmm.
+[2021-01-10 19:58:50] <pauld0051> [![image.png](https://files.gitter.im/548e71a2db8155e6700df25f/6qcb/thumb/image.png)](https://files.gitter.im/548e71a2db8155e6700df25f/6qcb/image.png)
+[2021-01-10 19:59:13] <pauld0051> So I tried that. And this doesn't prevent the date picker from continually winding down the clock.
+[2021-01-10 20:00:10] <pauld0051> https://gyazo.com/331d2fdd91745718dc2a22225124b16d
+[2021-01-10 20:15:35] <doughballs> Then there is an error in your code. Check the console? And remove everything other than the minDate, then add back in one by one, and check the console each time.
+[2021-01-10 20:16:00] <doughballs> It is minDate, not min.
+[2021-01-10 20:17:55] <pauld0051> ahhh, ok I will try. Thanks. 
+[2021-01-10 20:23:08] <pauld0051> I removed everything. I could still go back in time, but I just couldn't select a date. But I could keep going back. 
+[2021-01-10 20:27:12] <pauld0051> [![image.png](https://files.gitter.im/548e71a2db8155e6700df25f/wnjw/thumb/image.png)](https://files.gitter.im/548e71a2db8155e6700df25f/wnjw/image.png)
+[2021-01-10 20:27:54] <pauld0051> I tried it this way - I removed everything. But it would still go back. Now, it doesn't just go back, it goes forward too :P
+[2021-01-10 20:42:41] <doughballs> You don’t need all the other options. Strip it right back to just minDate. It works, you can see it works from my example - you have an error somewhere else. By adding the other options in one by one you will find it.
+[2021-01-10 21:19:30] <pauld0051> [![image.png](https://files.gitter.im/548e71a2db8155e6700df25f/Wjs1/thumb/image.png)](https://files.gitter.im/548e71a2db8155e6700df25f/Wjs1/image.png)
+[2021-01-10 21:19:32] <pauld0051> Cool, I am trying, honestly. Here's what I stripped it down to. 
+[2021-01-10 21:19:57] <pauld0051> [![image.png](https://files.gitter.im/548e71a2db8155e6700df25f/PaG9/thumb/image.png)](https://files.gitter.im/548e71a2db8155e6700df25f/PaG9/image.png)
+[2021-01-10 21:20:16] <pauld0051> Here's me at 1911. Now, granted, I can not pick a date here. But I can get back to that part of the code. 
+[2021-01-11 07:09:35] <EricTomphone> Hi guys, can I ask one question here about HTMLCollection List? although it's not too much Materialize related. thx in advance.
+[2021-01-11 07:11:29] <EricTomphone> I have a dynamic check list, using Array map function, get it from Google spreadsheet. as below pic..
+[2021-01-11 07:11:34] <EricTomphone> [![image.png](https://files.gitter.im/548e71a2db8155e6700df25f/YNLX/thumb/image.png)](https://files.gitter.im/548e71a2db8155e6700df25f/YNLX/image.png)
+[2021-01-11 07:13:15] <EricTomphone> the list appears on Web app successfully... with checkbox in front of each item.
+[2021-01-11 07:16:31] <EricTomphone> however I'm not able to change the checkbox status to do some other stuff, e.g. 
+if checklist[0].checked, 
+document.getElementById('inputarea').value = "checked";
+[2021-01-11 07:16:48] <EricTomphone> else {document.getElementById('inputarea').value = "not checked";}
+[2021-01-11 07:17:07] <doughballs> @pauld0051 great so that is working as it should. It sets the minimum date that can be selected.
+[2021-01-11 07:17:29] <EricTomphone> [![image.png](https://files.gitter.im/548e71a2db8155e6700df25f/0m68/thumb/image.png)](https://files.gitter.im/548e71a2db8155e6700df25f/0m68/image.png)
+[2021-01-11 07:17:46] <EricTomphone> [![image.png](https://files.gitter.im/548e71a2db8155e6700df25f/npii/thumb/image.png)](https://files.gitter.im/548e71a2db8155e6700df25f/npii/image.png)
+[2021-01-11 07:39:07] <doughballs> @EricTomphone have you  looked on SO? https://stackoverflow.com/questions/37373234/materialize-intermediate-checkbox-state
+[2021-01-11 07:45:31] <doughballs> @pauld0051 So it sounds like you need to add a max date if you want to cap the latest selectable date. The yearRange refers to the year dropdown - how many years are shown. The user can still click back and forward through the months, but since the dates are not selectable, it's not a big problem.
+[2021-01-11 07:57:47] <EricTomphone> @doughballs thanks bro... I hv checked that post, sorry I'm still not able to make it work... 
+[2021-01-11 08:30:14] <doughballs> @EricTomphone so what exactly do you need to do? Set a checkbox as checked, or not checked? Is this at time of render, or onto a pre-rendered set of checkboxes?
+[2021-01-11 08:33:45] <EricTomphone> @doughballs Hi bro, I have just found a video talking about the dynamic checkbox
+and also the chips appear once item checked... that;s what I'm looking for. :) 
+[2021-01-11 08:34:13] <EricTomphone> thanks a lot, let me go thru the video, and will ask again if I still have troubles.. 
+[2021-01-11 08:34:26] <EricTomphone> https://www.youtube.com/watch?v=znxoeUbBwi4 
+here it is...
+[2021-01-11 23:31:09] <neo-age> hello, I'm salah I'm from morocco , but I don't know what it is that I'm spouse to do as a web developer, I want to apply for freelance jobs but I'm scared of the responsibility, can anyone tell me what I need.
+[2021-01-12 13:41:48] <cimenta> hi, I am using the same Materialize Autocomplete on 3 input elements. Then on onAutocomplete() I need to get the ID of the element the autocomplete was used on so I can populate data in the right place. I created a question on SO https://stackoverflow.com/q/65674742/250422
+[2021-01-12 13:43:07] <cimenta> one more question. how can I increase a text size? I find it quite small to read
+[2021-01-12 13:49:54] <ThibaudMZN> [![image.png](https://files.gitter.im/548e71a2db8155e6700df25f/LRQo/thumb/image.png)](https://files.gitter.im/548e71a2db8155e6700df25f/LRQo/image.png)
+[2021-01-12 13:50:00] <ThibaudMZN> Hey everyone, I'm facing a weird issue with tabs, they all appeared "selected" when my page is loaded, like so :
+
+[2021-01-12 13:51:16] <ThibaudMZN> I have multiple tabs in a single page, maybe that's the issue ? Any idea on that would be perfect, here's my simple code :
+
+HTML
+```
+<ul class="tabs tabs-fixed-width">
+    <li class="tab"><a href="#reports">Raports</a></li>
+    <li class="tab"><a href="#testresult">Résultats de Test</a></li>
+    <li class="tab"><a href="#historic">Historique</a></li>
+</ul>```
+
+JS
+`$('.tabs').tabs();`
+[2021-01-13 00:08:36] <icassatti> Hi, i'm Thiago Icassatti from Brazil.
+
+I have a simple issue to ask.
+
+I'm try to put prev and next buton outside of carousel componente.
+I folow this sample (https://codepen.io/Paco_Cervantes/pen/ZLxKpj)
+But in my i have more then one corousel on my page. Thats de point: When i click in next icon no metter which carousel i call, the event run, to every others togther.
+I know why, but not how to refactor my script. I'm using JQuery. All elements are select with class .carousel, becouse that all sliders move to next togther.
+I don't want make a script for each #id of my carousels. I want a general script who know which id need to move.
+
+Some one can help me?
+
+[2021-01-13 02:12:03] <icassatti> I found the way to resolve:
+```
+          $('.moveNextCarousel').click(function(e){
+              var currentcarousel = $(this).closest("div.carousel");
+              e.preventDefault();
+              e.stopPropagation();
+              currentcarousel.carousel('next');
+          });
+
+          // move prev carousel
+          $(".movePrevCarousel").on("click", function (e) {
+            var currentcarousel = $(this).closest("div.carousel");
+            e.preventDefault();
+            e.stopPropagation();
+            currentcarousel.carousel('prev');
+          });
+```
+
+Thank you guys.
+https://api.jquery.com/closest/
+https://stackoverflow.com/questions/16091823/get-clicked-element-using-jquery-on-event
+
+[2021-01-14 17:40:39] <nirberko> Hey all, you're welcome to join a CSS channel. (without any specific topic) 
+https://gitter.im/CSS-Masters/community
+[2021-01-14 23:59:58] <sf0912> Hi,
+I'm Shawn from India.
+I'm new to web dev and I'm trying to use materialize for a project I was tasked with trying to find out how to disable contrainWidth in a dropdown. By default, it is true, but I want to set it to false.  On ver 0.100.2 in the site, there was documentation for changing options in line by adding them as data attributes. I've tried it on ver 1 but it hasn't worked. I've also tried experimenting with other options.So TLDR, I wanted to know if there is a way to quickly change one or two options of a JS element without having to dive into JSQuery since I don't really know it.
+[2021-01-15 09:33:39] <doughballs> @sf0912 
+
+````
+$('.dropdown-trigger').dropdown({
+constrainWidth: false
+});
+````
+[2021-01-19 11:18:38] <khalido1990> Hi i'm having some trouble my checkbox are not showing when i load in materialize. I'm using dat.gui and creating a checkbox. ``` x.userData.dgf.add(x, 'visible') ```
+[2021-01-19 11:20:24] <khalido1990> Can someone help me out
+[2021-01-19 11:20:41] <fadelghandour> Hello, I am having a trouble using MaterializeCss with AngularJS, when a ng-options update, the UI of select is not refreshed, I need to call M.AutoInit() each time?
+[2021-01-19 23:11:39] <ernestoroca> I read that materialize is deprecated because it didn't changed in several years.
+[2021-01-19 23:12:56] <ernestoroca> Is it secure to use it in commercial development?
+[2021-01-20 08:08:25] <allquizzes> Where can I get link to materializecss tutorial
+[2021-01-20 09:37:15] <doughballs> @allquizzes https://www.udemy.com/course/materialize-css-from-scratch-with-5-projects/
+[2021-01-20 09:40:35] <doughballs> @ernestoroca yes it's safe, and the project is moving forward via a fork https://github.com/materializecss/materialize 
+[2021-01-20 09:41:00] <doughballs> @fadelghandour maybe @tuffant21 can help?
+[2021-01-20 19:32:20] <tuffant21> @fadelghandour Are you working with Angular 1 or Angular 2+?
+[2021-01-21 16:08:39] <ManuTheCoder> Check out this simple food website I made using materialize
+[2021-01-21 16:08:40] <ManuTheCoder> https://sjscustomcakes.rf.gd/
+[2021-01-21 16:43:57] <tuffant21> Looks good!
+[2021-01-24 12:17:39] <medens92> Ho to everybody, i m Daniele from Italy. I am building a web site with the parallax template of materializecss. I would like to transform the first parallax image in a full page slider with parallax effect and i would like to make the navbar fixed and black with a little opacity to make it over the slider that i will build. I try to do those things but I did not succeed in. Can someone of you help me?thanks you guys.
+[2021-01-25 10:46:53] <doughballs> @medens92 yo. A little bit tricky this as you're nesting a component inside a component, and both of these components rely heavily on relative>absolute positioning, but it is possible.
+
+Not sure if you want to have the user access the slider, but I couldn't seem to get to it, maybe because of what I mention above. Hopefully should get you started though.
+
+https://codepen.io/doughballs/pen/wvzLPYw
+[2021-01-25 15:10:07] <drewhackfl> Starting with the Admin Template I'm trying to get the datatables plugin to look like the example but I'm not having much luck with it at all
+[2021-01-25 18:55:12] <nelsongil> Hi, I am updating my knowledge and I love Materialize, but I have a problem when loading code from Javascript in the  page, inside a div, Materialize stops working for me, if I write the same code directly on the page it works .
+Code page report.php
+[2021-01-25 18:59:11] <nelsongil> Use '''$('#divBotones').html(cadena);'''' 
+[2021-01-25 18:59:39] <nelsongil> in informe.js
+[2021-01-26 08:00:13] <doughballs> @nelsongil make sure to initialise any JavaScript components after they have been added to the page.
+[2021-01-26 09:17:37] <nelsongil> Thanks @doughballs , I found a solution, its becouse datapicker doesn`t exist when a call it, with this work: "let DateP = document.querySelectorAll('#divBotones .datepicker');
+    let instancesDP = M.Datepicker.init(DateP);"
+[2021-01-26 09:35:56] <doughballs> @nelsongil that's because your JS should be wrapped in a document.ready, and then any further dynamically added elements need to be re-init.
+[2021-01-26 09:46:04] <medens92> @doughballs  thank you so much. I ve tried to do this but it didn t work. I think i had something wrong. Thank again mate.
+[2021-01-26 15:12:33] <stecko1980> I added tabs in navbar but they dont work
+Navbar
+```
+<nav class="nav-extended">
+        <div class="nav-wrapper">
+                <a class="brand-logo center" href="<c:url value="/" />">
+                    L1CoderS
+                </a>
+                <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul class="right">
+                    <li><a class="dropdown-trigger" href="#!" data-target="language"><i class="material-icons">language arrow_drop_down</i></a></li>
+                </ul>
+        </div>
+        <div class="nav-content">
+            <ul class="tabs tabs-transparent">
+                <li class="tab"><a class="active" href="#tab-statistics"><spring:message code="voj.accounts.dashboard.statistics" text="Statistics" /></a></li>
+                <li class="tab"><a href="#tab-notifications"><spring:message code="voj.accounts.dashboard.notifications" text="Notifications" /></a></li>
+                <li class="tab"><a href="#tab-customize"><spring:message code="voj.accounts.dashboard.customize" text="Customize" /></a></li>
+                <li class="tab"><a href="#tab-messages"><spring:message code="voj.accounts.dashboard.messages" text="Messages" /></a></li>
+                <li class="tab"><a href="#tab-accounts"><spring:message code="voj.accounts.dashboard.accounts" text="Accounts" /></a></li>
+                <c:if test="${myProfile.userGroup.userGroupSlug == 'administrators'}">
+                    <li class="tab"><a href="<c:url value="/administration" />"><spring:message code="voj.accounts.dashboard.system-administration" text="System Administration" /></a></li>
+                </c:if>
+            </ul>
+        </div>
+    </nav>
+```
+If you need I can give you code with tabs
+[2021-01-26 15:16:40] <doughballs> @stecko1980 did you intitialize them?
+https://materializecss.com/tabs.html#initialization
+[2021-01-26 15:50:05] <stecko1980> > @stecko1980 did you intitialize them?
+> https://materializecss.com/tabs.html#initialization
+
+Yes
+```
+<script>
+        $(document).ready(function(){
+    $('.tabs').tabs();
+  });
+    </script>
+```
+[2021-01-26 15:51:03] <stecko1980> Tabs working as links. I have content on this page and when I click on tab link changes to id and srolls to id
+[2021-01-26 16:00:38] <doughballs> @stecko1980 that's not really what tabs are intended for. They are for hiding and showing content directly below. I would just use a nav link and set the href to the section anchor instead.
+[2021-01-26 16:04:05] <stecko1980> I understand, but it is working so I wrote below
+[2021-01-27 12:15:25] <chak> Hello, materialize looks awesome. Just looking over the examples, I had a question about the 'dropdown' javascript. It looks like the image is placed above the link text rather than to the left. Is that intentional?
+[2021-01-27 12:17:26] <doughballs> @chak hard to tell what you mean...some components have images with dropdown options and it’s usually to the right.
+[2021-01-27 13:51:39] <chak> @doughballs I'm referring specifically to the example on the website shown when you click "Drop me!" (https://materializecss.com/dropdown.html). It doesn't look the way I'd expect.
+[2021-01-27 14:37:51] <doughballs> I see. I don’t know if that’s as intended sorry. You’re right, it looks odd...needs some flex on that li!
+[2021-01-27 19:54:43] <MumblingFumbler> Hello, I'm Mumbling,
+I'm having trouble combining  text input validation and readonly or disabled input. For instance:
+```
+<input id="selection" type="text" class="validate" required readonly>
+```
+The input field is given a value via Javascript:
+```
+document.getElementById("selection").value = "value";
+```
+After the input field gets a value, Materialize continues to mark the field as red, indicating that it isn't valid. Is there a way to get Materialize to validate the field correctly?
+
+Thanks for your help,
+
+[2021-01-29 08:43:54] <darthgween> Hello! Im using vue.js, how can i run a function before oper a modal?
+[2021-01-29 08:44:30] <darthgween> open*
+[2021-01-29 08:48:58] <doughballs> @darthgween you mean before onOpenStart? You’d probably need to listen for a click on .modal-trigger.
+[2021-01-29 08:50:15] <darthgween> Yes, i have to run a function that gives values to text fields inside the modal
+[2021-01-29 08:50:42] <darthgween> But im using Vue.js im not sure that i can use onOpenStart inside Vue
+[2021-01-29 08:51:32] <darthgween> Anyway can you write me the code in order to use onOpenStart?
+[2021-01-29 10:37:47] <doughballs> @darthgween onOpenStart is a function built into the modal. It runs when the modal BEGINS to open.
+[2021-01-29 10:38:14] <doughballs> https://materializecss.com/modals.html#options
+[2021-01-29 10:39:08] <doughballs> https://codepen.io/doughballs/pen/abvJPww this is with jQuery, but you can do it with vanilla JS too.
+[2021-01-29 21:08:40] <computerwiz12890> I'm about to pull my hair out with this.... I need "display:block" in order to have a scrollbar with my <tbody>, but when I use "display:block", it makes everything funky
+[2021-01-29 21:08:41] <computerwiz12890> https://jsfiddle.net/byoscL3m/
+[2021-01-29 21:09:12] <computerwiz12890> Can anyone help me figure this out?  Need the table body to show scrollbar, and have the headers line up
+[2021-01-29 21:10:34] <computerwiz12890> You would think it was a simple task.  But apparently not.  Or I don't know enough HTML....  :-/
+[2021-01-29 22:14:44] <doughballs> @computerwiz12890 I'm not really sure what you're trying to do, there is no scroll bar on your example? I can't even see why you'd need a scroll bar. Materialize has a `table-responsive` class for taking care of that on mobile. Also you have cols inside your th, which is not part of the docs and will add complexity to the css.
+[2021-01-29 22:17:12] <computerwiz12890> [![image.png](https://files.gitter.im/548e71a2db8155e6700df25f/dXIp/thumb/image.png)](https://files.gitter.im/548e71a2db8155e6700df25f/dXIp/image.png)
+[2021-01-29 22:17:19] <computerwiz12890> There's my scroll bar.
+[2021-01-29 22:17:57] <computerwiz12890> You don't see a need for a scrollbar because that is just a test sample.  It is part of a notes screen, and there can be a lot of notes.  It will also be what I use in many other "tabled" locations.
+[2021-01-29 22:18:23] <computerwiz12890> None of the "apps" I build will be used on mobile, so I don't think that class will help me.
+[2021-01-29 22:19:40] <doughballs> You can force that class at any screen size you like. Just adjust the media query.
+[2021-01-29 22:22:18] <doughballs> My point is, you're adding the grid system to a table - two things with conflicting styles, different display and sizing properties  - so making order out of that might not be easy. 
+
+I think the responsive table class is not what you need, as you want the scroll bar in the opposite axis. 
+[2021-01-29 22:28:23] <computerwiz12890> I see.  I do like the % sizing that I get from the "s1 s2 s3, etc." classes.  Would it be better to just do the % myself?
+[2021-01-31 10:01:26] <doughballs> It might not be causing a problem tbh. I didn’t have a chance to have a proper dig around. 
+[2021-01-31 10:03:54] <doughballs> I’ll see if I get a minute a lunch...
+[2021-01-31 19:48:03] <doughballs> @computerwiz12890 https://codepen.io/doughballs/pen/GRNgOKo
+
+Found the answer on SO:
+
+https://stackoverflow.com/questions/21168521/table-fixed-header-and-scrollable-body
+
+You may need to play around with it, but the key is the wrapper around the table...
+[2021-02-01 15:48:32] <computerwiz12890> It's very very close @doughballs.  I run into a problem when I want 2 rows in the header.  In some of my tables, I have an "addition" row, where I allow the user to add a new entry into the table.  I love this method, because it is intuitive and easy.  But having 2 rows in the header goes funky with the "sticky" method.
+[2021-02-01 15:49:54] <computerwiz12890> Originally, I was using a <table> for the header, a <table> for the addition row, and a <table> for all the records.  Works fine in IE, but in Firefox, Chrome, and Edge, I will get random rows suddenly not lining up.  Since each "row" is actually it's own table, that kinda sorta makes sense.  But the classes & min-widths and other techniques I use would make sure they line up perfectly fine....in IE.
+[2021-02-01 15:51:08] <computerwiz12890> Looks like what I need to do is go back to my method of using a <table> for the header, <table> for the addition row, and <table> for the records.  But instead of wrapping the <table> in the ASP.Net Repeater, I will wrap the <tr> in the repeater.  That way instead of a <table> being created for each row of data, it will create a <tr> for each row of data.
+[2021-02-01 15:52:18] <computerwiz12890> I was hoping to have it all in a single table, and everything would just line up correctly, but it seems that's not going to work.
+[2021-02-02 09:37:49] <doughballs> @computerwiz12890 when you says 'goes funky' - how exactly? I would have thought you just need to set a new height and offset...
+[2021-02-02 09:42:35] <doughballs> Also...how strange that the only browser it works in is IE! Usually the other way around...
+[2021-02-02 14:20:33] <computerwiz12890> Lol yes, exactly.
+
+When I say "goes funky", I mean the 2nd row will slide under the 1st one.  Like it's just a regular data row.  And I don't think that method will work, because I'm also trying to account for smaller resolutions/window sizes.  Different sizes can cause some headers to wrap & take up more space, so I don't think the "sticky" solution would work, because you'd have to know ahead of time exactly how much height you'd need, correct?
+[2021-02-03 18:06:20] <medens92> Hi guys, i have put in my code a dropdown menu but i have a little problem. I don't know why when I hover over it with the mouse it works well, but when i go away with pointer the highlighted margin remains in the box until i click elsewhere.  I have setted border->none but it don' t works. Someone can help me? This is my code.
+
+  <nav>
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="#" class="brand-logo">Logo</a>
+      <ul class="right hide-on-med-and-down">
+		<li class="active"><a href="#">Navbar Link</a></li>
+        <li><a class='dropdown-trigger' href='#' data-target='dropdown1'>Navbar Link</a>
+			<ul id='dropdown1' class='dropdown-content'>
+				<li><a href="#">Navbar Link</a></li>
+				<li><a href="#">Navbar Link</a></li>
+				<li><a href="#">Navbar Link</a></li>
+			</ul>
+		 </li>
+		<li><a href="#">Navbar Link</a></li>
+		<li><a href="#">Navbar Link</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="sidenav">
+        <li><a href="#">Navbar Link</a></li>
+		<li><a href="#">Navbar Link</a></li>
+		<li><a href="#">Navbar Link</a></li>
+		<li><a href="#">Navbar Link</a></li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+[2021-02-03 18:19:22] <doughballs> @medens92 that’s a browser issue. I think you need to set outline:none on the trigger
+[2021-02-03 18:57:08] <calmlb> [![Screen Shot 2021-02-03 at 1.56.57 PM.png](https://files.gitter.im/548e71a2db8155e6700df25f/urOz/thumb/Screen-Shot-2021-02-03-at-1.56.57-PM.png)](https://files.gitter.im/548e71a2db8155e6700df25f/urOz/Screen-Shot-2021-02-03-at-1.56.57-PM.png)
+[2021-02-03 18:57:18] <calmlb> Hi All, I'm having trouble placing a card in the spot that I'd like. I've tried so many different options, and feel lost. 
+
+I'm trying to place the complimentary colors card just beneath "update"delete" buttons in the item card. but without pushing the photo and upload/delete card to a stacked arrangement. Any thoguths you have woudl be helpful.
+
+
+[2021-02-03 18:57:36] <calmlb> [![Screen Shot 2021-02-03 at 1.57.31 PM.png](https://files.gitter.im/548e71a2db8155e6700df25f/4CUS/thumb/Screen-Shot-2021-02-03-at-1.57.31-PM.png)](https://files.gitter.im/548e71a2db8155e6700df25f/4CUS/Screen-Shot-2021-02-03-at-1.57.31-PM.png)
+[2021-02-03 18:57:59] <calmlb> i've included a photo of the site i'm working on and the code for the delete, update, and complimentary colors card so that you'd have more context.
+[2021-02-03 19:15:00] <doughballs> @calmlb one way this can happen is if you have two columns (left and right), and in the left goes north face, delete, colours. Then the image in the second column.
+
+Alternatively, masonry layout is what you want (the cards to take up empty white space)
+[2021-02-03 19:15:52] <doughballs> @computerwiz12890 I guess, but you can remedy this with media queries at each breakpoint to set new appropriate css values...
+[2021-02-03 19:19:55] <khalilkhamassi-ui> hey guys, am new here and new to materialize in general, i just want to ask how to make a logo responsive in the navbar ? like if i change the size of the navbar the logo changes with it ? 
+[2021-02-03 19:22:21] <calmlb> oh thank you Sean! Yes, I see now that I've got new rows declared which is pushing stuff around. So i have to make sure i abide by the columns in terms of where i'm putting the div's. 
+[2021-02-03 19:22:30] <doughballs> @khalilkhamassi-ui with media queries. Or by setting the height to be 100% and top and bottom padding say 8px. That way, if nav changes height, so will the logo, but always retain spacing.
+[2021-02-03 19:30:17] <khalilkhamassi-ui> ohh @doughballs  thank you so much for your help 
+[2021-02-03 19:56:36] <computerwiz12890> @doughballs I'm gonna have to "drop 10 & punt" on this issue.  I've spent waaaaaaay to much time trying to figure it out.  I'm going to move the <asp:Repeater> tag to encompass the <tr> instead of the entire <table>.  That solves the issue of the records spontaneously not lining up.  The header & "addition row" are their own <table> elements still.  And as such, I see the header ever so slightly off alignment from the records (only in instances with many columns), even though it has the exact same classes & min-width settings.  It's just enough to trigger someone with OCD, but not enough to look terrible.
+
+I'll use margins or padding to fix that....when someone actually brings it up as an issue.  Not the best solution, but it's the one I'm going with in order to finally move on to bigger, better things.
+
+Thanks for your assistance!
+[2021-02-03 21:43:54] <ozyx> Hi everyone. I'm attempting to convert a series of checkboxes to a Materialize Multiselect on our project. I'm trying to add a "Select All" element at the top of the multiselect, and I can get it to "check" each element, but when I close the dropdown and open it back up, only the elements which were "clicked" are selected. Anybody know how to make these changes persistent with the multiselect?
+[2021-02-03 21:44:53] <ozyx> Right now I'm setting the internal checkboxes to 'checked' (within the `ul` wrapper container). 
+[2021-02-03 21:55:37] <ozyx> Let me know if I can clarify anything. I'll try to put together a jsfiddle that illustrates what's happening.
+[2021-02-04 08:55:48] <doughballs> @ozyx you could do with with JS? trigger a click on each one perhaps?
+[2021-02-04 15:59:52] <computerwiz12890> Does anyone know how to trick Firefox into downloading an updated .css or .js file?  In IE it was easy....you just rename the link like this:
+
+`<link href="Styles/Default.css?v=002" rel="stylesheet" type="text/css" />`
+
+With the **"?v=002"** at the end.  But that doesn't seem to work in Firefox.  It hangs on to the old version of the file.
+[2021-02-04 16:01:23] <doughballs> @computerwiz12890 change the name completely, but version numbering works for me
+[2021-02-04 16:03:29] <computerwiz12890> I figured that would work.  I was hoping I wouldn't have to rename the actual file.  Wouldn't that make it a bit harder when viewing the file in versioning software (like GitHub Desktop) since it would be a new file every time, and you wouldn't be able to easily see what you changed?
+[2021-02-04 16:08:00] <doughballs> @computerwiz12890 will I wouldn't do that myself, but that is one way. Like I say, i timestamp my css on each save, and this works for me.
+[2021-02-04 16:55:06] <kavinmehta-work> Hi, I have a quick question, I would like to use only the form elements from materialize, is there documentation on how to do it ?  Do I need any js other than forms.js if i want to do this? for styling i am assuming i will need everytyhing under components/forms folder
+[2021-02-04 18:59:29] <Zee98> Hello Dear, I am trying to use toast with django. what i need is that if i have messages in template, inside the messsage which is an if condition then i want the toast to work. right now, i have to click the btn to show a toast. but i want this to happen automatedly 
+[2021-02-05 05:56:49] <amitpatekar> Where Can i see the demo for carousel https://materializecss.com/carousel.html
+[2021-02-05 05:57:00] <amitpatekar> The demo on this page is not working on chrome
+[2021-02-05 12:01:33] <mxdpeep>  [February 4, 2021 4:59 PM](https://gitter.im/Dogfalo/materialize?at=601c19f8ae4b9b27c19c1617) Ctrl + Shift + R
+[2021-02-05 12:01:48] <mxdpeep> @computerwiz12890 Ctrl + Shift + R
+[2021-02-05 15:39:53] <computerwiz12890> @mxdpeep Thanks!
+[2021-02-05 19:56:11] <imprex92> Hello! i'm trying to create  a carousel in react and populate it with .map like this 
+```
+<div className="carousel post-carousel">
+							{blogPosts.map((post) => (
+								<a href="#one!" className="carousel-item post-carousel-item">
+									<Image
+									src={post.imgURL}
+									alt="post image"
+									quality={75}
+									layout="fill"
+									/>
+									<p className="post-location-container"><i className=" material-icons">place</i>this is location</p>
+								</a>
+							))}
+</div>
+```
+
+Unfortunately it doesn't work att all and I get this error message  
+> Cannot read property 'clientWidth' of undefined
+
+Does anyone know how I can fix this? It works if I hardcode the items in the carousel. But now i gat an array and its always different data...
+hope someone can help :)
+[2021-02-06 17:36:28] <doughballs> @imprex92 not sure but the id needs to be unique for starters. This would give each one the same, which could mess things up...
+[2021-02-07 12:05:33] <GerritKuilder> Hi all, I am looking around for am alternative for bootstrap  and foundation css, I have only looked at a few things in materialize css,  so far so good, but before I switch I have 1 or 2 questions: 1:  is it easy or is there a good example of loading a modal with external data ie a jquery ajax? 2) any good examples of sticky topbar navigation and a sticky footer?
+[2021-02-07 12:31:21] <Zee98> hi, i need to run a function of js when the modal opens or ready. and another function when that modal closes or at complete? 
+[2021-02-07 12:31:43] <Zee98> I am trying to do it. but it does not work!
+[2021-02-07 12:32:44] <Zee98> and by the way, I am making image crop modal. if you know or have done it before, please mention it. 
+[2021-02-07 12:51:42] <doughballs> @Zee98 there are inbuilt functions that do this. onOpenStart, onOpenEnd, onCloseStart, onCloseEnd. Run an anonymous function for whichever you need.
+[2021-02-07 12:55:07] <doughballs> @GerritKuilder you would load modal data the same as anywhere else. Create a placeholder for the data, then use JS to populate it. As for sticky nav and footer - what do you mean exactly? There is a fixed navbar example in the documentation and sticky footer would just be a couple of lines of css, position: fixed, bottom:0 and of course remember to add padding-bottom to your main container that is equivalent to the height of the footer.
+[2021-02-07 13:04:28] <Zee98> i am new to this.  @doughballs thank you so much. that helped. 
+[2021-02-07 13:09:26] <doughballs> @Zee98 no problem, holler if you still have problems 
+[2021-02-07 13:10:56] <doughballs> My codepen is a bit of a mess but always worth a search: https://codepen.io/your-work?search_term=modal
+[2021-02-07 19:58:14] <AlbertTundy> Howdy, so I'm super new to coding (maybe a month in) but I'm trying to got a modal to trigger off of an if else statement rather then from a button click. I'm not sure what I'm missing. 
+[2021-02-07 20:29:29] <doughballs> @AlbertTundy first get the modal to open. A single line should do it : $(‘.modal’).modal(‘open’); I believe, if you only have one on the page, or use an ID as the selector. This is with jQuery. Once you get the modal opening, then make sure the if else is working properly by console logging each route. Then pop it in. If you’re using vanilla is, get the modal using get instance, then instance.open, or instance[0].open
+[2021-02-08 08:01:55] <mahsy33> How to solve Does not use passive listeners to improve scrolling performance in materialize.js
+[2021-02-08 08:04:02] <mahsy33> …vnd/materialize-1.0.0.min.js
+line: 0
+[2021-02-08 08:12:54] <doughballs> @mahsy33 this is triggered mostly by sidenav (most common) but a few others also. Couple of options, either amend the sidenav.js file directly or use the fork of Materialize which has fixed the issue. https://github.com/materializecss/materialize/issues/20
+[2021-02-08 11:09:30] <mahsy33> @doughballs Thank you... Problem resolved
+[2021-02-08 16:30:23] <tomaswilhelmsson> Hey, im using materilize with vue3, got stuff to work with "M.AutoInit()" but im not a real fan of doing magic so wondering with composition api ... how do i manualy init my stuff? in this case a sidebar =)
+[2021-02-08 16:35:44] <doughballs> @tomaswilhelmsson I don't use Vue, but your basic inits all look like this:
+
+````
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems);
+  });
+````
+
+The init needs to run each time the sidenav is rendered to the page...
+[2021-02-08 16:36:16] <doughballs> Shorthand:  `M.Sidenav.init( document.querySelector('.sidenav'));`
+[2021-02-08 16:37:24] <doughballs> If you need to pass options:
+
+`M.Sidenav.init( document.querySelectorAll('.sidenav'), {edge:'right'});`
+[2021-02-08 16:37:38] <doughballs> https://materializecss.com/sidenav.html#initialization
+https://materializecss.com/sidenav.html#options
+[2021-02-08 16:38:28] <doughballs> Beware of the `options` variable that runs throughout the docs...it will cause an error if left undeclared. 
+[2021-02-08 16:39:41] <tomaswilhelmsson> @doughballs thanks! That worked nicley and doesnt obscure what im actualy doing =)
+[2021-02-08 16:43:24] <tomaswilhelmsson> and now i got it working with vue3 element refs also insted of document.querySelectorAll =)
+[2021-02-08 16:45:23] <tomaswilhelmsson> alltho, feels like there is a bit of magic behind that also :P
+[2021-02-08 21:22:49] <tomaswilhelmsson> hmm is it possible to make the selector for a tab react to router-link-active somehow ? as if i change the page from the sidenav menu the top menu is not updated to the active page =)
+[2021-02-08 21:34:13] <tomaswilhelmsson> changed the vue activeClass to "active" but that didnt help as it doesnt seem to update :/
+[2021-02-08 21:36:59] <doughballs> @tomaswilhelmsson I can’t answer that question...for me, I use Wordpress and body classes to activate the active state of nav links. Also...what do you mean by magic? As in, you’re leaving a lot of the logic up to the framework?
+[2021-02-08 21:38:21] <tomaswilhelmsson> @doughballs well i want to see what happends like me explicitly using the querySelectorAll , than i know what objects im targeting and its easier to find problems imo =)
+[2021-02-08 21:39:01] <tomaswilhelmsson> compared to "InitAll" that there is quite little info in what the classes it targets etc =) i learn more when i need to explicitly tell what class i want targeted =)
+[2021-02-08 21:47:01] <doughballs> Well for instance not many sites use more than one sidenav. So it’s fine in this case to use query selector on the generic sidenav class. But you can be very specific and target by ID, or any other class name you choose, which will return the specific element. If you have many components all with the same options/behaviour, then you can use, say, querySelectorAll on .modal, which returns an array of all modals on the page and inits them at once. But can can also just target by ID individually. Personally I never use autoinit. And I compile my js file to include just the js components used on the project, and init individually.
+[2021-02-08 21:48:58] <doughballs> If you look into getInstance, then instance.el (I think!) will return the specific component along with all the data attached to it.
+[2021-02-09 00:14:03] <ManuTheCoder> Hi! I get this error in chrome when using Materialize: 
+>  Added non-passive event listener to a scroll-blocking 'touchstart' event. Consider marking event handler as 'passive' to make the page more responsive. 
+
+Could anyone pls help me? 
+
+Thx
+[2021-02-09 08:41:59] <tomaswilhelmsson> Hmm solved my problem using a href="#" v-on:click="goTo('page')" then in goTo i push the router and when its done pushing i call init on the tabs again (as the router doesnt update the whole page it didnt work when stuff got changed to active, maybe add an updateIndicator function to the tab class that rechecks for active classes for this kind of pages? or is there one? =)
+[2021-02-09 09:01:06] <tomaswilhelmsson> ah a doesnt need href even ? =) quite new to this so :P
+[2021-02-09 11:22:44] <doughballs> @ManuTheCoder check the fork for details on how to fix:
+
+https://github.com/materializecss/materialize/issues/20
+[2021-02-09 12:54:36] <pasha1110> hello guys, i want to ask, how do I make the tabs on the materialize CSS in the bottom position, thank you
+[2021-02-09 15:46:26] <tomaswilhelmsson> can you use accoridon style collapse in a table using materialize ? if user clicks a table row i want a field under that row to expand for more info about that row
+[2021-02-09 15:52:08] <doughballs> @tomaswilhelmsson I never got this to work, but I mimicked table style with an accordion:
+
+https://codepen.io/doughballs/pen/NWNbvzW
+[2021-02-09 15:56:11] <tomaswilhelmsson> that looked nice i got this using an ul inside each table row: https://snipboard.io/Qg9isf.jpg
+[2021-02-09 15:56:27] <tomaswilhelmsson> but those seperators would be nice to get rid of
+[2021-02-09 16:29:00] <tomaswilhelmsson> @doughballs your table was quite nice .. maybe a bit of a pita to work with but works .. all tho if i click on the header im getting an: Uncaught TypeError: Failed to execute 'getComputedStyle' on 'Window': parameter 1 is not of type 'Element'
+[2021-02-09 16:31:50] <tomaswilhelmsson> ah using vue it was easy .. v-on:click.prevent
+[2021-02-09 16:31:52] <tomaswilhelmsson> =)
+[2021-02-09 16:42:46] <tomaswilhelmsson> https://snipboard.io/im1Ctp.jpg well doesnt look to chabby =) tho i guess pagination and stuff will mess me up like crazy :P
+[2021-02-09 16:50:12] <tomaswilhelmsson> Ah, atleast getting one in there wasnt to hard .. then for the functionality of it but thats a later problem =) thanks for the stuffs @doughballs 
+[2021-02-10 08:26:57] <doughballs> @tomaswilhelmsson no problem. So would up you recommend vue? I have a friend trying to persuade me to use it.
+[2021-02-10 13:35:24] <albertocarlassare86> hi! I'm using Materialize as framework for a private Web App I'm developing with App Script. The framework works great but default font and some default alignments are not exact the same as the documentation. For example, The text in the <th> of a table isn't different as normal <td> text; the tab isn't centered; the text inside a <li> collection isn't properly aligned. Do I am missing something. See this screenshot. I didn't do any css coding.
+[2021-02-10 13:35:33] <albertocarlassare86> [![materialize-css-issue.png](https://files.gitter.im/548e71a2db8155e6700df25f/jcWS/thumb/materialize-css-issue.png)](https://files.gitter.im/548e71a2db8155e6700df25f/jcWS/materialize-css-issue.png)
+[2021-02-10 14:08:41] <mxdpeep> @computerwiz12890 no problem :) I use git version hash as a virtual symlink in my templates, solves a lot of problems > https://lasagna.gscloud.cz/
+[2021-02-10 14:08:53] <mxdpeep> @computerwiz12890 example: https://lasagna.gscloud.cz/cdn-assets/e5f103e0132f13d41d1e50c5968863adcec27d40/img/logo.png
+[2021-02-10 14:19:36] <imprex92> Hello guys! i'm using react. When you validate form inputs, how do you override the valid and add invalid to the class name? I'm doing validation in a file input-field with my own validation I check the filetype and size an if it's wrong filetype  I add "invalid" to the classlist with `document.getElementById('main-image-upload').classList.add('invalid')` on the input but nothing happens and materialize insists on putting valid instead... what can I do to override? 
+I have tried combining **.add('invalid')** with **.remove('valid')** but remove class doesn't work...
+If I were to change **.add('invalid')** to **.add('red')** I do get a red background-color on the input-field so then it works but then the line is still green...
+
+```
+<input id="main-image-upload" type="text" className="file-path validate" placeholder="Upload Main-Image"/>
+```
+
+Thanks for the help :)
+[2021-02-10 15:38:56] <shaney80> Is there any easy way to get only certain portions of the JS components?  My main issue is that our existing app is already using the Jquery UI DatePicker which has an init method of .datePicker().  I'd like to start transitioning using some of the materialize components (mainly chips for now) but if I put the full min.js reference it throws a wrench in my plans.  I have seen where I can probably hack the class selectors for date picker in the materialize.min.js but I'd rather not mess with the source if possible.  So I'm either looking for someone who has a materialize.chips.min.js standalone or a nice cleaner way to change the date picker init.
+[2021-02-10 21:41:15] <doughballs>  @shaney80 you should be compiling a custom Materialize build for your projects, not including the default js. You comfortable using grunt? And Sass?
+[2021-02-10 22:55:31] <shaney80> @doughballs I've been using Sass so I'm good on that side, but I've never used Grunt before.  I'm using .Net
+[2021-02-11 18:31:27] <wbhill13> Hi! I am trying to update options in a materialize select dynamically but its not working.     if (security == '2') {
+        document.querySelector('#webmaster-value').setAttribute('disabled', 'disabled')
+    }
+
+[2021-02-11 18:31:52] <wbhill13> ```     if (security == '2') {
+        document.querySelector('#webmaster-value').setAttribute('disabled', 'disabled')
+    }
+```
+[2021-02-11 18:32:18] <wbhill13> ``` <div class="input-field">
+                <select name="security-select" id="security-select">
+                  <option style="display: none;" id="webmaster-value" value="1">Webmaster</option>
+                  <option id="scoutmaster-value" value="2">Scoutmaster</option>
+                  <option id="general-admin-value" value="3">General Admin</option>
+                  <option id="spl-value" value="4">Senior Patrol Leader</option>
+                  <option selected id="standard-user-value" value="5">Standard User</option>  
+                </select>
+            </div>```
+[2021-02-12 07:18:58] <GerritKuilder> I found a piece of code for modal loading ajax: https://gist.github.com/mattrothstein/01f9677509115186c8b93934d3129d7a It uses leanModal, so you need to replace it with $('.modal-trigger').modal(); insteand of $('.modal-trigger').leanModal();  
+[2021-02-12 07:19:33] <GerritKuilder> Weird thing is the ajax conten only loads on teh second click....
+[2021-02-12 07:35:01] <GerritKuilder> The second click ws my bad, bad copy/paste. It only works if you use 1 link, with 2 links it will find only the first data-source...
+[2021-02-12 11:03:18] <GerritKuilder> ` $('.modal-trigger').click(function () {
+          var $current = $(this);
+          var url = $current.attr("data-source");
+          // use other ajax submission type for post, put ...
+          console.log(url)
+          $.get(url, function (data) {
+            //console.log(data)
+            // use this method you need to handle the response from the view
+            // with rails Server-Generated JavaScript Responses this is portion will be in a .js.erb file
+            $(".modal-content").html(data);
+          });
+        });
+[2021-02-12 11:03:37] <GerritKuilder> Fixed it
+[2021-02-13 05:48:41] <gauravgupta98> Gus, I've been working on React and built a WhatsApp Web clone. Checkout the demo here - https://whatsapp-clone-36b61.web.app/
+If you have any suggestions or you liked it or want to contribute then checkout the GitHub repo here - https://github.com/gauravgupta98/whatsapp-clone
+**Don't be lazy to give a star** ;)
+[2021-02-13 20:13:15] <tomaswilhelmsson> @doughballs well im kinda a noob in all this but tried angular before and vue is alot easier atleast =)
+[2021-02-13 21:12:31] <sisaha9> [![valign_image.png](https://files.gitter.im/548e71a2db8155e6700df25f/oA9P/thumb/valign_image.png)](https://files.gitter.im/548e71a2db8155e6700df25f/oA9P/valign_image.png)
+[2021-02-13 21:12:57] <sisaha9> This is prob easy for the pros here but I can't figure out how to vertically align the left image to match the amount of text at the right
+[2021-02-13 21:13:18] <sisaha9> The left image is in a col s12 m4 while the text is in a col s12 m8
+[2021-02-13 21:13:38] <sisaha9> I tried wrapping the image into a valign wrapper but it did not work
+[2021-02-13 21:14:04] <sisaha9> Any help is greatly appreciated
+[2021-02-13 21:15:29] <sisaha9> ```
+<div class="container">
+    <div class="section">
+      <div class="row">
+        <div class="col s12 m4">
+          <center>
+            <img class="responsive-img" src="imgs/training_process.png" alt="Training Process">
+          </center>
+        </div>
+        <div class="col s12 m8">
+          <div class="icon-block">
+            <h5 class="center">Training</h5>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <p class="light">dummy</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+```
+Here is the code I used to produce it. The bunch of <br>s would be replaced and instead have a single long <p> tag
+[2021-02-13 21:16:15] <sisaha9> I don't need the image to stretch to fit. It should just align itself vertically to stay in the middle
+[2021-02-14 03:36:49] <sisaha9> For now I hardcoded in some <br> to fix it but there def should be a better approach
+[2021-02-14 08:41:27] <pauld0051> [![image.png](https://files.gitter.im/548e71a2db8155e6700df25f/5Z1k/thumb/image.png)](https://files.gitter.im/548e71a2db8155e6700df25f/5Z1k/image.png)
+[2021-02-14 08:41:37] <pauld0051> I am using a materialize card, but the images that fit within that card don't seem responsive. 
+[2021-02-14 08:42:03] <pauld0051> I tried this in the class: class="profile-pic-size responsive-img"
+[2021-02-14 08:42:23] <pauld0051> And this object-fit: contain; in CSS
+[2021-02-14 08:42:58] <pauld0051> Neither seem to resize the pic to the card. 
+[2021-02-14 09:00:34] <pauld0051> Apologies... it does work. 
+[2021-02-14 14:13:29] <codeinvolute> I'm trying to add previous and next buttons to fullscreen slider
+[2021-02-14 14:13:47] <codeinvolute> but it is showing some error
+[2021-02-14 14:14:12] <codeinvolute> I'm new to materialize js please help me out
+[2021-02-14 14:15:50] <codeinvolute>   <div class="slider fullscreen" data-indicators="true" >
+          <div class="slider-fixed-item center middle-indicator">
+    <div class="left">
+        <a href="" onclick="prev();" class="middle-indicator-text waves-effect waves-light content-indicator button"><i
+                class="material-icons left  middle-indicator-text">chevron_left</i></a>
+    </div>
+
+    <div class="right">
+        <a href="" onclick="next();" class="middle-indicator-text waves-effect waves-light content-indicator button"><i
+                class="material-icons right middle-indicator-text">chevron_right</i></a>
+    </div>
+</div>
+          <ul class="slides">
+            <li class="slider-item">
+              <img src="https://images.unsplash.com/photo-1464817739973-0128fe77aaa1?dpr=1&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop="> <!-- random image -->
+              <div class="caption center-align">
+                <h3>This is our big Tagline!</h3>
+                <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+              </div>
+            </li>
+            <li class="slider-item">
+              <img src="https://ununsplash.imgix.net/photo-1414849424631-8b18529a81ca?q=75&fm=jpg&s=0e993004a2f3704e8f2ad5469315ccb7"> <!-- random image -->
+              <div class="caption left-align">
+                <h3>Left Aligned Caption</h3>
+                <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+              </div>
+            </li>
+            <li class="slider-item">
+              <img src="https://ununsplash.imgix.net/uploads/1413259835094dcdeb9d3/6e609595?q=75&fm=jpg&s=6a4fc66161293fc4a43a6ca6f073d1c5"> <!-- random image -->
+              <div class="caption right-align">
+                <h3>Right Aligned Caption</h3>
+                <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+              </div>
+            </li>
+          </ul>
+        </div>
+[2021-02-14 14:16:40] <codeinvolute>   document.addEventListener('DOMContentLoaded', function() {
+var sliderElems = document.querySelectorAll('.slider');
+var instances = M.Slider.init(sliderElems, {indicators: false, interval:'5'});
+window.next = function() {
+  var sliderElem = document.querySelector('.slider');
+  var l = M.Slider.getInstance(sliderElem);
+  l.next(1);
+}
+window.prev = function() {
+  var sliderElem = document.querySelector('.slider');
+  var l = M.Slider.getInstance(sliderElem);
+  l.prev(1);
+}
+});
+[2021-02-14 14:33:22] <doughballs> @codeinvolute maybe look at this pen for an idea         
+[2021-02-14 14:33:25] <doughballs> https://codepen.io/doughballs/pen/PoNGLER
+[2021-02-15 07:59:36] <tomaswilhelmsson> hmm strange, why is the select class set to display: none; when i do <select> <option></option></select> etc ? .. :/
+[2021-02-15 08:00:52] <tomaswilhelmsson> there it is ... i did M.AutoInit to early ... had to do it in onMounted()
+[2021-02-15 11:26:38] <GerritKuilder> [![Screenshot 2021-02-15 at 12.24.00.png](https://files.gitter.im/548e71a2db8155e6700df25f/ZnLg/thumb/Screenshot-2021-02-15-at-12.24.00.png)](https://files.gitter.im/548e71a2db8155e6700df25f/ZnLg/Screenshot-2021-02-15-at-12.24.00.png)
+[2021-02-15 11:26:40] <GerritKuilder> Forms: I noticed that a select box and a text filed do not line up nice to eachother.  Set the top-margin to 0rem on input field fixes it.
+[2021-02-15 15:03:41] <tomaswilhelmsson> dont gert this one .. var instance = await M.Autocomplete.init(autoCompleteInput); gives me an object [Autocomplete] but that object does not contain for example, open, updateData etc ?
+[2021-02-15 15:03:53] <tomaswilhelmsson> the await might not have to be there, just tried it :P
+[2021-02-15 15:04:57] <tomaswilhelmsson> ah or it does but when i try and call them i get that the function does not exist ..
+[2021-02-15 15:05:59] <tomaswilhelmsson> is it just "open" without () ? .. feels strange...
+[2021-02-15 15:13:45] <tomaswilhelmsson> and like usual .. found the problem .. using querySelectorAll ..
+[2021-02-15 15:13:48] <tomaswilhelmsson> not querySelector
+[2021-02-15 22:30:46] <brentknudsenstud> Hello, I'm Brent. I'm new to this chat.
+[2021-02-15 22:31:15] <Zee98> hi there, I have set the yearRange in datpicker to from 1900 to the current year. but it shows the year 1900 first and goes down to 2021 at the end. how can i get this in reversed ?
+[2021-02-15 22:32:42] <brentknudsenstud> Should I put the materialize.css file link before or after my own CSS file link in the HTML head?
+[2021-02-15 22:44:18] <Zee98> @brentknudsenstud it would be better to put it prior to your own css files  
+[2021-02-15 23:31:39] <Acoder-Ana> how to run cefsharp project in local?
+[2021-02-16 14:27:46] <minifisk> How can I have multiple columns inside a collapsible body? IT looks like this now: https://preview.redd.it/b91cas6qeuh61.png?width=1190&format=png&auto=webp&s=491794472d49c08d533fc0ec80180b1e0c05ef6b and I want to have it (responsive) with multiple columns. My code: https://www.reddit.com/r/web_design/comments/ll3xx0/how_do_i_get_multiple_columns_in_my/
+[2021-02-17 07:12:38] <gauravgupta98> Guys, I've been working on React and built a WhatsApp Web clone. Checkout the demo here - https://whatsapp-clone-36b61.web.app/
+If you have any suggestions or you liked it or want to contribute then checkout the GitHub repo here - https://github.com/gauravgupta98/whatsapp-clone
+**Don't be lazy to give a star** ;)
+[2021-02-17 22:01:21] <ManuTheCoder> Remarkable! 
+Wow, that's a very cool app!!!!!!!
+I gave you a star and watched it :D 
+
+[2021-02-18 00:28:45] <arudivalentine> Hello, is there any one free to work on a project with me. It's really mega, need a team mate to accomplish. 
+[2021-02-18 02:46:49] <ManuTheCoder> Sure!
+I could help you with: 
+HTML, CSS, JS, jQuery, PHP, and SQL
+[2021-02-18 02:47:00] <ManuTheCoder> Email: hello@homebase.rf.gd
+[2021-02-18 14:43:14] <albcorare26> Hello, I have a problem, I have tried to put a photo with a width of 100% but it is always shortened and does not occupy it. I have tried inside the "container" class. I have even tried to use parallax and it still doesn't work.
+If you could help me it would be an honor.
+[2021-02-18 15:03:41] <ManuTheCoder> Could I see your code?
+[2021-02-18 18:23:34] <albcorare26> <div class="parallax-container" id="index-banner">
+  <div class="center"> 
+      <img class="logo centered" src="{% static 'images/rosa.png' %}" alt="corrige" width="400" height="200">  
+  </div>
+
+  <div class="center">
+  <h3>{% trans "Welcome" %} {{user.username}}</h3>
+  </div>
+  <div class="parallax" >
+    <img src="/static/images/fondo Pantalla.png" style="bottom: 0px; display: block;">
+  </div>
+</div>
+
+[2021-02-18 18:23:48] <albcorare26> [![Captura.PNG](https://files.gitter.im/548e71a2db8155e6700df25f/7XaB/thumb/Captura.png)](https://files.gitter.im/548e71a2db8155e6700df25f/7XaB/Captura.PNG)
+[2021-02-18 18:24:58] <albcorare26> I have a base class which contains the nav
+[2021-02-19 15:03:09] <y0ukn0wwho> [![Screenshot_1.jpg](https://files.gitter.im/548e71a2db8155e6700df25f/XJmt/thumb/Screenshot_1.jpg)](https://files.gitter.im/548e71a2db8155e6700df25f/XJmt/Screenshot_1.jpg)
+[2021-02-19 15:03:13] <y0ukn0wwho> hello i am trying to create this layout is it possible ?
+[2021-02-19 20:02:00] <marhafan> sample html script to use SASS?
+[2021-02-19 20:15:17] <doughballs> @y0ukn0wwho anything is possible!
+[2021-02-19 20:15:32] <doughballs> @marhafan come again?
+[2021-02-19 21:15:05] <mxdpeep> SASS is pre-compile format of CSS, you need to compile it first
+[2021-02-20 10:52:56] <OmarHegazi94> Hi guys , we are making an app part of it contains project management tool but we need your help with this simple survey ( 3 questions )
+https://docs.google.com/forms/d/e/1FAIpQLSdygaBDG5LssxfU1W5cZJrGLuQb8AsxjQ8NBlMkteuiCHrVRw/viewform
+thank you all
+[2021-02-20 13:05:28] <pauld0051> Is there a way to get a collapsible to remain completely open on one page (which extends from a base.html) as well as working as anticipated (ie closed) on another page that also extends that same base.html?
+[2021-02-21 06:19:46] <Zee98> hello dear all, I was wondering if there is an option for datepicker that show/list the year-rage in descending order. right now, i see that i can only specify the min and max year range. or the number selecting the year in future and past to show. 
+[2021-02-21 08:18:32] <doughballs> @pauld0051 just trigger a click on the collapsible header that you need to be open. You could do with css too - inspect the element when open and add that to the one you want to remain open. Possibly a class of active or something like that.
+[2021-02-21 08:20:00] <doughballs> @Zee98 if you want a year picker, use a select element instead.
+[2021-02-21 08:36:45] <Zee98> @doughballs i want the year range in the date picker. 
+[2021-02-21 08:51:16] <doughballs> @Zee98 there is already a year range in the datepicker, but it is set to default to the current year and doesn’t look to be an option to change that.
+[2021-02-21 09:17:41] <doughballs> But just thinking on this, if you absolutely need for the year to start at one end, you could just set the current date to be the last/first year of your range.
+[2021-02-22 18:26:12] <bboatth> there is no class margin top like bootstrap ?
+[2021-02-22 19:58:30] <ManuTheCoder> Well, I just make my own classes: 
+```
+.large { padding: 10px 20px }
+.white {background: white;}
+.purple { background: #673ab7; }
+button.purple:active { background: #6a3bbb; }
+.blue { background: #03a9f4; }
+button.blue:active { background: #04afff; }
+.green,.bg-green { background-color: #00C851; }
+button.green:active { background-color: rgb(3, 224, 92); }
+.red,.bg-red { background-color: #F93154; }
+.dark,.bg-dark { background-color: #262626; }
+.orange { background-color: #FFA900; }
+.m-0 {margin: 0;}
+.m-10 {margin: 10px;}
+.m-20 {margin: 20px;}
+.p-0 {padding: 0;}
+.p-10 {padding: 10px;}
+.p-20 {padding: 20px;}
+.black {background: black}
+.white {background: white;}
+.whitesmoke {background: whitesmoke}
+.transparent {background: transparent}
+.d-none {display: none}
+.d-block {display: block}
+.d-flex {display: flex}
+.d-inline {display: inline}
+.d-inline-block {display: inline-block}
+.z-depth-0 {box-shadow: none}
+.z-depth-1 {box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);}
+.z-depth-2 {box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);}
+.z-depth-3 {box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);}
+```
+[2021-02-23 10:37:38] <OjhaG2021> How can I make select dropdown searchable because my dropdown list is to long
+[2021-02-23 10:39:08] <OjhaG2021> ?
+[2021-02-23 10:39:32] <doughballs> @OjhaG2021 my advice would be to use autocomplete - or present the data in another way. Dropdowns are not ideal for really long lists of data, and there isn't an inbuilt search function for the select in materialize.
+[2021-02-23 15:40:51] <tuffant21> Hey, sorry I was out. Got a new job and had to prioritize that. I'm back now
+[2021-02-23 16:53:49] <doughballs> @tuffant21 congrats on the new job!
+[2021-02-23 17:25:35] <tuffant21> Thanks man!
+[2021-02-23 17:25:59] <hbhanoo> Hi all! I don't see any recent messages relating to using materializecss with rails. I'm wondering if anyone here has experience with rails? I've got a rails app that integrates materialize-css but could use some help cleaning things up a bit if anyone is interested (I've been more of a backend guy)
+[2021-02-23 17:26:27] <tomaswilhelmsson> @tomaswilhelmsson
+hey, i would like to have a drop down item at the right of a tabbed menu with an indicator for how many items there is in the menu ... but it looks like crap (added blue for contrast only) looks like this now .. https://snipboard.io/cKQpy4.jpg any tips for how to do this ? and that is with in webbrowser editing of some css values ...
+using badges and material icons, sorry for cross post but other chat i was in hadnt been active for an eternity :P
+[2021-02-23 17:28:09] <tuffant21> I haven't had any experience in Ruby on Rails, so I would not have any advice :(
+[2021-02-23 17:29:21] <tuffant21> Do badges not work for you? That would be a great use of the badge.
+[2021-02-23 17:30:32] <tomaswilhelmsson> im trying to use badges =) but cant get it to work like i want =)
+[2021-02-23 17:34:52] <tomaswilhelmsson> ```
+          <li v-if="!!todaysFood" style="float: right;line-height: 48px;">
+            <a>
+              <div>
+                <span class="material-icons" style="line-height: 48px;">menu </span>
+                <span class="badge">{{ Object.keys(todaysFood).length }}</span>
+              </div>
+            </a>
+          </li>
+```
+[2021-02-23 17:53:32] <hbhanoo> Yeah I feel like  a dinosaur talking about RoR.
+[2021-02-23 23:23:20] <EnmanuelAguayo> hola como están!!!
+Como puedo hacer para desplegar la barra de navegacion movil side-nav de materialize?
+[2021-02-24 11:34:13] <akshaybhadange> multiselect is not working ..can anyone plz help
+[2021-02-24 16:50:13] <bener07> Hi e have an issue if someone could explain this code 
+[2021-02-24 16:50:52] <bener07> ```
+nav > ul > li:hover ul {
+  visibility: visible;
+  transition-delay: 0s;
+}
+```
+[2021-02-24 17:27:36] <tuffant21> So it says, nav should have a child ul. Ul should have a child li. li ul by itself would mean there is a ul as a child of li. When you hover on this li it should become visible
+[2021-02-24 17:27:46] <tuffant21> <nav><ul><li><ul>this would become visible on hover</ul></li></ul></nav>
+[2021-02-24 17:29:17] <tuffant21> Need more info
+[2021-02-24 17:30:03] <bener07> nope thanks dude I'm grateful 
+[2021-02-24 20:13:28] <pauld0051>  [February 21, 2021 9:18 AM](https://gitter.im/Dogfalo/materialize?at=60321758726a881d4f8acb68) Thank you :) This worked perfectly. 
+[2021-02-25 22:47:06] <pauld0051> [![image.png](https://files.gitter.im/548e71a2db8155e6700df25f/Q7pd/thumb/image.png)](https://files.gitter.im/548e71a2db8155e6700df25f/Q7pd/image.png)
+[2021-02-25 22:47:13] <pauld0051> Hello all. I am trying to put a search bar into my navbar, and so far it is all going a bit crud. 
+[2021-02-25 22:47:48] <pauld0051> The bar doesn't show when nothing in it, but when I go and type something, the label isn't disappearing. 
+[2021-02-25 22:50:07] <pauld0051> I am using backend for search so I have set it up like this:
+
+[2021-02-25 22:50:10] <pauld0051> [![image.png](https://files.gitter.im/548e71a2db8155e6700df25f/91gQ/thumb/image.png)](https://files.gitter.im/548e71a2db8155e6700df25f/91gQ/image.png)
+[2021-02-25 22:50:42] <pauld0051> If someone has a nice, neat, Materialize search bar for the navbar, I would love to see it! 
+[2021-02-25 23:07:22] <Wondeys> Hi, is it possible to make the "Material Box" as "display: flex" and still have the right zoom effect?
+I try to make a gallery and I want the images to fit so I use flex, but if I then add the materialboxed class, the images are not showing properly and if I click on them it doesnt open right aswell.
+
+Thanks
+[2021-02-26 07:13:18] <doughballs> @pauld0051 Materialize already has the markup for a nav search. Check the nav page.
+[2021-02-26 07:20:52] <doughballs> @Wondeys what do you mean ‘want them to fit?’ All the same height? I think I’ve had problems with this in the past.
+[2021-02-26 19:55:15] <Wondeys> @doughballs Yep all the same height and so they fit inside the gallery perfectly
+[2021-02-26 19:55:43] <Wondeys> [![1.png](https://files.gitter.im/548e71a2db8155e6700df25f/s5xC/thumb/1.png)](https://files.gitter.im/548e71a2db8155e6700df25f/s5xC/1.png)
+[2021-02-26 19:56:01] <Wondeys> Thats how it should look like, but if I add the materialboxed class it looks like that
+[2021-02-26 19:56:09] <Wondeys> [![2.png](https://files.gitter.im/548e71a2db8155e6700df25f/3AhX/thumb/2.png)](https://files.gitter.im/548e71a2db8155e6700df25f/3AhX/2.png)
+[2021-02-26 20:00:30] <Wondeys> thats the code, hope it helps
+[2021-02-26 20:00:31] <Wondeys> https://pastebin.com/HF7F6S1R
+[2021-02-26 20:00:36] <Wondeys> https://pastebin.com/CnCnfYe6
+[2021-02-26 20:03:49] <Wondeys> aswell I tried to call the open method to just open the image when clicking on it, and close it if you click again, but thats not working properly too: https://pastebin.com/0RjXvCm1
+[2021-02-26 20:36:08] <doughballs> @Wondeys need a working demo really...
+[2021-02-26 20:54:18] <doughballs> @Wondeys I realised, as I was building this, that I'd already built it before and got to the same point...!
+
+https://codepen.io/doughballs/pen/JjbpaZZ
+
+This is my idea: set an image container with fixed height, fill it with image, but somehow set the height back to auto when it opens. Can't get it to work...
+[2021-02-26 20:57:39] <doughballs> I wonder if you could put the image as a background image somehow. Don't have time to test right now...but one thing is for sure, using Mbox on a bunchy of differently sized images is not easy :D
+[2021-02-26 22:51:17] <bener07> hi, i kind have an issue i did a header with an image and a contacts link to other page but the contacts tag doesn't want to stay on the other side of the header so if anyone could help 
+I will show the code and the output 
+```
+ <header style="height: 50%;margin-top: 10px;">
+        <div class="menu " style="height: 140px; ">
+            <img src="https://image.shutterstock.com/image-vector/cute-cartoon-character-cow-mascot-600w-1713500890.jpg " style="border-radius: 50px;height: 100px;padding: 15px 10px 10px 20px ;border-color: rgb(37, 36, 36); ">
+            <nav style="align: right;">
+                <ul>
+                    <li>
+                        <a href="#">contactos <span style="border: black solid;border-width:0px 3px 3px 0px;display: inline-block;padding:3px;transform: rotate(45deg);">
+                        </span></a>
+                        <ul>
+                            <a href="">teste1234</a>
+                            <a href="">teste</a>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+```
+[2021-02-26 23:07:43] <bener07> [![image.png](https://files.gitter.im/548e71a2db8155e6700df25f/ISKH/thumb/image.png)](https://files.gitter.im/548e71a2db8155e6700df25f/ISKH/image.png)
+[2021-02-26 23:07:45] <bener07> the output is this 
+
+[2021-02-26 23:16:02] <bener07> the image is diferent of course 
+[2021-02-26 23:51:11] <Wondeys> @doughballs I found another solution, I cut each image and make it fit into the gallery. Its a lot of work, but it should work. Thanks for you help tho <3
+[2021-03-02 18:53:06] <ManuTheCoder> Hi! I was wanting to make an extended floating action button that **expands/contracts** on scroll
+[2021-03-02 18:53:26] <ManuTheCoder> ![](https://miro.medium.com/max/2460/1*1AdEok6D02fb5S_Ks0Uh-w.gif)
+[2021-03-02 18:53:42] <ManuTheCoder> Here is my code so far:
+[2021-03-02 18:53:47] <ManuTheCoder> ```
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("FLOATING_ACTION_BUTTON").style.transform = "scale(1)";
+  } else {
+    document.getElementById("FLOATING_ACTION_BUTTON").style.transform = "scale(0)";
+  }
+  prevScrollpos = currentScrollPos;
+}
+```
+[2021-03-03 07:16:37] <doughballs> @ManuTheCoder when exactly do you need it to expand, and when to contract? There’s a snippet in the startup theme that turns a navbar solid from transparent. It’s transparent when the page it at the top of the viewport (0) and solid if anywhere below  (>0). Would this work?
+[2021-03-03 10:50:54] <pauld0051> I'm having troubles with buttons over hanging on cards on mobile devices.
+[2021-03-03 10:53:44] <bener07> can you give more help, or explain better?
+[2021-03-03 10:54:03] <pauld0051> I am trying to add a screenshot.. haha, things going bad here for screenshots. 
+[2021-03-03 10:54:53] <bener07> ok
+[2021-03-03 10:55:04] <pauld0051> Hmmm, how do I add a screenhot? I have done it before, seems odd. 
+[2021-03-03 10:56:42] <bener07> well if you take a screenshot with the pc, you can click on "windows" + "V" and the transference area shows up, this is on windows 
+[2021-03-03 10:57:00] <pauld0051> I am doing exactly that. 
+[2021-03-03 10:57:52] <bener07> or to take a screenshot you can click on "windows" + "Shift" + "S"
+[2021-03-03 10:58:22] <pauld0051> I have the screen shot. I just can't add it here. Weird. I have done it plenty of times before. 
+[2021-03-03 10:58:51] <pauld0051> [![image.png](https://files.gitter.im/548e71a2db8155e6700df25f/EGTb/thumb/image.png)](https://files.gitter.im/548e71a2db8155e6700df25f/EGTb/image.png)
+[2021-03-03 10:59:01] <bener07> ok is here 
+[2021-03-03 10:59:17] <pauld0051> There... this way worked. Perhaps the others were too large? Well, there... the submit button over hangs. 
+[2021-03-03 10:59:29] <bener07> this is on a app or a website 
+[2021-03-03 11:00:05] <pauld0051> Webpage
+[2021-03-03 11:00:05] <pauld0051> [![image.png](https://files.gitter.im/548e71a2db8155e6700df25f/L3oA/thumb/image.png)](https://files.gitter.im/548e71a2db8155e6700df25f/L3oA/image.png)
+[2021-03-03 11:01:07] <bener07> well i think i can't do alot but waht are you having problems??
+[2021-03-03 11:01:15] <pauld0051> Is it the extra "right" in the button? 
+[2021-03-03 11:01:39] <pauld0051> The submit button needs to fit within the white card, not overhang. 
+[2021-03-03 11:01:58] <bener07> ok let me see 
+[2021-03-03 11:02:35] <bener07> you can use an top property on the css code 
+[2021-03-03 11:11:25] <bener07> and basically the button is in a diferent  than the card I think 
+[2021-03-03 11:18:19] <pauld0051> When you say use the "top" property.... what exactly are you meaning?
+[2021-03-03 11:20:40] <bener07> use some improve  like this
+```
+.something {top: 20px;}
+```
+[2021-03-03 11:22:09] <bener07> or ```<label class="waht you want" style="top: 20px;">```
+[2021-03-03 11:23:37] <pauld0051> Ahh, it's ok, I fixed it, it was correct the way I have it here. 
+[2021-03-03 11:24:07] <bener07> ok, i know i'm not the best to help
+[2021-03-03 15:06:55] <ManuTheCoder> Basically, the fab should collapse while scrolling, and expand while scrolling *up*
+[2021-03-03 15:08:06] <ManuTheCoder> Right now, scrolling just hides the FAB with a small animation using the `scale` property
+[2021-03-03 15:17:37] <ManuTheCoder> See: https://jsfiddle.net/ztp947cb/1/
+[2021-03-03 17:15:37] <ElliotFer2000> Hello, I'm using materialize with react, I need a textfield only accept strings of 8 characters. I'm using data-length attribute but only marks error to users if I exceed the 8 characters but not when I type a string of a size lesser than 8
+[2021-03-03 17:16:13] <ElliotFer2000>    
+  useEffect(()=>{
+        const charCounter = new M.CharacterCounter(document.querySelector("#phone-number"))
+    })
+[2021-03-03 17:17:18] <ElliotFer2000> The other problem I see is, I'm using an Icon for the field but the color's icon doesn't change its color when the error is shown to the user
+[2021-03-03 17:34:34] <ElliotFer2000> I've solved the problem, I've used the pattern attribute in the field  instead of data-length to throw the error message when the string is not of 8 characters.
+[2021-03-03 17:35:22] <ElliotFer2000>              ` <div class="input-field">
+                    <i class="material-icons prefix">phone</i>
+                    <input id="phone-number" type="text" className="validate"  pattern="\d{8}"/>
+                    <label class="" for="phone-number">Telefono</label>
+                    <span class="helper-text" data-error="Incorrect phone format for +505 area code" data-success="The phone format is correct">Type phone numbers of +505 area code</span>
+                </div>`
+[2021-03-03 20:03:14] <rogerdc> Hey, all. I'm using Selenium to try and grab the state of a switch element. The guide at https://materializecss.com/switches.html says this: 
+```
+  <!-- Switch -->
+  <div class="switch">
+    <label>
+      Off
+      <input type="checkbox">
+      <span class="lever"></span>
+      On
+    </label>
+  </div>
+
+  <!-- Disabled Switch -->
+  <div class="switch">
+    <label>
+      Off
+      <input disabled type="checkbox">
+      <span class="lever"></span>
+      On
+    </label>
+  </div>
+```
+But when I try and look at the DOM, I can't find any differences there when the switch is turned on or turned off. Anyone have any insight on how the DOM changes when a switch is turned on vs. off? 
+[2021-03-03 21:22:13] <jshster> roderdc you just need to look at the checked property of the checkbox.  I was able to replicate the behaviour you're seeing - in that whether you tick it or not, the "checked" attribute will still show in the inspect window BUT if you run some jQuery as follows - alert($(this).is(":checked")); - on the click of the checkbox you'll see that it does toggle.  Hope that helps.
+
+Additional note - Another approach if you're wanting to check the checked state is - $(this).prop('checked').  This also will change between true and false depending on whether the box is ticked or not.
+[2021-03-03 21:33:17] <rogerdc> Thanks, jshster. Here's my final answer: 
+[2021-03-03 21:35:48] <rogerdc> ```
+        public static bool GetMaterializeSwitchState(this IWebElement element)
+        {
+            string oldOutline = element.Highlight();
+            IWebElement cbElement = element.FindElement(By.XPath("../input"));
+            IJavaScriptExecutor jse = (IJavaScriptExecutor)element.Driver();
+            bool toReturn = (bool)jse.ExecuteScript("return arguments[0].checked", new object[] { cbElement });
+            element.Unhighlight(oldOutline);
+            return toReturn;
+        }
+```
+[2021-03-03 21:39:39] <rogerdc> The element is the span within the switch, since that is what registers clicks. So I go up a level and down to the input, and then grab its state.
+[2021-03-03 21:40:12] <rogerdc> The highlight and unhighlight draw a pink outline around the element I'm interacting with so you can see what it is I'm doing.
+[2021-03-04 09:26:00] <albcorare26> Hello, I have a problem and I don't know how to make my image occupy 100% of the screen width.
+[2021-03-04 09:26:18] <albcorare26> [![imagen.PNG](https://files.gitter.im/548e71a2db8155e6700df25f/Rubs/thumb/imagen.png)](https://files.gitter.im/548e71a2db8155e6700df25f/Rubs/imagen.PNG)
+[2021-03-04 09:26:23] <albcorare26> [![vs.PNG](https://files.gitter.im/548e71a2db8155e6700df25f/gGtl/thumb/vs.png)](https://files.gitter.im/548e71a2db8155e6700df25f/gGtl/vs.PNG)
+[2021-03-04 09:27:12] <albcorare26> Here is a sample graphic and the code in question
+[2021-03-04 11:32:19] <albcorare26> the footer does not occupy 100% either
+[2021-03-04 11:32:36] <albcorare26> [![footer.PNG](https://files.gitter.im/548e71a2db8155e6700df25f/sP60/thumb/footer.png)](https://files.gitter.im/548e71a2db8155e6700df25f/sP60/footer.PNG)
+[2021-03-05 09:29:09] <bener07> can someone help me, my menu buttons are with a bug unfordable [help with this code?](https://codepen.io/bener07/pen/BaQVWZP)
+[2021-03-05 11:10:55] <sisaha9> Is there a way for me to add a Learn more button that generates text right below it? Kind of like the ones here: https://www.sanchezenrique.com/PredictingDiseaseWebsite/
+[2021-03-05 11:12:34] <bener07> i think if you use and .slidetoogle function it could work 
+[2021-03-05 11:13:27] <bener07> here you have an example 
+[2021-03-05 11:13:32] <bener07> https://codepen.io/codeycodecode/pen/hxfws
+[2021-03-05 11:14:46] <bener07> but can someone help me please
+[2021-03-06 14:07:57] <doughballs> @sisaha9 that is not good UX in my opinion. It is actually a little bit pointless if you thinking about it. But, you could use collapsible to get something similar. You would put a button inside the collapsible head, and change the styling to remove the lines etc.
+[2021-03-06 14:09:22] <doughballs> @bener07 what are you trying to do? Just copy the example from the docs and use the correct markup, then amend to fit your needs.
+[2021-03-06 14:09:44] <doughballs> @albcorare26 looks like your content is inside a container...
+[2021-03-07 11:38:21] <turingoat> I have a problem with the menu for mobile devices. It opens but the items cannot be clicked. Can you tell me what's wrong with the code and how to fix it?
+Everything can be found here https://github.com/turingoat/TurinGoAt
+[2021-03-07 14:38:55] <doughballs> @turingoat I’ve never had this issue but I’ve heard others have it. Check the z-index on the sidenav overlay.
+[2021-03-08 20:27:01] <kjq221> Is it possible to add images inside modals? From how I have set up my modal at least, it does not seem to be the case, but I could be doing it wrong: codepen: https://codepen.io/kjq221/pen/KKNGovM
+[2021-03-08 20:31:59] <doughballs> @kjq221 no idea what’s going on in that codepen, but the short answer is: yes, you can put images inside modals. I would take the very basic modal example from the docs, and put an image inside it, and take it from there.
+[2021-03-08 20:32:40] <kjq221> Yeah i don't know what happened there either. I just used a smaller image and it seems to display it now. Can the modal not display large resolution images?
+[2021-03-08 20:32:48] <kjq221> the one I was using was around 2000x2000
+[2021-03-08 20:45:28] <kjq221> So to add to my question since now I figured out how to get the image to load, is it possible to make it so the image takes up the full modal space and does not require a scroll bar?
+[2021-03-08 20:56:19] <doughballs> @kjq221 you need to put class of responsive-img to stop images spilling outside of their container.
+[2021-03-08 20:59:11] <kjq221> I did and they still overflow
+[2021-03-08 21:00:35] <doughballs> On the image itself? You can also try width:100% on the image.
+[2021-03-08 21:01:01] <doughballs> Also no need to use 2000px wide, because modals will never be that wide.
+[2021-03-08 21:01:23] <kjq221> I have it as <img class="responsive-img" src="img/IMG_4249.jpg" alt="">
+[2021-03-08 21:13:27] <turingoat> @doughballs thank you, I will try
+[2021-03-08 22:16:58] <kjq221> > I have it as <img class="responsive-img" src="img/IMG_4249.jpg" alt="">
+
+It's a long vertical image I feel like I need to add. I know I can set a pixel limit, but that would cause the image to look bad.
+[2021-03-09 01:25:25] <kjq221> Would setting the modal to be a max height be better?
+[2021-03-09 09:31:18] <doughballs> @kjq221 modal is not ideal for something like this. Meant for small bits of content that would ideally fit on any screen without needing to scroll.
+[2021-03-09 18:01:10] <kjq221> @doughballs do you have any suggestions then? I tried the materialbox component but it cuts the text off for long captions which is why I transitioned into modals. On mobile it works really well with vertical images
+[2021-03-09 18:32:04] <doughballs> @kjq221 materialbox does sound like what you need. Can you control the size of the caption/style it so it doesn’t cut off? Reduce the length of the captions?
+[2021-03-10 11:44:52] <ghost~6048b0686da0373984675317> Hi there ! What's the good way to use the .isOpen() property from dropdown ? I don't understand how tu use it to get the boolean
+[2021-03-11 16:40:25] <GABAnich> Hello, I have a question about this https://materializecss.com/select.html. How can I add options to select using JS?
+[2021-03-11 16:41:29] <GABAnich> @Material-Design ^^
+[2021-03-11 18:01:03] <ManuTheCoder> How about using `insertAdjacentHTML`?
+ ```javascript
+document.getElementById('<YOUR_SELECTOR_HERE>').insertAdjacentHTML("afterend", "<p>My new paragraph</p>");
+```
+[2021-03-12 04:49:11] <nh916> is anyone working on materialize web accessibility?
+[2021-03-12 04:54:21] <nh916> it seems like there is no tab accessibility for anyone who has any kind of disability
+[2021-03-14 01:49:52] <ManuTheCoder> [![Image](https://i.ibb.co/PZr6Gdn/save-money-by-keeping-track-of-what-you-have-at-home-1.png)](https://smartlist.ga)
+
+[2021-03-14 01:50:20] <ManuTheCoder> Check out my new app made with Materialize CSS---> https://smartlist.ga/
+[2021-03-14 01:51:15] <ManuTheCoder> Check out the dashboard --> 
+![https://i.ibb.co/pRMKr1Q/Screenshot-2021-03-13-at-5-50-36-PM.png](https://i.ibb.co/pRMKr1Q/Screenshot-2021-03-13-at-5-50-36-PM.png)
+[2021-03-14 08:18:04] <doughballs> @ManuTheCoder good work!
+[2021-03-14 13:40:19] <mxdpeep> @ManuTheCoder use OAUTH 2.0, not email sign-ups
+[2021-03-14 18:18:59] <ManuTheCoder> Thanks!
+[2021-03-14 18:20:04] <ManuTheCoder> > OAUTH 2.0 
+
+Hi, 
+Are you talking about "Sign up with Google"?
+[2021-03-16 00:07:53] <TomaszCienciala> hi - is it just me or carousel page is broken ? https://materializecss.com/carousel.html
+[2021-03-16 00:07:58] <TomaszCienciala> I mean lorempixel is down
+[2021-03-16 00:08:04] <TomaszCienciala> and images are not loading
+[2021-03-16 17:10:36] <shammiac> hi, how to make preloading block the whole page, like to show the preloader as a modal like ..
+[2021-03-16 21:04:54] <ManuTheCoder> Try this: 
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Loader Modal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <style>
+      .modal_bg {
+        position: fixed; 
+        top: 0; 
+        left: 0; 
+        width: 100%; 
+        height: 100%;
+        background: rgba(0,0,0,0.3);
+        opacity:0;
+        transform: scale(2);
+        transition: all .2s;
+      }
+      .modal_content {
+        position: fixed;
+        top: 50%;
+        transition: all .2s;
+        left: 50%;
+        width: 80px;
+        height: 80px;
+        background: white;
+        border-radius: 2px;
+        padding: 15px;
+        transform: translate(-50%, -50%)
+      }
+    </style>
+  </head>
+  <body onload='load()'>
+    <div class="modal_bg" id="modal">
+      <div class="modal_content">
+        <div class="preloader-wrapper active">
+          <div class="spinner-layer spinner-red-only">
+            <div class="circle-clipper left">
+              <div class="circle"></div>
+            </div><div class="gap-patch">
+            <div class="circle"></div>
+            </div><div class="circle-clipper right">
+            <div class="circle"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container"><br>
+      <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/33/f9/c0/big-sur.jpg?w=1100&h=600&s=1" width="100%">
+      <h1>Title</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+      // The setTimeout is used for demo purposes only. Please remove this, as it will slow your page down!
+      function load() {
+        var e = document.getElementById("modal");
+        e.style.transform = 'scale(1)';
+        e.style.opacity = '1';
+        setTimeout(function(){
+          e.style.transform = 'scale(2)';
+          e.style.opacity = '0';
+          setTimeout(function(){
+            e.style.display = 'none';
+          }, 0200);
+        }, 3000);
+      }
+    </script>
+  </body>
+</html>
+```
+Remove the `setTimeout` function (ONLY the one here: 
+>  }, 3000);
+[2021-03-16 22:03:53] <Ribbfors> Hey there,
+I'm using three card modules next to each other in a row, but I can't seem to use flex-wrap: wrap; on them, so they get into column as the screen reaches a certain size. Does anyone know what I might be doing wrong? 
+[2021-03-18 13:01:35] <doughballs> @Ribbfors card don’t use flex, Materialize uses a % and float based grid system. Put each card in a col and let the grid take care of stacking.
